@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هیرویت هلث اید | داروکده</title>
+
+    <!-- style css page -->
+    <link rel="stylesheet" href="Products.css">
+    <link rel="stylesheet" href="../../Style/main.css">
+    <link rel="shortcut icon" href="../../Image/Logo01.ico" type="image/x-icon">
+    <style>
+        .main__footer{
+            margin-top: 360pc;
+        }
+        .box__btn_comment svg{
+            padding: 6px 7px;
+            left: 18rem;
+        }
+        @media (min-width: 750px) and (max-width: 991px){
+            .main__footer {
+                margin-top: 384pc !important;
+            }
+        }
+        @media (min-width: 350px) and (max-width: 500px){
+            .main__footer {
+                margin-top: 403pc !important;
+            }
+        }
+    </style>
+
+    <!-- Bootstrap Component -->
+    <link rel="stylesheet" href="../../Component/Bootstrap/bootstrap.css">
+    <script src="../../Component/Bootstrap/bootstrap.js"></script>
+    <script src="../../Component/jquery.js"></script>
+
+    <!-- FontAwsome Component -->
+    <script src="../../Component/FontAwsome/6.2.0/fontawesome.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/all.js"></script>
+    
+    <!-- js Component -->
+    <script src="../../Script/main.js"></script>
+    <script src="../../Script/filterItem.js"></script>
+    <script src="../../Script/addProduct.js"></script>
+    <script src="../../Script/RegisterAndLogin.js"></script>
+    <script src="../../Script/ProductShow.js"></script>
+    <script src="../../Script/MainProducts.js"></script>
+</head>
+<body>
+    <header class="main__header">
+        <div class="Title__Banner">
+            <div></div>
+        </div>
+        <section class="list__info">
+            <div>
+                <a onclick="showForm()" id="list__info_span" onload="UserFullData()" class="list__info_span">ورود کاربر
+                    <i class="fa-solid fa-user"></i></a>
+                <div id="form__login_back">
+                    <div class="form__box_login">
+                        <input autocomplete="off" class="form_login" id="UserName" type="text"
+                            placeholder="شماره تلفن همراه خود را وارد کنید">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="form__box_login">
+                        <input autocomplete="off" class="form_login" id="Password" type="text"
+                            placeholder="رمز عبور خود را وارد کنید">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="form__check">
+                        <input id="checkData" type="checkbox" title="check">
+                        <label for="check">مرا به خاطر بسپار</label>
+                    </div>
+                    <div class="form__btn">
+                        <button onclick="LoadData()">ورود به حساب کاربری</button>
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+                    <div class="form__link">
+                        <a href="../Register/Register.html"><i class="fa-solid fa-user"></i>ثبت نام کاربر جدید</a>
+                    </div>
+                    <div class="form__link">
+                        <a href="../ForgetPassword/ForgetPassword.html"><i class="fa-solid fa-lock"></i>کلمه عبور خود را
+                            فراموش کرده ام</a>
+                    </div>
+                </div>
+                <a href="../Basket/Basket.html" class="list__info_span">پیگری سفارش <i class="fa-solid fa-check-to-slot"></i></a>
+                <span class="list__info_span" id="special__info"> 62747000 - 52862000 - 021 <i class="fa-solid fa-phone"></i></span>
+            </div>
+        </section>
+        <section class="list__Box_Search">
+            <i onclick="showNav()" id="bar__icon" class="fa-solid fa-bars"></i>
+            <div id="special__item" class="list__Box_item">
+                <span class="list__Box_Number">0</span>
+                <i id="icon__basket" class="fa-solid fa-cart-shopping"></i>
+                <a onclick="showBasket()" id="show__basket" href="#" class="list__Box_span">سبد خرید</a>
+                <div class="form__basket_back">
+
+                </div>
+            </div>
+            <div class="list__Box_item">
+                <span id="list__line"></span>
+            </div>
+            <div class="list__Box_item">
+                <input type="text" class="list__box" placeholder="عبارت مورد نظر جهت جستجو وارد کنید">
+                <i id="icon__Search" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="list__Box_item">
+                <a href="../Home/Home.html"><img id="Box__img" src="../../Image/SVG/logo.svg" title="Logo"></a>
+            </div>
+        </section>
+        <nav>
+            <ul class="list__items">
+                <li class="list__item">
+                    <span class="list__link">
+                        آرایشی بهداشتی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">محصولات آفتاب</a>
+                                <a href="#" class="list__background_item">مرطوب کننده</a>
+                                <a href="#" class="list__background_item">ضده لک</a>
+                                <a href="#" class="list__background_item">ضد چروک</a>
+                                <a href="#" class="list__background_item">لیفتینگ پوست</a>
+                                <a href="#" class="list__background_item">ترمیم کننده پوست</a>
+                                <a href="#" class="list__background_item">پاکسازی پوست</a>
+                                <a href="#" class="list__background_item">مراقبت مو</a>
+                                <a href="#" class="list__background_item">مو درمانی</a>
+                                <a href="#" class="list__background_item">بهداشت دندان و دهان</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مکمل غذایی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">مکمل آقایان</a>
+                                <a href="#" class="list__background_item">مکمل بانوان</a>
+                                <a href="#" class="list__background_item">مکمل کودکان</a>
+                                <a href="#" class="list__background_item">مکمل گیاهی</a>
+                                <a href="#" class="list__background_item">مکمل ورزشی</a>
+                                <a href="#" class="list__background_item">مکمل کمک درمانی 1</a>
+                                <a href="#" class="list__background_item">مکمل درمانی 2</a>
+                                <a href="#" class="list__background_item">ویتامین و مواد معدنی</a>
+                                <a href="#" class="list__background_item">مکمل تنظیم وزن</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مکمل ورزشی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">پروتئین</a>
+                                <a href="#" class="list__background_item">کربوهیدرات</a>
+                                <a href="#" class="list__background_item">کاهش وزن</a>
+                                <a href="#" class="list__background_item">انرژی زا</a>
+                                <a href="#" class="list__background_item">کراتین</a>
+                                <a href="#" class="list__background_item">گلوتامین</a>
+                                <a href="#" class="list__background_item">بی سی ای ای</a>
+                                <a href="#" class="list__background_item">سی ال ای</a>
+                                <a href="#" class="list__background_item">کارنیتین</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مادر و کودک
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">مادرو بارداری</a>
+                                <a href="#" class="list__background_item">دوران شیردهی</a>
+                                <a href="#" class="list__background_item">شیر خشک و غذای کودک</a>
+                                <a href="#" class="list__background_item">لوازم کودک و نوزاد</a>
+                                <a href="#" class="list__background_item">مکمل مادران</a>
+                                <a href="#" class="list__background_item">مکمل کودکان</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">تجهیزات پزشکی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">تجهیزات پزشکی بدن</a>
+                                <a href="#" class="list__background_item">تجهیزات قند و خون</a>
+                                <a href="#" class="list__background_item">سلامت محیط</a>
+                                <a href="#" class="list__background_item">تجهیزات تسکین دهنده</a>
+                                <a href="#" class="list__background_item">تراز و دماسنج</a>
+                                <a href="#" class="list__background_item">تجهیزات مادر و کودک</a>
+                                <a href="#" class="list__background_item">لوازم فردی</a>
+                                <a href="#" class="list__background_item">ارتوپدی</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <a href="../MagLog/MagLogHome.html" class="list__link">مجله داروکده</a>
+                </li>
+                <li class="list__item">
+                    <a href="../Jamalzadeh/Jamalzadeh.html" class="list__link">داروخانه مرکزی جمالزاده</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="nav__responsive">
+            <div class="div__responsive">
+                <i onclick="showNav()"  class="fa-solid fa-bars"></i>
+                <a target="_blank" href="../Basket/Basket.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <div class="form__basket_back">
+                </div>
+                <a target="_blank" href="../Login/Login.html"><i class="fa-regular fa-user"></i></a>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a href="../Home/Home.html"><img src="../../Image/SVG/logo-short.svg" alt=""></a>
+        </section>
+        <div id="nav__bar">
+            <i onclick="closeBar()" id="close__bar" class="fa-solid fa-xmark"></i>
+            <img src="../../Image/SVG/logo_nav.svg" alt="">
+            <div class="icon__bar">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div id="bar1"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <span class="item__title">آرایشی بهداشتی</span>
+                    </div>
+                    <span class="change1" onclick="showNavBar(1)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>محصولات آفتاب</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مرطوب کننده</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ضد لک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ضد چروک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>لیفتینگ پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ترمیم کننده پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>پاکسازی پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مراقبت مو</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مو (درمانی)</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>بهداشت دهان و دندان</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar2"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-glass-water"></i>
+                        <span class="item__title">مکمل غذایی</span>
+                    </div>
+                    <span class="change2" onclick="showNavBar(2)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>مکمل آقایان</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل بانوان</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل گیاهی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل ورزشی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل کمک درمانی 1</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل کمک درمانی 2</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ویتامین ها مواد معدنی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل تنظیم وزن</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar3"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <span class="item__title">مکمل ورزشی</span>
+                    </div>
+                    <span class="change3" onclick="showNavBar(3)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>پروتئین</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کربوهیدرات</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>آمینو اسید</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کاهش وزن</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>انرژی زا</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کراتین</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>گلوتامین</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar4"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-person-breastfeeding"></i>
+                        <span class="item__title">مادر و کودک</span>
+                    </div>
+                    <span class="change4" onclick="showNavBar(4)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>مادر و بارداری</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>دوره شیردهی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>بهداشت مادر و کودک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>شیر خشک و غذای کودک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>لوازم کودک و نوزاد</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل مادران</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar5"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-kit-medical"></i>
+                        <span class="item__title">تجهیزات پزشکی</span>
+                    </div>
+                    <span class="change5" onclick="showNavBar(5)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>تجهیزات پزشکی بدن</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>تجهیزات قند و خون</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>سلامت محیط</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>تجهیزات تسکین دهنده</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ترازو و دماسنج</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <a target="_blank" href="#" class="link__end_bar">استخدام</a>
+            <a target="_blank" href="#" class="link__end_bar">مجوز و منابع</a>
+            <a target="_blank" href="../AboutUs/AboutUs.html" class="link__end_bar">درباره داروکده</a>
+        </div>
+    </header>
+    <main>
+        <div class="scope__element_product">
+            <header id="title__one" class="header__main">
+                <a href="../Home/Home.html">صفحه نخست</a>
+                <span>></span>
+                <a href="HomeProduct.html">مکمل غذایی</a>
+                <span>></span>
+                <a href="#">مراقبت مو</a>
+                <span>></span>
+                <a href="Product3.html">هیرویت</a>
+            </header>
+            <section class="section__main">
+                <div class="box__first">
+                    <header>
+                        <div class="main__header_box">
+                            <img src="../../Image/Banner/Country/England.jpg" alt="تحت لیسانس انگلستان">
+                            <span>هلث اید - Health Aid</span>
+                        </div>
+                        <div class="main__header_box">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.2</span>
+                        </div>
+                    </header>
+                    <section>
+                        <div class="first__box">
+                            <div class="title__box">
+                                <h4 id="title10">هیرویت</h4>
+                                <span>Hair Vit</span>
+                            </div>
+                            <div class="date__box">
+                                <span>25% تخفیف</span>
+                                <span>تاریخ مصرف : بیش از 10 ماه</span>
+                            </div>
+                            <div class="price__box">
+                                <span>110,400 تومان</span>
+                                <span>147,200 تومان</span>
+                            </div>
+                            <div class="btn__box">
+                                <button onclick="addProduct(10, 110400)">افزودن به سبد خرید</button>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                            </div>
+                            <div class="counter__box">
+                                <span>تعداد سفارش</span>
+                                <div class="counter">
+                                    <i onclick="upPrice(110400)" class="fa-solid fa-chevron-up"></i>
+                                    <span id="count__number">0</span>
+                                    <i onclick="downPrice(110400)" class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <span class="end__title_box">هزینه ارسال این محصول <span>رایگان</span> است</span>
+                        </div>
+                        <div class="second__box">
+                            <img id="main__img" src="../../Image/Product/Main-Product/Main-Product1.jpg" alt="">
+                            <div class="img__box">
+                                <img onclick="selectImage(1)" id="sub__img" src="../../Image/Product/Main-Product/Main-Product1.jpg" alt="">
+                                <img onclick="selectImage(1.2)" id="sub__img" src="../../Image/Product/Main-Product/Main-Product1.2.jpg" alt="">
+                                <img onclick="selectImage(1.3)" id="sub__img" src="../../Image/Product/Main-Product/Main-Product1.3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="third__box">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <i class="fa-solid fa-code-compare"></i>
+                            <i class="fa-solid fa-bell"></i>
+                            <i class="fa-solid fa-arrow-up-right-dots"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <span>+1</span>
+                        </div>
+                    </section>
+                </div>
+                <div class="box__second">
+                    <span data-target="box__third" onclick="GoPanel(this)">مشخصات محصول</span>
+                    <span data-target="box__four" onclick="GoPanel(this)">اطلاعات کاربردی</span>
+                    <span data-target="box__six" onclick="GoPanel(this)">محصولات مرتبط</span>
+                    <span data-target="box__seven" onclick="GoPanel(this)">نقد و بررسی</span>
+                    <span data-target="box__eight" onclick="GoPanel(this)">امتیاز دهی</span>
+                    <span data-target="box__nine" onclick="GoPanel(this)">مقالات مرتبط</span>
+                    <span data-target="box__ten" onclick="GoPanel(this)">نظرات کاربران</span>
+                </div>
+                <div class="box__third">
+                    <h4 class="main__title">مشخصات محصول</h4>
+                    <div class="full__box">
+                        <span id="border1" onclick="showTab(1)" class="full__box_title"> مشخصات اختصاری <i id="rot1" class="fa-solid fa-chevron-up"></i></span>
+                        <div id="tab1" class="description__box">
+                            <ul>
+                                <li>قرص هیرویت حاوی ریزمغذی های مناسب برای کمک به درخشندگی، ضخامت و تقویت ریشه مو</li>
+                                <li>تقویت و افزایش ضخامت تارهای موی آسیب دیده</li>
+                                <li>کمک به توقف و کاهش ریزش مو ناشی از استرس، آلودگی هوا و کمبود ریزمغذی ها</li>
+                                <li>قرص هیرویت مناسب برای دوران بعد از کاشت مو</li>
+                                <li>هیرویت فاقد رنگ مصنوعی، طعم دهنده و نگهدارنده</li>
+                                <li>کمک به سلامت پوست صورت به واسطه داشتن ویتامین ها، مواد معدنی، پودر ژلاتین و مخمر</li>
+                                <li>جلوگیری از سفید شدن موها به علت دارا بودن پابا</li>
+                                <li>قابل استفاده برای مردان و زنان بالای 16 سال</li>
+                                <li>غنی از ویتامین های گروه ب و آمینواسیدهای ضروری</li>
+                                <li>مشخصات اختصاصی هیرویت</li>
+                            </ul>
+                        </div>
+                        <span id="border2" onclick="showTab(2)" class="full__box_title"> مشخصات اختصاصی <i id="rot2" class="fa-solid fa-chevron-up"></i></span>
+                        <div id="tab2" class="detail__box">
+                            <div class="line__box">
+                                  <span>نوع محصول</span>
+                                  <span>سافت ژل</span>
+                            </div>
+                            <div class="line__box">
+                                <span>تعداد در بسته</span>
+                                <span>30 عدد</span>
+                            </div>
+                            <div class="line__box">
+                                <span>جنسیت مصرف</span>
+                                <span>عمومی</span>
+                            </div>
+                            <div class="line__box">
+                                <span>گروه</span>
+                                <span>مراقبت مو</span>
+                            </div>
+                            <div class="line__box">
+                                <span>نوع محفظه</span>
+                                <span>جعبه مقوایی</span>
+                            </div>
+                        </div>
+                        <span id="border3" onclick="showTab(3)" class="full__box_title"> مشخصات عمومی <i id="rot3" class="fa-solid fa-chevron-up"></i></span>
+                        <div id="tab3" class="detail__box">
+                            <div class="line__box">
+                                  <span>تحت لیسانس</span>
+                                  <span>انگلستان</span>
+                            </div>
+                            <div class="line__box">
+                                <span>کشور سازنده</span>
+                                <span>ایران</span>
+                            </div>
+                            <div class="line__box">
+                                <span>شرکت سازنده</span>
+                                <span>شرکت نیک اختر آریا</span>
+                            </div>
+                            <div class="line__box">
+                                <span>وب سایت</span>
+                                <span>www.healthaid.co.uk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__four">
+                    <h4 class="main__title">اطلاعات کاربردی</h4>
+                    <div class="full__box_four">
+                        <div class="first">
+                            <span onclick="showDisplay(1 , 0)" id="color1">مشخصه ها</span>
+                            <span onclick="showDisplay(2 , 0)" id="color2">روش مصرف</span>
+                            <span onclick="showDisplay(3 , 0)" id="color3">موارد مصرف</span>
+                            <span onclick="showDisplay(4 , 0)" id="color4">هشدار مصرف</span>
+                            <span onclick="showDisplay(5 , 0)" id="color5">شرایط نگهداری</span>
+                            <span onclick="showDisplay(6 , 6)" id="color6">توضیحات</span>
+                        </div>
+                        <div class="second">
+                            <span id="show1">
+                                <ul>
+                                    <li>- قرص هیرویت منبع غنی از ویتامین های گروه B و اسیدهای آمینه و کلاژن</li>
+                                    <li>- هیرویت فاقد هر گونه رنگ مصنوعی، طعم دهنده و نگهدارنده</li>
+                                    <li>- مناسب برای زنان و مردان</li>
+                                </ul>
+                            </span>
+                            <span id="show2">
+                                افراد بالای 16 سال، روزانه یک عدد کپسول هیرویت همراه با صبحانه مصرف نمایند.
+                            </span>
+                            <span id="show3">
+                                <ul>
+                                    <li>- کمک به سلامت مو</li>
+                                    <li>جلوگیری از ریزش مو</li>
+                                    <li>تقویت و افزایش ضخامت تارهای موی آسیب دیده</li>
+                                </ul>
+                            </span>
+                            <span id="show4">
+                                <ul>
+                                    <li>- در صورت بروز حساسیت به ترکیبات قرص هیرویت از مصرف این فرآورده خودداری شود.</li>
+                                    <li>مکمل هیرویت جهت تشخیص، پیشگیری و یا درمان بیماری نمی باشد.</li>
+                                    <li>hair vit در دوران بارداری و شیردهی با نظر پزشک مصرف شود.</li>
+                                    <li>مقدار توصیه شده را بدون مشورت با پزشک و یا داروساز افزایش ندهید.</li>
+                                    <li>در صورت مصرف دارو یا مکمل های دیگر، قبل از مصرف این فرآورده با پزشک یا داروساز مشورت نمایید.</li>
+                                </ul>
+                            </span>
+                            <span id="show5">
+                                <ul>
+                                    <li>- در جای خشک و خنک و دور از دسترس کودکان نگهداری شود.</li>
+                                </ul>
+                            </span>
+                            <span id="show6">
+                                همه افراد در معرض تغییراتی مانند ریزش و نازک شدن موها هستند. تغذیه ناکافی و فقیر از مواد مغذی، استرس، تغییرات هورمونی و آلودگی هوا از جمله عواملی هستند که ریزش و نازک شدن موها را تشدید می کنند. <br>
+                                <br>
+بهترین راه پیشگیری از ریزش و نازک شدن موها تغذیه متعادل می باشد. زیرا موها جهت حفظ ساختمان و ضخامت خود به ویتامین ها، مواد معدنی، اسیدهای آمینه و سایر مواد مغذی در دوران های مختلف زندگی خود نیاز دارند.<br>
+<br>
+کپسول hair vit کمپانی Health Aid حاوی مجموعه ای از ویتامین های گروه B و اسیدهای آمینه ضروری می باشد. مصرف قرص ریزش مو هیرویت باعث جلوگیری از ریزش مو، بهبود بافت و افزایش ضخامت مو شده و همچنین سبب بهبود رنگ و درخشندگی مو نیز می شود و در تأمین سلامت مو بسیار مؤثر عمل می کند.<br>
+<br>
+ترکیبات موجود در هرویت به صورت مستقیم و یا غیرمستقیم نقش خود را در سلامت مو ایفا کرده و علاوه بر این می توانند تأثیر یکدیگر را نیز تقویت کنند. فواید ترکیبات آن عبارتند از : - B complex : جزو ویتامین های محلول در آب هستند که اعمال متعددی را در بدن انجام می دهند، از آن جمله : در رشد و تقسیم سلولی، در واکنش های متابولیکی بدن، در بهبود و تقویت عملکرد سیستم ایمنی و سیستم عصبی.اما یکی از مهم ترین اعمال این گروه از ویتامین ها بهبود رشد و حفظ سلامت و شادابی پوست، مو و ناخن می باشد.<br>
+<br>
+اثرات هر کدام از ویتامین های این گروه بر روی سلامت پوست، مو و ناخن در زیر بیان شده است :<br>
+<br>
+- ویتامین B1 : مطالعات انجام شده، نشان داده است که کمبود تیامین سبب کاهش خون رسانی به پوسته سر شده و پیامد آن باعث ریزش مو و کند شدن رشد تارهای جدید مو می شود.تیامین سبب حفظ سلامت پوست و شادابی آن می گردد.<br>
+<br>
+- ویتامین B2 : ریبوفلاوین جهت تولید مجدد، رشد، بازسازی و گسترش بافت های بدن شامل پوست، مو و ناخن، بافت پیوندی و سیستم ایمنی ضروری است. براساس یک مطالعه انجام شده ریبوفلاوین توانایی بهبود ترشح موکوس در لایه های پوست را داشته و به این ترتیب می تواند در پیشگیری از آکنه مفیدباشد. کمبود این ویتامین منجر به افزایش تولید سبوم شده و به دنبال افزایش تولید سبوم ریشه مو ضعیف می شود.<br>
+<br>
+- ویتامین B3 : نتایج یک مطالعه تحقیقاتی نشان داد که نیاسین سبب گشاد شدن عروق می شود و به این ترتیب می تواند باعث افزایش و بهبود گردش خون در پوسته سر و پیامد آن بهبود رشد مو شود. علاوه برآن نیاسین می تواند سبب کاهش سطح چربی در پوسته سر و کاهش تبدیل آن به DHT شود و به این ترتیب سبب بهبود رشد مو گردد. بر اساس یک تحقیق نیاسین می تواند در پیشگیری از آکنه و کاهش دوره درمان آن مفید باشد. - پانتوتنیک اسید : این ویتامین نقش مهمی در ترشح هورمون ها به ویژه کورتیزون دارد و این هورمون هم برای حفظ سلامت پوست و مو بسیار مهم و ضروری است. علاوه برآن سبب بهبود پوست سر هم می شود.<br>
+<br>
+- ویتامین B6 (پریدوکسین) : این ویتامین تبدیل تسترون به دی هیدرو تستسترون (DHT) را متوقف می کند. دی هیدروتستسترون ترکیبی است که سبب تحریک و افزایش ریزش مو می شود. از سوی دیگر ویتامین B6 تقویت کننده ملانین (رنگدانه) می باشد و نیز نقش مهمی در جذب اسیدهای آمینه سولفور شده ایفا می کند. در ضمن با توجه به نقش B6 در رشد گلبول های قرمز می توان به اهمیت آن در تأمین سلامت مو پی برد.<br>
+<br>
+- ویتامین B7 (بیوتین) : این ویتامین از طریق تحریک تولید کراتین (پروتئین مو) از ریزش مو جلوگیری می کند، بیوتین همچنین در حفظ سطح مناسب هموگلوبین نقش داشته و انتقال اکسیژن به تمامی بافت ها از جمله سلول های مسئول رشد مو را بر عهده دارد. علاوه بر موارد مذکور با توجه به نقش بیوتین در متابولیسم پروتئین، چربی و کربوهیدرات، کمبود بیوتین باعث کاهش متابولیسم مواد مغذی و در نتیجه سوء تغذیه سلول های فولیکول مو و نازک شدن تارهای مو می شود. در واقع بیوتین یکی از مواد مغذی مهم جهت حفاظت از استحکام و بافت مو می باشد.
+<br>
+- ویتامین B12 : این ویتامین در شکل گیری گلبول های قرمز خون و اکسیژن رسانی سلولی و بافتی مؤثر است. بنابراین با بهبود اکسیژن رسانی به بافت ها از جمله فولیکول های مو، می تواند سبب بهبود رشد مو و جلوگیری از ریزش مو شود. با توجه به مکانیسم بالا، این ویتامین سبب بهبود اکسیژن رسانی به پوست هم شده و در بهبود سلامت پوست و شادابی آن مفید است. ویتامین B12 و اسیدفولیک هر یک به طور جداگانه با تولید اسیدهای نوکلئیک در ارتباطند. در دسترس بودن اسید های نوکلئیک به میزان کافی در سلامت مو اهمیت ویژه ای دارد زیرا اسیدهای نوکلئیک جهت تشکیل نوکلئوپروتئین ها نقش دارند. نوکلئوپروتئین ها بایستی در فولیکول مو به مقدار کافی وجود داشته باشند تا موجب رشد طبیعی موها شوند.<br>
+<br>
+- کلسیم : کلسیم در سنتز پروتئین کراتین که یکی از ضروری ترین ترکیبات برای رشد فولیکول های مو می باشد، نقش دارد. علاوه بر آن کراتین سبب درخشندگی، استقامت و سلامت موها نیز می شود.<br>
+<br>
+- فسفر : اعمال متعددی را در بدن انجام می دهد که از آن جمله می توان به : شرکت در تولید و سنتز درشت مغذی ها مانند : کربوهیدرات ها، چربی ها و به ویژه پروتئین ها که سبب رشد، حفظ سلامت و ترمیم سلول ها و بافت های آسیب دیده (به ویژه تارهای موی ضعیف شده) می شود، اشاره کرد. همچنین این ماده معدنی به شکل سینرژیک با ویتامین های گروه Bهمکاری می کند و سبب تحریک اعمال آن ها می شود.<br>
+<br>
+- منگنز و آهن : در این قسمت عناصر منگنز و آهن را با هم مورد بررسی قرار می دهیم زیرا بخشی از واکنش های آنزیمی و مسیرهای بیوشیمیایی که این دو عنصر در آن ها فعالند، مشابه هم می باشد. آهن و منگنز، از جمله عناصری هستند که در سنتز اسید نوکلئیک RNA و سیکل کربس نقش مهمی را ایفا می کنند. بدون وجود این دو عنصر سیکل کربس برای تولید انرژی اکسیداتیو با مشکل مواجه شده و نمی تواند در سطح مطلوب عمل کند.<br>
+<br>
+آنزیم ایزوستیریک دهیدروژناز (IDH) که وابسته به عنصر منگنز و آنزیم سوسینیک دهیدروژناز (SDH) که وابسته به عنصر آهن است، دو نمونه از رابطه های مهم در سیکل کربس می باشند. بدون عملکرد مطلوب سیکل کربس، باندهای فسفاته پرانرژی تولید نشده و در نتیجه گلیکوژن کافی که ذخیره انرژی برای رشد فولیکول های مو است، ساخته نشده و در نتیجه رشد مو کاهش می یابد. مطالعات انجام شده بر روی فولیکول موها نشان دهنده جایگیری آسان آهن در فولیکول موها و اهمیت آن هم در فرایند اکسیداتیو و هم در سیستم های انتقال دهنده اتم هیدروژن در فولیکول مو می باشد.<br>
+<br>
+- مس : یک ماده معدنی کمیاب و ضروری است که جهت تشکیل هموگلوبین خون مورد نیاز است. هموگلوبین مسئول خونرسانی به ریشه مو می باشد لذا به دنبال کمبود مس ریشه مو ضعیف شده و ریزش مو ایجاد می شود. از سوی دیگر این عنصر یکی از ترکیبات ضروری در ملانین محسوب می شود. این عنصر در تحریک فولیکول های مو که در دوره کمون هستند نیز نقش بسزایی ایفا می کند. از سوی دیگر در سنتز پروتئین مو، تشکیل پیوندهای دی سولفیدی به عنوان کاتالیزور جهت یکپارچگی و ساختار مناسب مو، بسیار ضروری است.<br>
+<br>
+- روی : یک ماده معدنی است که نقش حیاتی در بسیاری از فرآیندهای بدن همچون ساخت سلول، ایجاد تعادل هورمونی، حفظ ترشح غدد چربی، سنتز پروتئین و در نتیجه تشکیل کلاژن دارد. تمامی فرآیندهای مذکور جهت تأمین سلامت پوست و مو و جلوگیری از نازک شدن و ریزش مو نقش دارند. کمبود روی منجر به ریزش مو و بروز مشکلات پوستی می شود در حالی که دریافت روی می تواند در بهبود مشکلات و بیماری های پوستی همچون آکنه و اگزما و همچنین کمک به رشد مو مفید و مؤثر باشد. این عنصر همچنین از طریق افزایش تعداد گلبول های سفید در خون در تقویت سیستم ایمنی نیز نقش ویژه ای دارد.<br>
+<br>
+- کولین و اینوزیتول : این دو ماده ترکیباتی محلول در آب بوده که جزء ویتامین های گروه B دسته بندی می شوند. هر دو ماده پیش ساز فسفولیپیدها بوده و به دلیل اهمیت ویژه فسفولیپیدها در رشد و نمو سلول فولیکول های مو، می توانند در بهبود سلامت، رشد و کیفیت موها نقش داشته باشند.<br>
+<br>
+- PABA (پارا آمینو بنزوئیک اسید) : این ترکیب یک آنتی اکسیدان قوی و وابسته به گروه ویتامین های B می باشد. سبب تثبیت غشای سلولی در فولیکول های مو شده و بدین وسیله از ریشه های مو حفاظت کرده و از ریزش مو جلوگیری می کند و همچنین در پیشگیری از خاکستری شدن و سفید شدن موها در صورتی که در اثر کمبود مواد مغذی و یا استرس باشد، نیز مؤثر است.
+<br>
+- مخمر : این ماده سرشار از ویتامین های B کمپلکس، اسیدهای آمینه ضروری و عناصر معدنی همچون روی، سلنیوم ،کروم و مس می باشد که فواید هرکدام از این اجزا در بالا بیان شد. در نتیجه می توان ازاین ترکیب به عنوان یک فرمول ویژه در تأمین سلامت مو و جلوگیری از ریزش مو استفاده کرد.<br>
+<br>
+- پودر ژلاتین : منبع بسیار مناسبی برای تأمین پروتئین ها از جمله کلاژن می باشد که به همین دلیل می تواند باعث افزایش ضخامت مو و تقویت بافت های پیوندی شده و سرعت رشد مو را نیز افزایش می دهد.<br>
+<br>
+ لستین : یک آنتی اکسیدان طبیعی و فراوان ترین فسفولیپید موجود در ساختار سلولی می باشد. لستین پروتئین مورد نیاز برای رشد مو را تأمین کرده و در ترمیم بافت مو نقش دارد.
+ <br>
+- سیستئین : اسید آمینه ای است که در تشکیل پروتئین در بدن، متابولیسم انرژی، سنتز اسیدهای چرب، تکثیر سلول های ایمنی و تقویت سیستم ایمنی نقش دارد. این اسید آمینه یکی از ترکیبات اصلی موجود در پوست، مو و ناخن ها بوده و باعث افزایش ضخامت ساقه مو و تحریک رشد مو می شود. از دیگر اثرات آن می توان به موارد زیر اشاره کرد:  - کمک به تأمین سلامت پوست - توقف در ریزش مو و کمک به رشد مو - کمک به بهبود زخم ها - تقویت سیستم ایمنی - دارای نقش اساسی در تولید کلاژن که درنتیجه در ایجاد خاصیت الاستیکی پوست و ایجاد استحکام ناخن و مون قش دارد.<br>
+<br>
+- متیونین : یک اسیدآمینه ضروری است با خواص قوی آنتی اکسیدانی و منبع غنی سولفور، که از اختلالات مربوط به مو، پوست و ناخن جلوگیری می کند. این اسید آمینه ضروری از نازک شدن تارهای مو جلوگیری کرده و سبب بهبود رشد مو می گردد.<br> 
+<br>
+قرص هیر ویت تحت لیسانس و امتیاز شرک هلث اید انگلستان، دارنده پروانه ساخت از شرکت نیک اختر آریا و توسط شرکت امید پارسینا دماوند در ایران تولید و بسته بندی شده است .
+<br>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__five">
+                    <h4 class="main__title">ترکیبات ( <span>به ازاي يک کپسول</span> )</h4>
+                    <div class="full__box">
+                        <div class="box__gradient">
+                            <div id="full__box_gradient">
+                                <div class="gradient__info">
+                                    <span>عنوان</span>
+                                    <div>
+                                        <span>مقدار</span>
+                                        <span>نیاز روزانه</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B1 ( Thiamin )</span>
+                                    <div>
+                                        <span>10 mg</span>
+                                        <span>1111 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B2 ( Riboflavin )</span>
+                                    <div>
+                                        <span>10 mg</span>
+                                        <span>111 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B3 ( Niacin )</span>
+                                    <div>
+                                        <span>10 mg</span>
+                                        <span>167 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B6 ( Pyridoxine )</span>
+                                    <div>
+                                        <span>5 mg</span>
+                                        <span>385 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B12 ( Cyanocobalamin )</span>
+                                    <div>
+                                        <span>2 µg</span>
+                                        <span>111 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B7 ( Biotin )</span>
+                                    <div>
+                                        <span>20 µg</span>
+                                        <span>67 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B5 ( Panthotenic Acid )</span>
+                                    <div>
+                                        <span>10 mg</span>
+                                        <span>200 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Iron</span>
+                                    <div>
+                                        <span>12 mg</span>
+                                        <span>67 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Zinc</span>
+                                    <div>
+                                        <span>8 mg</span>
+                                        <span>73 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Choline Bitarate</span>
+                                    <div>
+                                        <span>50 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Inositol</span>
+                                    <div>
+                                        <span>50 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Para Amino Benzoic Acid (PABA)</span>
+                                    <div>
+                                        <span>10 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Yeast</span>
+                                    <div>
+                                        <span>10 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Hydrolysed Gelatine Powder</span>
+                                    <div>
+                                        <span>50 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Lecithin</span>
+                                    <div>
+                                        <span>20 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>L-Cysteine Hydrochloride</span>
+                                    <div>
+                                        <span>30 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>DL-Methionine</span>
+                                    <div>
+                                        <span>20 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="show__gradient_box">
+                                <span onclick="showGradient()" id="gradient__show">نمایش کامل</span>
+                                <i id="show__gradient_icon" class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <span class="end__gradient"> نیاز مصرف روزانه از طرف شرکت سازنده مشخص نشده است <i class="fa-solid fa-star"></i></span>
+                            <span class="end__gradient"> مقدار به کار رفته از طرف شرکت سازنده مشخص نشده است <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__six">
+                    <h4 class="main__title">محصولات مرتبط</h4>
+                    <div class="full__box">
+                        <div class="box__slider_product">
+                            <i onclick="showSlider(1)" id="icon__slider1" class=" slide__svg fa-solid fa-chevron-right"></i>
+                            <div class="card__slider_product">
+                                <a href="Product5.html">
+                                    <img src="../../Image/Product/Main-Product/Main-Product9.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.7
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>952k</span>
+                                    </div>
+                                    <span>قرص اپتی وومن</span>
+                                    <span>Golden Life</span>
+                                    <span>327,000</span>
+                                    <span>261,600 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="Product1.html">
+                                    <img src="../../Image/Product/Main-Product/Main-Product3.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.6
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>952k</span>
+                                    </div>
+                                    <span>زینک پلاس 10 میلی گرم</span>
+                                    <span>Zinc Plus 10 mg</span>
+                                    <span>261,000</span>
+                                    <span>235,500 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="Product4.html">
+                                    <img src="../../Image/Product/Main-Product/Main-Product4.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.7
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>952k</span>
+                                    </div>
+                                    <span>ول من اورجینال</span>
+                                    <span>Vitabiotics</span>
+                                    <span>192,000</span>
+                                    <span>177,000 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="Product2.html">
+                                    <img src="../../Image/Product/Main-Product/Main-Product2.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.7
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>952k</span>
+                                    </div>
+                                    <span>ول وومن اورجینال</span>
+                                    <span>Vitabiotics</span>
+                                    <span>199,000</span>
+                                    <span>189,000 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="#">
+                                    <img src="../../Image/Product/Main-Product/Main-Product10.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            2.9
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>21k</span>
+                                    </div>
+                                    <span>زینک پلاس ب کمپلکس مخصوص کودکان و نوجوانان</span>
+                                    <span>Daana</span>
+                                    <span>100,000</span>
+                                    <span>95,000 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="#">
+                                    <img src="../../Image/Product/Main-Product/Main-Product11.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.3
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>76k</span>
+                                    </div>
+                                    <span> زینک پلاس 10 میلی گرمی ب کمپلکس </span>
+                                    <span>Daana</span>
+                                    <span>135,400</span>
+                                    <span>101,600 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="#">
+                                    <img src="../../Image/Product/Main-Product/Main-Product12.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.5
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>137k</span>
+                                    </div>
+                                    <span>زینک گلوکونات و ویتامین ث</span>
+                                    <span>Sandrous</span>
+                                    <span>70,000</span>
+                                    <span>74,900 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="#">
+                                    <img src="../../Image/Product/Main-Product/Main-Product13.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.7
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>54k</span>
+                                    </div>
+                                    <span>ویتامین ب6 مولتی نرمال 40 میلی گرم</span>
+                                    <span>MultiNormal</span>
+                                    <span>52,400 تومان</span>
+                                </a>
+                            </div>
+                            <i onclick="showSlider(2)" id="icon__slider2" class="slide__svg fa-solid fa-chevron-left"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__seven">
+                    <h4 class="main__title">نقد و بررسی</h4>
+                    <div class="full__box">
+                        <div class="review">
+                            <p>
+                                هیرویت چیست؟<br>
+هیرویت یکی از مکمل های مراقبت مو است. معمولا، تغذیه ناکافی و محدود از نظر مواد مغذی، تغییرات هورمونی، اختلال در خون رسانی به فولیکول مو، استرس و آلودگی هوا از جمله عواملی هستند که باعث ضعیف شدن، نازک شدن و در نهایت ریزش موها می شوند. از آنجایی که موها برای حفظ استحکام و ضخامت خود به ویتامین ها، مواد معدنی و سایر مواد مغذی در دوران های مختلف چرخه رشد خود نیاز دارند بهترین راه پیشگیری از ریزش و نازک شدن موها تغذیه متعادل و غنی از ترکیبات اثر گذار در تقویت مو می باشد. در این مورد مکمل های تقویت پوست و مو مانند قرص هیر ویت اثرات چشمگیری دارند.<br>
+<br>
+هیرویت به شکل کپسول است ولی در بین مصرف کنندگان به قرص هیرویت معروف است که به ظاهرا به معنای دارویی برای مراقبت مو است (نه اشاره به شکل دارویی آن). در این بخش ما نیز گاها از واژه قرص هیرویت به جای کپسول هیر ویت استفاده خواهیم کرد.<br>
+<br>
+<br>
+<br>
+خواص قرص هیرویت<br>
+فواید قرص هیرویت به ترکیبات آن نسبت داده می شود. از مهم ترین فواید قرص هیر ویت می توان به موارد زیر اشاره کرد:<br>
+<br>
+- حفظ سلامت و تقویت فولیکول های مو<br>
+- حفظ درخشندگی و سلامت مو<br>
+- کاهش و جلوگیری از ریزش مو<br>
+- حفظ سلامت پوست<br>
+- حفظ سلامت سیستم ایمنی<br>
+<br>
+<br>
+<br>
+عوارض قرص هیرویت
+قرص هیر ویت یکی از کم عارضه ترین و ایمن ترین مکمل های مراقبت از مو است. با این حال، مصرف این مکمل نیز ممکن است در برخی از افراد عوارضی داشته باشد. البته لازم به ذکر است که این عوارض قرص هیرویت خطرناک نبوده و با قطع مصرف از بین می رود.<br>
+<br>
+هیرویت حاوی آهن و زینک است، به همین دلیل ممکن است در برخی از افراد علائمی مانند یبوست، اسهال، سوزش سر دل و درد معده ایجاد شوند. که با مصرف هیرویت بعد از غذا و با معده پر این عوارض ایجاد نخواهند شد.<br>
+<br>
+مبتلایان به آلرژی و یا افرادی با سابقه آلرژی بهتر است جدول ترکیبات غذایی این محصول را مطالعه کنند و در صورتی که به یکی از ترکیبات آن آلرژی دارند، از خوردن هرویت اجتناب کنند.<br>
+<br>
+مصرف قرص هیرویت ممکن است باعث تغییر رنگ ادرار شود که طبیعی است. کپسول هیرویت حاوی ویتامین های گروه B مانند B2 و B12 است که گاها باعث تغییر رنگ ادرار می شوند.<br>
+<br>
+<br>
+<br>
+نحوه مصرف قرص هیرویت
+تمامی جوانان بالای 16 سال و بزرگسالان بایستی روزانه یک قرص هیرویت در روز مصرف کنند. مصرف بیشتر از یک کپسول در روز توصیه نمی شود، مگر با تجویز پزشک یا داروساز.  بایستی برای کاهش احتمال بروز عوارض گوارشی، قرص هیرویت را با غذا و معده پر مصرف کرد.<br>
+<br>
+<br>
+<br>
+بهترین زمان مصرف قرص هیرویت<br>
+بهترین زمان مصرف قرص hair vit ابتدای روز یعنی صبح است. مصرف هیرویت در وعده صبح، ضمن کاهش احتمال فراموش شدن خوردن قرص هیرویت، به افزایش سطح انرژی و بهبود عملکرد فیزیکی در طول روز کمک می کند.<br>
+<br>
+<br>
+<br>
+ویژگی های ظاهری قرص هیرویت<br>
+کپسول هیرویت تحت لیسانس شرکت هلث اید انگلستان توسط شرکت OPD Pharma و به سفارش شرکت نیک اختر آریا تولید می شود. این محصول در هر جعبه حاوی 30 عدد کپسول با رنگ قهوه ای تیره است. با این حال، این محصول به قرص هیرویت نیز معروف شده است.<br>
+<br>
+<br>
+<br>
+ترکیبات قرص هیرویت<br>
+ترکیبات موجود در قرص هرویت شامل ویتامین ها، مواد معدنی، اسیدهای آمینه ضروری، مخمر، پابا، کولین و لسیتین هستند. در ادامه به بررسی ترکیبات موجود در این محصول می پردازیم:
+<br>
+<br>
+زینک (Zinc)<br>
+این ماده معدنی برای سنتز پروتئین و تقسیم سلولی، دو فرایند مورد نیاز برای رشد مو ضروری است. به همین ترتیب، کمبود روی ممکن است باعث ریزش مو شود که با مصرف مکمل روی بر طرف می شود. همچنین روی از جمله مواد معدنی است که نقش بسزایی در کلاژن سازی، بهبود زخم و بهبود علائم آکنه دارد. بنابراین، مصرف هیرویت در سلامت و تقویت پوست، مو و ناخن اهمیت دارد و از خشکی و شکنندگی آن ها جلوگیری می‌کند.<br>
+<br>
+<br>
+پابا PABA<br>
+ اسید پارا آمینوبنزوئیک (PABA) که به آن ویتامین B10 نیز می گویند، یک ترکیب آلی سفید رنگ با خواص آنتی اکسیدان قوی است که در برخی غذاها وجود دارد. به علاوه این ترکیب توسط باکتری های مفید روده نیز تولید می شود. PABA می تواند در تولید فولات (ویتامین B9) کمک کننده باشد و به صورت غیر مستقیم می تواند تا حدودی در سلامت پوست و مو مؤثر باشد. این ترکیب باعث  تثبیت غشای سلولی در فولیکول های مو شده و بدین وسیله از ریشه ی مو حفاظت می کند و از ریزش مو جلوگیری  می کند. تصور می شود که PABA می تواند در پیشگیری از خاکستری شدن و سفید شدن موها موثر باشد از پوست در برابر نور خورشید محافظت کند. این ترکیب موجود در hair vit در بهبود برخی از مشکلات پوستی نظیر لک های پوستی، تغییر رنگ و سخت شدن پوست کاربرد دارد.<br>
+ <br>
+ <br>
+ <br>
+آهن (iron)<br>
+آهن جز اصلی ترین ترکیبات به کار رفته در hairvit برای حفظ سلامت پوست، مو و استحکام ناخن است. همچنین در ساخت DNA به ویژه در سلول های مو نقش دارد. در زمان فقر آهن،‌ بدن نمی‌‌تواند هموگلوبین مورد نیاز را تولید کند و در نتیجه اکسیژن کافی برای رشد و ترمیم سلول‌‌ها‌ی بدن از جمله سلول‌‌ها‌ی تحریک کننده رشد مو فراهم نمی شود. ریزش مو یکی از عوارض کم خونی ناشی از فقر آهن است که با دریافت مکمل آهن برطرف می شود.<br>
+<br>
+<br>
+<br>
+پودر ژلاتین هیدرولیز شده (Hydrolysed Gelatine Powder)<br>
+ ژلاتین فرم پخته شده ی کلاژن است. کلاژن فراوان ترین پروتئین در بدن انسان و حیوانات است. مطالعات انجام شده بر روی مکمل های ژلاتین نتایج مثبتی در بهبود ضخامت و رشد مو همچنین رطوبت پوست نشان دادند. ژلاتین می تواند برای سلامت مفاصل و استخوان ها نیز مفید باشد.<br>
+ <br>
+ <br>
+ <br>
+مخمر (Yeast)<br>
+امروزه استفاده از مخمر در مکمل های تقویت پوست و مو محبوبیت بیشتری پیدا کرده است. مخمر آبجو غنی از کروم، سلنیوم، آهن، روی، ویتامین های گروه ب و تعدادی از آمینواسیدها است که تمامی این ترکیبات به عنوان یک فرمول ویژه علاوه بر تامین انرژی و تقویت سیستم عصبی و ایمنی، می تواند به حفظ سلامت پوست و مو  کمک کنند. وجود مخمر قرص هیرویت را از سایر مکمل های ضد ریزش مو متمایز می کند.<br>
+<br>
+<br>
+<br>
+بیوتین (Biotin)<br>
+ بیوتین جزو ویتامین های گروه B می باشد و نام دیگر آن ویتامین 7b است. این ویتامین برای رشد و نگهداری موها، بهبود و تقویت ناخن‌ها ضروری است. این ترکیب همچنین سندرم ناخن‌های شکننده را کاهش می‌دهد. کمبود بیوتین به طور واضح باعث نازک شدن تار مو و کاهش کیفیت ناخن شده و زیبایی و سلامت آن ها را تحت تاثیر قرار می دهد. <br>
+ <br>
+ <br>
+ <br>
+ویتامین B5 یا (Pantothenic Acid)<br>
+ویتامین 5B رطوبت پوست را حفظ می کند و خاصیت ارتجاعی پوست را بهبود می بخشد. از آنجا که پوست مرطوب نیز از مقاومت بیشتری برخوردار است، 5B می تواند به جلوگیری از آکنه کمک کرده و علائم پیری پوست را نیز کاهش دهد.<br>
+<br>
+<br>
+<br>
+ویتامین B6 (پیریدوکسین)<br>
+یکی دیگر از مهم ترین ویتامین های ضروری برای استرس، 6B می باشد که با تولید سروتونین (هورمون شادی)، ملاتونین (هورمون خواب) و نوراپی نفرین (هورمون استرس) به تنظیم خلق و خو و خواب کمک می کند. استرس و خواب ناکافی باعث افزایش التهاب در بدن، کاهش بازسازی سلول و خشکی پوست می شود. همه این عوامل منجر به ضعیف شدن مو و پیری زودرس می شوند که هرویت می تواند از این موارد پیشگیری کند.<br>
+<br>
+<br>
+<br>
+کولین (Choline Bitartrate)<br>
+ کولین یک ترکیب آلی و محلول در آب است. اگر چه کبد مقادیر اندکی از آن را در بدن تولید می کند اما دریافت آن از طریق رژیم غذایی یا مکمل ها غذایی لازم است. از نقش های اصلی کولین در بدن می توان به عملکرد مناسب کبد، سیستم عصبی، رشد مغز و حفظ یکپارچگی ساختارهای سلولی اشاره نمود. کمبود این ماده مغذی می تواند باعث کدر شدن مو، کم پشت شدن مو، ریزش مو و طاسی شود. بنظر می رسد که مصرف مکمل هیرویت به واسطه دارا بودن همزمان کولین و اینوزیتول می توانند در تقویت ریشه مو موثر باشند. یکی از نقش های اصلی اینوزیتول و کولین حفظ سلامت کبد با جلوگیری از تجمع بیش از حد چربی ها است. با کمک اینوزیتول و کولین کبد می تواند ویتامین ها و مواد معدنی ضروری را به سلول های بدن شما از جمله فولیکول های مو برساند و از این طریق نقش مهمی در بهبود وضعیت مو ایفا می کنند. <br>
+ <br>
+ <br>
+ <br>
+اینوزیتول (inositol)<br>
+ اگر چه از اینوزیتول به عنوان ویتامین B8 نیز نام می برند، اما این ماده یک ویتامین محسوب نمی شود. این ماده ماهیت کربوهیدراتی داشته و در بدن نقش ساختاری دارد. مکمل این ماده اغلب به عنوان درمانی برای کم پشت شدن مو و طاسی مطرح می شود اما هنوز تحقیقات در این زمینه به صورت کامل انجام نگرفته است. بنظر می رسد که اینوزیتول می تواند به کاهش تستوسترون و تعادل هورمون ها مخصوصا در زنان مبتلا به سندرم تخمدان پلی کیستیک کمک کند و از این طریق باعث کاهش علائم این بیماری از جمله کم پشت شدن مو ها شود. این نتایج باعث می شود که hair-vit به عنوان یک ترکیب موثر در رشد و تقویت مو مطرح باشد.<br>
+ <br>
+ <br>
+ <br>
+لسیتین ( Lecithin)<br>
+لسیتین یک آنتی اکسیدان طبیعی و فراوان ترین فسفولیپید موجود در ساختار سلولی می باشد. به طور طبیعی در بدن یافت می شود، علاوه بر این در برخی مواد غذایی نظیر زرده تخم مرغ و سویا وجود دارد. عملکرد اصلی لسیتین تجزیه چربی و تقویت عملکرد مغز است. مصرف مکمل های حاوی لسیتین می تواند از طریق افزایش آبرسانی سلامت پوست را بهبود بخشدو خشکی آن را کاهش می دهد.از طرف دیگر لسیتین کیفیت ساختاری مو را ارتقا داده و به بازسازی پوشش طبیعی مو کمک می کند. بنابراین،  قرص هرویت باعث کاهش اثر پیری بر مو ها می شود و در نهایت منجر به ظاهر سالم، براق و نرم مو می شود.<br>
+<br>
+<br>
+<br>
+ال-سیستئین (L-Cystine)<br>
+سیستئین از لحاظ شیمیایی جزو آمینو اسید ها طبقه بندی می شود. آمینه اسید ها اجزای تشکیل دهنده ی پروتئین ها هستند و سیستئین به دلیل ساختار خود و توانایی ایجاد پیوند های دی سولفیدی نقش بسیار مهمی در پروتئین های تشکیل دهنده مو دارد. از آنجا که کلاژن و الاستین از جنس پروتئین بوده و از مهم ترین اجزای ساختاری پوست، مو و ناخن هستند، مصرف سیستئین می تواند در سلامت و افزایش رشد مو و ناخن نقش داشته باشد. <br>
+<br>
+<br>
+<br>
+متیونین (Methionine)<br>
+متیونین اسید آمینه ای ضروریست که توسط بدن ساخته نمی شود و باید آن را از رژیم غذایی و مکمل ها دریافت کرد. این اسید آمینه حاوی عنصر گوگرد است که باعث بهبود خاصیت ارتجاعی پوست، تقویت مو و ناخن ها می شود.<br>
+<br>
+کپسول هیرویت همچنین حاوی ویتامین های B1، B2، B3 و B12 نیز می باشد که اثر بخشی ترکیبات قرص ریزش مو هیرویت را تقویت می کنند.<br>
+<br>
+<br>
+<br>
+مصرف همزمان زینک و هیرویت<br>
+کپسول هیرویت حاوی 8 میلی گرم زینک است. مصرف آن با سایر مکمل های زینک به دوز زینک به کار رفته در مکمل زینک بستگی دارد. حداکثر مقدار مجاز مصرفی روزانه زینک برای افراد بزرگسالان 40 میلی گرم در روز است. بنابراین، اگر مجموع دوز زینک موجود در قرص هیرویت و قرص زینک مصرفی کمتر از 40 میلی گرم باشد، مصرف همزمان زینک و هیرویت نمی تواند مشکلی ایجاد کند.<br>
+<br>
+<br>
+<br>
+نتیجه گیری
+بهترین راه پیشگیری از ریزش و نازک شدن موها تغذیه متعادل می باشد. زیرا موها جهت حفظ ساختمان و ضخامت خود به ویتامین ها، مواد معدنی، اسیدهای آمینه و سایر مواد مغذی در دوران های مختلف زندگی خود نیاز دارند.<br>
+<br>
+قرص Hairvit تحت لیسانس کمپانی Health Aid حاوی مجموعه ای از ویتامین های گروه B و اسیدهای آمینه ضروری می باشد. مصرف این محصول باعث جلوگیری از ریزش مو، بهبود بافت و افزایش ضخامت مو شده و همچنین سبب بهبود رنگ و درخشندگی مو نیز می شود و در تأمین سلامت مو بسیار مؤثر عمل می کند. ترکیبات موجود در هیرویت به صورت مستقیم و یا غیرمستقیم نقش خود را در سلامت مو ایفا کرده و علاوه بر این می توانند تأثیر یکدیگر را نیز تقویت کنند.<br>
+<br>
+نظرات در مورد قرص هیرویت را می توانید در ادامه همین صفحه داروکده مطالعه کنید.<br>
+                            </p>
+                            <span class="authorship">تالیف: الهه عبدالهی دکترای فارماکولوژی و مصطفی جلالی کارشناس ارشد تغذیه</span>
+                        </div>
+                        <button onclick="showReview(3)" class="btn__review"> ادامه مطلب <i class="fa-solid fa-chevron-down"></i> </button>
+                    </div>
+                </div>
+                <div class="box__eight">
+                    <h4 class="main__title">امتیاز دهی</h4>
+                    <div class="full__box_eight">
+                        <div class="pointer__info">
+                            <div class="star__pointer">
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i id="special_item" class="fa-solid fa-star"></i>
+                                    <span><span>4.2</span> / 5</span>
+                                </div>
+                                <span>امتیاز مجموع این محصول</span>
+                            </div>
+                            <div class="info">
+                                <div class="canvas__setting">
+                                    <div>
+                                        <canvas id="Canvas2" width="100" height="100"></canvas>
+                                        <span class="canvas__title">4.0 <span>/5</span></span>
+                                        <span class="canvas__description">امتیاز کاربران</span>
+                                    </div>
+                                    <div>
+                                        <canvas id="Canvas1" width="100" height="100"></canvas>
+                                        <span class="canvas__title">5.0 <span>/5</span></span>
+                                        <span class="canvas__description">علاقه مندی عمومی</span>
+                                    </div>
+                                    <div>
+                                        <canvas id="Canvas3" width="100" height="100"></canvas>
+                                        <span class="canvas__title">2.7 <span>/5</span></span>
+                                        <span class="canvas__description">امتیاز بازار</span>
+                                    </div>
+                                    <div>
+                                        <canvas id="Canvas4" width="100" height="100"></canvas>
+                                        <span class="canvas__title">4.6 <span>/5</span></span>
+                                        <span class="canvas__description">ارزیابی کارشناسی</span>
+                                    </div>
+                                </div>
+                                <span class="end__info_point"><i class="fa-solid fa-circle-exclamation"></i>  امتیاز کلی یک محصول ، حاصل مجموع امتیازهای کاربران ، کارشناسان و سهم بازار می باشد که بر اساس الگوریتمهای دقیق محاسبه و ارائه می شود .</span>
+                            </div>
+                        </div>
+                        <div class="pointer__info">
+                            <div class="star__pointer">
+                                <span>شما هم به این محصول امتیاز دهید</span>
+                            </div>
+                            <div class="info">
+                                <div class="box__pointer">
+                                    <span>کیفیت</span>
+                                    <div>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="box__pointer">
+                                    <span>میزان اثربخشی</span>
+                                    <div>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="box__pointer">
+                                    <span>بسته بندی</span>
+                                    <div>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="box__pointer">
+                                    <span>ارزش نسبت به قیمت</span>
+                                    <div>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="box__pointer">
+                                    <span>امتیاز شما به این محصول</span>
+                                    <span>0 از 5</span>
+                                </div>
+                                <div class="end__btn">
+                                    <button>ثبت امتیاز</button>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__nine">
+                    <h4 class="main__title">مقالات</h4>
+                    <div class="full__box">
+                        <div class="link__blog">
+                            <h6>مقالات مرتبط</h6>
+                            <a href="../MagLog/MagLogHome.html" target="_blank">مشاهده همه</a>
+                        </div>
+                        <div class="box__blog">
+                            <div class="blog">
+                                <a href="#">
+                                    <img src="../../Image/Product/Mag/Mag-29.jpg" alt="وبلاگ">
+                                    <h6>همه چیز درباره زینک یا روی</h6>
+                                    <span id="description__blog">با مشاهده این ویدیو درباره زینک و تاثیر آن بر روی بدن بیشتر بیاموزید</span>
+                                    <div class="end__blog">
+                                        <span class="btn__vlog">بیشتر</span>
+                                        <div class="point__vlog">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <span>3921</span>
+                                            <i class="fa-solid fa-heart"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="blog">
+                                <a href="#">
+                                    <img src="../../Image/Product/Mag/Mag-30.jpg" alt="وبلاگ">
+                                    <h6>نقش منیزیم (Mg) و روی (Zinc) در بدن سازی</h6>
+                                    <span id="description__blog"> در این مقاله به معرفی مکمل ZMA می پردازیم که به دلیل دارا بودن منیزیم و روی توسط ورزشکاران، ژیمناستیک کاران و بدن سازان مورد استفاده قرار می گیرد.</span>
+                                    <div class="end__blog">
+                                        <span class="btn__vlog">بیشتر</span>
+                                        <div class="point__vlog">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <span>20469</span>
+                                            <i class="fa-solid fa-heart"></i>
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="blog">
+                                <a href="#">
+                                    <img src="../../Image/Product/Mag/Mag-31.jpg" alt="وبلاگ">
+                                    <h6>همه چیز درباره زینک Zinc (روی)</h6>
+                                    <span id="description__blog">با مطالعه این مقاله از مجله داروکده هر آن چیزی که باید در مورد روی بدانید، را بیاموزید.</span>
+                                    <div class="end__blog">
+                                        <span class="btn__vlog">بیشتر</span>
+                                        <div class="point__vlog">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <span>17181</span>
+                                            <i class="fa-solid fa-heart"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__ten">
+                    <h4 class="main__title">نظرات کاربران <i class="fa-solid fa-comment-dots"></i></h4>
+                    <div class="full__box" id="comment_box">
+                        <i onclick="textClear()" id="x__mark" class="fa-solid fa-x"></i>
+                        <textarea name="comment" id="box__comment" placeholder="در اینجا نظر خود را با سایر دیگران به اشتراک بگذارید" cols="100" rows="5"></textarea>
+                        <div class="box__btn_comment">
+                            <div id="check__private">
+                                <label for="check__comment">پیام بصورت خصوصی ثبت شود</label>
+                                <input type="checkbox" name="check__comment" title="comment">
+                            </div>
+                            <i class="fa-solid fa-check"></i>
+                            <button onclick="addComment()">ثبت نظر</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>
+        var canvas1 = document.getElementById("Canvas1");
+        var context = canvas1.getContext("2d");
+        var centerX = canvas1.width / 2;
+        var centerY = canvas1.height / 2;
+        var radiusX = 45;
+        var radiusY = 45;
+        context.beginPath();
+        context.strokeStyle = "#1eabf3";
+        context.lineWidth = 7;
+        context.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
+        context.stroke();
+
+        var canvas2 = document.getElementById("Canvas2");
+        var context = canvas2.getContext("2d");
+        var centerX = canvas2.width / 2;
+        var centerY = canvas2.height / 2;
+        var radiusX = 45;
+        var radiusY = 45;
+        var gradient = context.createLinearGradient(0, centerY, canvas2.width, centerY);
+        gradient.addColorStop(0, "#ffcc00");
+        gradient.addColorStop(0.85, "#ffcc00");
+        gradient.addColorStop(0.85, "#e0e1e2");
+        gradient.addColorStop(1, "#e0e1e2");
+        context.beginPath();
+        context.strokeStyle = gradient;
+        context.lineWidth = 7;
+        context.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
+        context.stroke();
+
+        var canvas3 = document.getElementById("Canvas3");
+        var context = canvas3.getContext("2d");
+        var centerX = canvas3.width / 2;
+        var centerY = canvas3.height / 2;
+        var radiusX = 45;
+        var radiusY = 45;
+        var gradient = context.createLinearGradient(0, centerY, canvas2.width, centerY);
+        gradient.addColorStop(0, "#59d9ae");
+        gradient.addColorStop(0.5, "#59d9ae");
+        gradient.addColorStop(0.5, "#e0e1e2");
+        gradient.addColorStop(1, "#e0e1e2");
+        context.beginPath();
+        context.strokeStyle = gradient;
+        context.lineWidth = 7;
+        context.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
+        context.stroke();
+
+        var canvas4 = document.getElementById("Canvas4");
+        var context = canvas4.getContext("2d");
+        var centerX = canvas4.width / 2;
+        var centerY = canvas4.height / 2;
+        var radiusX = 45;
+        var radiusY = 45;
+        var gradient = context.createLinearGradient(0, centerY, canvas2.width, centerY);
+        gradient.addColorStop(0, "#aad901");
+        gradient.addColorStop(0.9, "#aad901");
+        gradient.addColorStop(0.9, "#e0e1e2");
+        gradient.addColorStop(1, "#e0e1e2");
+        context.beginPath();
+        context.strokeStyle = gradient;
+        context.lineWidth = 7;
+        context.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
+        context.stroke();
+    </script>
+    <footer class="main__footer">
+        <section class="footer__other_items">
+            <ul>
+                <li><a href="../Home/Home.html">صفحه نخست</a></li>
+                <li><a href="../Login/Login.html">کاربران</a></li>
+                <li><a href="../Basket/Basket.html">پیگیری سفارش</a></li>
+                <li><a href="../MagLog/MagLogHome.html">مجله داروکده</a></li>
+                <li><a href="#">ویکی کده</a></li>
+                <li><a href="#">کمپین مصرف کنندگان</a></li>
+                <li><a href="#">فرصت های شغلی</a></li>
+                <li><a href="../Basket/Basket.html">راهنمایی خرید</a></li>
+            </ul>
+        </section>
+        <section class="footer__social_icon">
+            <div class="footer__icon">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a id="footer__aparat" href="#">
+                    <img id="aparat1" src="../../Image/SVG/icons-aparat.png" alt="aparat">
+                    <img id="aparat2" src="../../Image/SVG/icons-aparat1.png" alt="aparat">
+                </a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <img width="5%" src="../../Image/eNamadLogo.jpg" alt="eNamad.ir">
+            <section class="footer__list_info">
+                <a href="../Jamalzadeh/Jamalzadeh.html"><i class="fa-solid fa-lock"></i> داروخانه مرکزی جمالزاده</a>
+                <a href="../ContactUs/ContactUs.html" target="_blank"><i class="fa-solid fa-phone"></i> تماس با ما</a>
+                <a href="../AboutUs/AboutUs.html"><i class="fa-solid fa-user"></i> درباره ما</a>
+            </section>
+            <section class="footer__info_address">
+                <span class="info__address">تهران - خیابان جمالزاده شمالی - 200 متر بالاتر از خیابان فرصت - نبش کوچه یزدان شناس - پلاک 251 - داروخانه مرکزی جمالزاده</span>
+                <span class="info__call">62747000 - 52862000 - 021</span>
+            </section>
+            <span class="end-message">طراحی و توسعه توسط احسان نجباء ( 1402-1401 )</span>
+        </section>
+    </footer>
+</body>
+</html>

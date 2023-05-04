@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما | داروکده</title>
+
+    <!-- style css page -->
+    <link rel="stylesheet" href="AboutUs.css">
+    <link rel="stylesheet" href="../../Style/main.css">
+    <link rel="shortcut icon" href="../../Image/Logo01.ico" type="image/x-icon">
+    <style>
+        .main__footer{
+            margin-top: 224pc;
+        }
+    </style>
+
+    <!-- Bootstrap Component -->
+    <link rel="stylesheet" href="../../Component/Bootstrap/bootstrap.css">
+    <script src="../../Component/Bootstrap/bootstrap.js"></script>
+    <script src="../../Component/jquery.js"></script>
+
+    <!-- FontAwsome Component -->
+    <script src="../../Component/FontAwsome/6.2.0/fontawesome.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/solid.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/all.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/brands.js"></script>
+
+   <!-- js Component -->
+   <script src="../../Script/main.js"></script>
+   <script src="../../Script/filterItem.js"></script>
+   <script src="../../Script/addProduct.js"></script>
+   <script src="../../Script/RegisterAndLogin.js"></script>
+
+</head>
+<body>
+    <header class="main__header">
+        <div class="Title__Banner">
+            <div></div>
+        </div>
+        <section class="list__info">
+            <div>
+                <a onclick="showForm()" id="list__info_span" onload="UserFullData()" class="list__info_span">ورود کاربر
+                    <i class="fa-solid fa-user"></i></a>
+                <div id="form__login_back">
+                    <div class="form__box_login">
+                        <input autocomplete="off" class="form_login" id="UserName" type="text"
+                            placeholder="شماره تلفن همراه خود را وارد کنید">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="form__box_login">
+                        <input autocomplete="off" class="form_login" id="Password" type="text"
+                            placeholder="رمز عبور خود را وارد کنید">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="form__check">
+                        <input id="checkData" type="checkbox" title="check">
+                        <label for="check">مرا به خاطر بسپار</label>
+                    </div>
+                    <div class="form__btn">
+                        <button onclick="LoadData()">ورود به حساب کاربری</button>
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+                    <div class="form__link">
+                        <a href="../Register/Register.html"><i class="fa-solid fa-user"></i>ثبت نام کاربر جدید</a>
+                    </div>
+                    <div class="form__link">
+                        <a href="../ForgetPassword/ForgetPassword.html"><i class="fa-solid fa-lock"></i>کلمه عبور خود را
+                            فراموش کرده ام</a>
+                    </div>
+                </div>
+                <a href="../Basket/Basket.html" class="list__info_span">پیگری سفارش <i class="fa-solid fa-check-to-slot"></i></a>
+                <span class="list__info_span" id="special__info"> 62747000 - 52862000 - 021 <i class="fa-solid fa-phone"></i></span>
+            </div>
+        </section>
+        <section class="list__Box_Search">
+            <i onclick="showNav()" id="bar__icon" class="fa-solid fa-bars"></i>
+            <div id="special__item" class="list__Box_item">
+                <span class="list__Box_Number">0</span>
+                <i id="icon__basket" class="fa-solid fa-cart-shopping"></i>
+                <a onclick="showBasket()" id="show__basket" href="#" class="list__Box_span">سبد خرید</a>
+                <div class="form__basket_back">
+
+                </div>
+            </div>
+            <div class="list__Box_item">
+                <span id="list__line"></span>
+            </div>
+            <div class="list__Box_item">
+                <input type="text" class="list__box" placeholder="عبارت مورد نظر جهت جستجو وارد کنید">
+                <i id="icon__Search" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="list__Box_item">
+                <a href="../Home/Home.html"><img id="Box__img" src="../../Image/SVG/logo.svg" title="Logo"></a>
+            </div>
+        </section>
+        <nav>
+            <ul class="list__items">
+                <li class="list__item">
+                    <span class="list__link">
+                        آرایشی بهداشتی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">محصولات آفتاب</a>
+                                <a href="#" class="list__background_item">مرطوب کننده</a>
+                                <a href="#" class="list__background_item">ضده لک</a>
+                                <a href="#" class="list__background_item">ضد چروک</a>
+                                <a href="#" class="list__background_item">لیفتینگ پوست</a>
+                                <a href="#" class="list__background_item">ترمیم کننده پوست</a>
+                                <a href="#" class="list__background_item">پاکسازی پوست</a>
+                                <a href="#" class="list__background_item">مراقبت مو</a>
+                                <a href="#" class="list__background_item">مو درمانی</a>
+                                <a href="#" class="list__background_item">بهداشت دندان و دهان</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مکمل غذایی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">مکمل آقایان</a>
+                                <a href="#" class="list__background_item">مکمل بانوان</a>
+                                <a href="#" class="list__background_item">مکمل کودکان</a>
+                                <a href="#" class="list__background_item">مکمل گیاهی</a>
+                                <a href="#" class="list__background_item">مکمل ورزشی</a>
+                                <a href="#" class="list__background_item">مکمل کمک درمانی 1</a>
+                                <a href="#" class="list__background_item">مکمل درمانی 2</a>
+                                <a href="#" class="list__background_item">ویتامین و مواد معدنی</a>
+                                <a href="#" class="list__background_item">مکمل تنظیم وزن</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مکمل ورزشی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">پروتئین</a>
+                                <a href="#" class="list__background_item">کربوهیدرات</a>
+                                <a href="#" class="list__background_item">کاهش وزن</a>
+                                <a href="#" class="list__background_item">انرژی زا</a>
+                                <a href="#" class="list__background_item">کراتین</a>
+                                <a href="#" class="list__background_item">گلوتامین</a>
+                                <a href="#" class="list__background_item">بی سی ای ای</a>
+                                <a href="#" class="list__background_item">سی ال ای</a>
+                                <a href="#" class="list__background_item">کارنیتین</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مادر و کودک
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">مادرو بارداری</a>
+                                <a href="#" class="list__background_item">دوران شیردهی</a>
+                                <a href="#" class="list__background_item">شیر خشک و غذای کودک</a>
+                                <a href="#" class="list__background_item">لوازم کودک و نوزاد</a>
+                                <a href="#" class="list__background_item">مکمل مادران</a>
+                                <a href="#" class="list__background_item">مکمل کودکان</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">تجهیزات پزشکی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">تجهیزات پزشکی بدن</a>
+                                <a href="#" class="list__background_item">تجهیزات قند و خون</a>
+                                <a href="#" class="list__background_item">سلامت محیط</a>
+                                <a href="#" class="list__background_item">تجهیزات تسکین دهنده</a>
+                                <a href="#" class="list__background_item">تراز و دماسنج</a>
+                                <a href="#" class="list__background_item">تجهیزات مادر و کودک</a>
+                                <a href="#" class="list__background_item">لوازم فردی</a>
+                                <a href="#" class="list__background_item">ارتوپدی</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <a href="../MagLog/MagLogHome.html" class="list__link">مجله داروکده</a>
+                </li>
+                <li class="list__item">
+                    <a href="../Jamalzadeh/Jamalzadeh.html" class="list__link">داروخانه مرکزی جمالزاده</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="nav__responsive">
+            <div class="div__responsive">
+                <i onclick="showNav()"  class="fa-solid fa-bars"></i>
+                <a target="_blank" href="../Basket/Basket.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <div class="form__basket_back">
+                </div>
+                <a target="_blank" href="../Login/Login.html"><i class="fa-regular fa-user"></i></a>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a href="../Home/Home.html"><img src="../../Image/SVG/logo-short.svg" alt=""></a>
+        </section>
+        <div id="nav__bar">
+            <i onclick="closeBar()" id="close__bar" class="fa-solid fa-xmark"></i>
+            <img src="../../Image/SVG/logo_nav.svg" alt="">
+            <div class="icon__bar">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div id="bar1"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <span class="item__title">آرایشی بهداشتی</span>
+                    </div>
+                    <span class="change1" onclick="showNavBar(1)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>محصولات آفتاب</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مرطوب کننده</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ضد لک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ضد چروک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>لیفتینگ پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ترمیم کننده پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>پاکسازی پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مراقبت مو</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مو (درمانی)</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>بهداشت دهان و دندان</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar2"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-glass-water"></i>
+                        <span class="item__title">مکمل غذایی</span>
+                    </div>
+                    <span class="change2" onclick="showNavBar(2)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>مکمل آقایان</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل بانوان</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل گیاهی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل ورزشی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل کمک درمانی 1</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل کمک درمانی 2</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ویتامین ها مواد معدنی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل تنظیم وزن</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar3"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <span class="item__title">مکمل ورزشی</span>
+                    </div>
+                    <span class="change3" onclick="showNavBar(3)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>پروتئین</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کربوهیدرات</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>آمینو اسید</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کاهش وزن</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>انرژی زا</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کراتین</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>گلوتامین</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar4"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-person-breastfeeding"></i>
+                        <span class="item__title">مادر و کودک</span>
+                    </div>
+                    <span class="change4" onclick="showNavBar(4)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>مادر و بارداری</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>دوره شیردهی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>بهداشت مادر و کودک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>شیر خشک و غذای کودک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>لوازم کودک و نوزاد</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل مادران</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar5"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-kit-medical"></i>
+                        <span class="item__title">تجهیزات پزشکی</span>
+                    </div>
+                    <span class="change5" onclick="showNavBar(5)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>تجهیزات پزشکی بدن</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>تجهیزات قند و خون</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>سلامت محیط</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>تجهیزات تسکین دهنده</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ترازو و دماسنج</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <a target="_blank" href="#" class="link__end_bar">استخدام</a>
+            <a target="_blank" href="#" class="link__end_bar">مجوز و منابع</a>
+            <a target="_blank" href="../AboutUs/AboutUs.html" class="link__end_bar">درباره داروکده</a>
+        </div>
+    </header>
+    <main>
+        <div class="scope__element_information">
+            <header class="header__main">
+                <a href="../Home/Home.html">صفحه نخست</a>
+                <span>></span>
+                <a href="AboutUs.html">درباره ما</a>
+            </header>
+            <img id="img__ContactUs" src="../../Image/Banner/Banner-S17.jpg" alt="درباره ما">
+            <div class="container__box">
+                <span class="container__item_title">وبسایت داروکده <i class="fa-solid fa-leaf"></i></span>
+                <div class="scope__info">
+                    <img src="../../Image/Banner/Banner-S18.jpg" alt="Banner">
+                    <p>
+                        داروکده وب سایت رسمی داروخانه مرکزی جمالزاده است . <br/>
+                        اولین پایگاه اطلاع رسانی جامع اینترنتی محصولات داروخانه که از مهرماه سال 1388 به صاحب امتیازی آقای مجید خداپرست و تحت نظارت دکتر داروساز به منظور اطلاع رسانی و آشنائی هرچه بهتر مصرف کنندگان از محصولات داروخانه راه اندازی گردیده است .
+بر طبق آخرین آمار انجمن داروسازان هر فرد ایرانی به صورت میانگین حداقل یکبار در ماه به داروخانه مراجعه میکند . که البته بیشتر این مراجعات غیر دارویی و صرف خرید محصولات بهداشتی و بعضا آرایشی می شود .
+داروکده نیز با علم به این موضوع تصمیم به سهل نمودن ارتباط مخاطبان با محصولات داروخانه را دارد . لذا با این هدف وب سایت داروکده اقدام به نمایش و معرفی تمامی محصولات بهداشتی , آرایشی , مکمل , ارتوپدی و تجهیزات پزشکی داروخانه در محیط وب نموده است .
+مسلما داروکده قصد ارائه و فروش دارو را ندارد , زیرا دارو حتما با حضور بیمار و ارائه نسخه پزشک و در حضور مسئول فنی و دکتر داروساز داروخانه میسر می باشد . اما با راه اندازی این وب سایت امید آن می رود تا مشتریان محترم قبل از حضور فیزیکی در محیط داروخانه بتوانند در فرصت مناسب و فارغ از مشغله اجناس مورد نیاز خود را بررسی , مقایسه و انتخاب نمایند و متعاقبا وقت و هزینه کمتری را صرف خرید احتیاجات مورد نیاز خود از داروخانه نمایند .
+
+با سپاس فراوان از شما همراه گرامی استدعا داریم تا با ارائه نظرات , پیشنهادات و انتقادات خود مسیر را برای داروکده روشن تر و خوش آتیه تر نمایید .
+                    </p>
+                </div>
+            </div>
+            <div class="container__box">
+                <span class="container__item_title">حوضه فعالیت <i class="fa-brands fa-canadian-maple-leaf"></i></span>
+                <div class="scope__info">
+                    <p>
+                        داروکده تمامی محصولات قابل ارائه در داروخانه ( به غیر از دارو ) را پوشش میدهد .  <br/>
+                        به صورت کلی محصولات ارائه شده در داروکده شامل محصولات آرایشی , بهداشتی , مکملهای رژیمی غذایی , غذای کودک و نوزاد , ارتوپدی و تجهیزات پزشکی می شود .
+به جرات می توانیم ادعا کنیم کمتر محصولی را می شود در داروخانه ای یافت که در لیست محصولات داروکده موجود نباشد . قیمت و موجودی تمامی محصولات به روز و به صورت آنلاین توسط تیم پشتیبانی و انبار به روزرسانی می شوند .
+گروه بندی و منوهای دسترسی به گروه محصولات نیز به شکلی طراحی و چیده شده است که کاربران با کمترین زمان جستجو بتوانند به گروه محصولی خود دسترسی پیدا کنند .
+مجددا لازم به ذکر است که داروکده وب سایت رسمی داروخانه مرکزی جمالزاده ( داروخانه ای با بیش از 50 سال سابقه ) می باشد . این موضوع وجه تمایز داروکده با وب سایتهای مشابه می باشد . زیرا سایتهای مشابه ای که از موقعیت حقیقی و پشتوانه واقعی برخوردار نیستند و عموما حوزه فعالیت های متفاوت و غیر تخصصی را دارند قادر به ارائه خدمات تخصصی و منسجم نیز نخواهند بود .
+                    </p>
+                </div>
+            </div>
+            <div class="container__box">
+                <span class="container__item_title">خدمات <i class="fa-brands fa-canadian-maple-leaf"></i></span>
+                <div class="scope__info">
+                    <p>
+                        داروکده خدمات و سرویسهای متنوعی را به کاربران خود ارائه می دهد : <br/>
+                        معرفی و ارائه محصولات به همراه نحوه مصرف ، مشخصه ، موارد مصرف ، کاربرد ، اجزاء تشکیل دهنده ، کمپانی و کشور سازنده، قیمت مصرف کننده و همچنین ارائه اطلاعات دقیق و کاربردی از کلیه محصولات از جمله خدماتی است که می توانید برای شناخت و انتخاب محصول دریافت نمایید .
+                        امکان جستجوی پیشرفته با اعمال انواع پارامترها و فیلترهای مورد نظر کاربر می تواند شما را در دسترسی به محصولات مورد نظرتان یاری نماید .
+                        امکان جستجوی یک محصول بر اساس بارکد آن از جمله امکان قدرتمند وب سایت داروکده می باشد که مسلما امکان کسب اطلاعات تکمیلی و یا قیمت فعلی محصول مورد نظرتان را به شما خواهد داد .
+                        درج نظر , انتقاد , پرسش و یا درخواست مشاوره در ذیل تمامی محصولات داروکده امکان پذیر می شود که کارشناسان مربوطه در کوتاهترین زمان اقدام به پاسخگویی و یا تماس تلفنی خواهند نمود .
+                        ارائه مقالات و مطالب مفید بهداشتی در حوزه ها ی مختلف سلامت نیز از جمله امکانات حاشیه ای و مفید وب سایت داروکده می باشد . تمامی مقالات و مطالب از جدیدترین منابع معتبر جهان استخراج و ترجمه می شود و همراه با ویدیوهای مربوطه در اختیار کاربران قرار میگیرد . مسلما کاربران قادر خواهند بود سوالات یا موارد مورد نظر خود را در ذیل هر کدام از این مقالات مطرح و به مباحثه گذارند .
+                        ضمنا اطلاعات و توصیه های ارائه شده در مورد محصولات این وب سایت کاملا منطبق با اطلاعات پایه شرکت سازنده محصولات بوده و وب سایت داروکده دخل و تصرفی در توصیه های علمی آن نداشته است .
+                    </p>
+                </div>
+            </div>
+            <div class="container__box">
+                <span class="container__item_title">مشاور <i class="fa-brands fa-canadian-maple-leaf"></i></span>
+                <div class="scope__info">
+                    <p>
+                        تمامی مشاوره های داروکده توسط دکتر داروساز انجام میگیرد .  <br/>
+                    </p>
+                </div>
+            </div>
+            <div class="container__box">
+                <span class="container__item_title">حقوق و مجوزها <i class="fa-solid fa-medal"></i></span>
+                <div class="scope__info">
+                    <p>
+                        کلیه حقوق مادی و معنوی داروکده متعلق به <a href="#">داروخانه مرکزی جمالزاده</a> می باشد .  <br/>
+                        توجه داشته باشید هرگونه کپی برداری از مطالب وب سایت داروکده تنها با ذکر منبع و اطلاعبه مالک حقوقی سایت بلامانع می باشد.  <br/>
+                        پیشاپیش از اجترام به حریم مجازی و خصوصی دارمدگان وب سایت کمال تشکر را داریم.  <br/>
+                    </p>
+                </div>
+            </div>
+            <div class="container__box">
+                <span class="container__item_title">قوانین و مقررات <i class="fa-brands fa-canadian-maple-leaf"></i></span>
+                <div class="scope__info">
+                    <p>
+                        1 ) تمامی محصولات عرضه شده در سایت داروکده دارای تاریخ مصرف معتبر و مجوز فروش از سازمان مربوطه می باشند .<br/>
+
+2 ) تاریخ مصرف تمامی محصولات در صفحه محصول نمایش داده می شود و کاربران می توانند قبل از خرید و در وب سایت داروکده از تاریخ مصرف محصول مورد نظر خود اطلاع کسب نمایند .<br/>
+
+3 ) بنا بر دستور وزارت بهداشت و سازمان غذا و دارو امکان مرجوع شدن محصولات فروخته شده وجود ندارد , تنها در صورت مخدوش بودن محصول , یا مشکلات ساختاری که مربوط به سلامت محصول می باشد داروکده قادر به مرجوع نمودن و تعویض یا کنسل نمودن سفارش می باشد .<br/>
+
+4 ) کلیه محصولات سفارشات در هنگام ارسال بررسی می گردد , داروکده می تواند از ارسال محصولات فاقد کیفیت لازم و عدم تایید شده توسط واحد کنترل نهایی خود جلوگیری نماید . بدیهی است در اینصورت داروکده موظف به کنسل نمودن سفارش و استرداد مبلغ پرداخت شده در کمترین زمان ممکن می باشد . سفارشات نقدی (پرداخت در محل) که نیازی به مرجوع نمودن مبلغ پرداخت ندارند نیز مشمول همین قانون خواهند بود .<br/>
+
+5 )داروکده موظف است در زمان مقرر سفارشات را تحویل دهد , در غیر اینصورت مکلف به اطلاع رسانی و هماهنگی با مشتری جهت دریافت سفارش در زمان جدید می باشد .<br/>
+
+6 ) اطلاعات و نحوه مصرف محصولات در بروشور و صفحه محصول در وب سایت داروکده ذکر شده است . داروکده هیچگونه مسئولیتی در قبال مصرف خودسرانه و یا نادرست محصولات توسط مشتری ندارد .<br/>
+
+7 ) داروکده تنها مجاز به فروش محصولات غیر دارویی با مجوز رسمی فروش می باشد و به هیچ وجه قادر به فروش یا ارسال دارو در کنار سفارش مشتریان نمی باشد .<br/>
+
+8 ) تمامی مراحل ثبت و ارسال سفارشات به صورت غیر حضوری و آنلاین انجام می شود و داروکده به هیچ عنوان امکان تحویل حضوری سفارشاتی که آنلاین ثبت شده اند را از محل داروخانه مرکزی جمالزاده ندارد .<br/>
+
+9 ) تمامی اطلاعات مشتری به صورت خصوصی نزد داروکده محفوظ می باشد و داروکده حق انتشار یا استفاده غیر از اطلاعات مشتری را ندارد<br/>
+
+10 ) داروکده مجاز به حذف کامل نام کاربری و سوابق مشتریان نمی باشد , سوابق به صورت خصوصی و امن در بانک اطلاعاتی حفاظت خواهند شد .<br/>
+
+11 ) سوء استفاده از برند داروکده و بازفروش بدون مجوز محصولات ارائه شده در داروکده تبعات قانونی دارد و داروکده می تواند خاطیان را مورد پیگرد قانونی قرار دهد .<br/>
+                    </p>
+                </div>
+            </div>
+            <div class="container__box">
+                <span class="container__item_title">نماد اعتماد الکترونیک <i class="fa-solid fa-leaf"></i></span>
+                <div class="scope__info">
+                    <img id="img__icon_important" width="10%" src="../../Image/eNamadLogo.jpg" alt="Banner">
+                    <p>
+                        مرکز توسعه تجارت الکترونیکی، با اعطای نماد اعتماد الکترونیکی هویت صاحب و محل فعالیت کسب و کارهای اینترنتی را احراز می‌نماید.  <br/>
+                        ئولیت صحت فعالیت کسب و کار اینترنتی و کلیه محتوای منتشر شده در وب سایت بر عهده صاحب کسب و کار اینترنتی می باشد. دارنده نماد اعتماد الکترونیکی، تحت نظارت دستگاه های مسئول، ملزم به رعایت قوانین و مقررات مندرج درتعهدنامه نماد می باشد.
+
+کسب و کار داروخانه مرکزی جمالزاده از سال 1388 و با برند داروکده در مركز توسعه تجارت الكترونیكی وزارت صنعت، معدن و تجارت شناسایی شده و دارای نماد اعتماد الكترونیكی دو ستاره می باشد .
+                    </p>
+                </div>
+            </div>
+            <div class="container__box">
+                <span class="container__item_title">نماد اعتماد الکترونیک <i class="fa-solid fa-leaf"></i></span>
+                <div class="scope__info">
+                    <img id="img__icon_important" width="10%" src="../../Image/samadehi.aspx" alt="Banner">
+                    <p>
+                        وب سایت ساماندهی پایگاهی است که تقریبا اطلاعات تمام مدیران سایت ها در آن ثبت شده است ، داشتن نماد رسانه به معنای تایید حقوقی ساز و کار توسط سازمان مربوطه و وزارت ارشاد می باشد .
+
+کابران محترم می توانند با مشاهده این نماد از اعتبار حقوقی وب سایت مربوطه اطلاع یابند .
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="main__footer">
+        <section class="footer__other_items">
+            <ul>
+                <li><a href="../Home/Home.html">صفحه نخست</a></li>
+                <li><a href="../Login/Login.html">کاربران</a></li>
+                <li><a href="../Basket/Basket.html">پیگیری سفارش</a></li>
+                <li><a href="../MagLog/MagLogHome.html">مجله داروکده</a></li>
+                <li><a href="#">ویکی کده</a></li>
+                <li><a href="#">کمپین مصرف کنندگان</a></li>
+                <li><a href="#">فرصت های شغلی</a></li>
+                <li><a href="../Basket/Basket.html">راهنمایی خرید</a></li>
+            </ul>
+        </section>
+        <section class="footer__social_icon">
+            <div class="footer__icon">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a id="footer__aparat" href="#">
+                    <img id="aparat1" src="../../Image/SVG/icons-aparat.png" alt="aparat">
+                    <img id="aparat2" src="../../Image/SVG/icons-aparat1.png" alt="aparat">
+                </a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <img width="5%" src="../../Image/eNamadLogo.jpg" alt="eNamad.ir">
+            <section class="footer__list_info">
+                <a href="../Jamalzadeh/Jamalzadeh.html"><i class="fa-solid fa-lock"></i> داروخانه مرکزی جمالزاده</a>
+                <a href="../ContactUs/ContactUs.html" target="_blank"><i class="fa-solid fa-phone"></i> تماس با ما</a>
+                <a href="../AboutUs/AboutUs.html"><i class="fa-solid fa-user"></i> درباره ما</a>
+            </section>
+            <section class="footer__info_address">
+                <span class="info__address">تهران - خیابان جمالزاده شمالی - 200 متر بالاتر از خیابان فرصت - نبش کوچه یزدان شناس - پلاک 251 - داروخانه مرکزی جمالزاده</span>
+                <span class="info__call">62747000 - 52862000 - 021</span>
+            </section>
+            <span class="end-message">طراحی و توسعه توسط احسان نجباء ( 1402-1401 )</span>
+        </section>
+    </footer>
+</body>
+</html>

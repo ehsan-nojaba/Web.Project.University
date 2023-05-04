@@ -1,0 +1,69 @@
+.form__box h4 {
+    margin-bottom: 4rem !important;
+}
+
+.form__box_data_check_rule {
+    margin-top: 2rem !important;
+}
+
+.form__box_data_check_rule span {
+    color: #788593 !important;
+}
+
+.form__login_link {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-family: vazir;
+    font-size: 14px;
+    color: #78971b !important;
+    padding-right: 1rem;
+    transition: 0.5s all;
+}
+
+.form__login_link:hover {
+    color: #5f7c12 !important;
+}
+
+.form__info {
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+.form__info img {
+    width: 109% !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+#checkData {
+    margin-left: 5px;
+}
+
+.form__box_data_check_rule span {
+    display: flex;
+}
+
+@media (min-width: 750px) and (max-width: 991px){
+    .main__footer{
+        margin-top: 47rem !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width : 1335px){
+    .main__footer {
+        margin-top: 66rem !important;
+    }
+}
+
+@media (min-width: 1337px) and (max-width: 1536px){
+    .main__footer {
+        margin: 62pc 0px 0px !important;
+    }
+}
+
+@media (min-width: 1537px){
+    .main__footer {
+        margin: 67pc 0px 0px !important;
+    }
+}

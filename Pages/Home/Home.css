@@ -1,0 +1,1033 @@
+.main__section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: start;
+    margin-bottom: 1.5rem;
+}
+
+.section__Product {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 74%;
+}
+
+.product__slider {
+    width: 100%;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide a {
+    width: 100%;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+:root {
+    --swiper-theme-color: #9fd00d;
+}
+
+.section__Banner {
+    display: flex;
+    flex-direction: column;
+}
+
+.section__banners {
+    display: flex;
+    flex-direction: column;
+}
+
+.section__banner {
+    margin-bottom: 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__banner div {
+    font-family: yekan;
+    background: url("../../Image/Banner/Banner-S8.jpg") rgb(165, 209, 34);
+    padding: 0.5rem 47px;
+    font-size: 15px;
+    color: rgb(255, 255, 255) !important;
+}
+
+.section__product {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section__select_product {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.gold__title {
+    font-family: yekan;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 21px;
+}
+
+.gold__title span {
+    color: rgb(206, 180, 106);
+    word-spacing: 5px;
+}
+
+.goldBox__select {
+    display: flex;
+    border-top: 0.5px solid rgb(206, 180, 106);
+    border-bottom: 0.5px solid rgb(206, 180, 106);
+    border-left: 0.5px solid rgb(206, 180, 106);
+    border-image: initial;
+    border-right: none;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.goldBox__select div {
+    padding: 1rem 0rem;
+    text-align: center;
+    font-size: 25px;
+    border-right: 0.5px solid rgb(206, 180, 106);
+    font-weight: bolder;
+    color: rgb(51, 51, 51);
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+    width: 100%;
+}
+
+#gold__select {}
+
+.goldBox__select div:active {
+    background-color: rgb(206, 180, 106) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.gold__box {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 20.5rem;
+    border: 0.5px solid rgb(206, 180, 106);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    direction: rtl;
+}
+
+.gold__content {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    direction: rtl;
+    width: 100%;
+}
+
+.gold__box_title {
+    width: 46%;
+    margin: 1.5rem 1.5rem 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gold__box_title h6 {
+    font-family: yekan;
+    font-size: 17px;
+    transition: all 0.5s ease 0s;
+}
+
+.gold__box_title h6:hover {
+    color: rgb(165, 209, 34) !important;
+}
+
+.gold__box_title a {
+    text-decoration: none;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 12px;
+    transition: all 0.5s ease 0s;
+    color: rgb(67, 67, 67) !important;
+}
+
+.gold__box_title a:hover {
+    color: rgb(165, 209, 34) !important;
+}
+
+.gols__img {
+    margin-top: 2rem;
+}
+
+.gols__img a img {
+    width: 100%;
+}
+
+.gold__info {
+    margin: 1.5rem 1rem 0px 0.5rem;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gold__point {
+    display: flex;
+    direction: ltr;
+    justify-content: space-between;
+}
+
+.gold__point span {
+    margin-left: 1rem;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    color: rgb(202, 202, 203) !important;
+}
+
+.gold__point span svg {
+    font-size: 13px;
+    padding-right: 4px;
+    padding-top: 2px;
+}
+
+.gold__special_price {
+    margin-top: 1.5rem;
+    font-size: 16px;
+    color: rgb(220, 56, 56);
+    font-family: Vazir;
+    font-weight: bold;
+    text-decoration: line-through;
+    line-height: 25px;
+}
+
+.gold__price {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-family: Vazir;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.gold__basket {
+    margin-top: 11px;
+    direction: ltr;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.gold__basket button {
+    border: none;
+    background-color: rgb(114, 196, 64);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    text-align: center;
+    width: 82%;
+    height: 2.5rem;
+    color: rgb(255, 255, 255);
+    font-family: yekan;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.gold__basket button:hover {
+    background-color: rgb(93, 176, 43) !important;
+}
+
+.gold__basket svg {
+    color: rgb(255, 255, 255);
+    background-color: rgb(93, 176, 43);
+    padding: 9px;
+    font-size: 22px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+}
+
+.gold__timer {
+    display: flex;
+    flex-direction: column;
+}
+
+.gold__timer_title {
+    display: flex;
+    justify-content: start;
+    width: 97.9%;
+    direction: ltr;
+    margin-top: 2rem;
+}
+
+.gold__timer_title span {
+    margin: 0px 1rem;
+    font-size: 12px;
+    color: rgb(111, 111, 111);
+    font-family: vazir;
+}
+
+.gold__timer_box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    direction: ltr;
+    font-family: yekan;
+    align-items: center;
+    width: 95%;
+}
+
+.gold__timer_clock {
+    display: flex;
+    justify-content: center;
+    font-family: vazir;
+    align-items: center;
+    direction: ltr;
+    margin-top: 0.5rem;
+}
+
+.gold__timer_clock p {
+    font-size: 19px;
+    margin: 0px;
+    height: 2.5rem;
+    color: rgb(255, 255, 255);
+    background: url("../../Image/Product/goldBox/timer-back.jpg") center center / cover;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 36px;
+    width: 2.5rem;
+    padding-top: 4px;
+}
+
+.gold__timer_clock span {
+    margin: 0px 0.45rem;
+}
+
+.timer {
+    height: 1rem;
+    font-size: 15px;
+    color: rgb(112, 106, 106);
+}
+
+#item5,
+#item4,
+#item3,
+#item2,
+#item1 {
+    display: none;
+}
+
+.section__product_onebox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: end;
+    margin-top: 1rem;
+}
+
+.product__onebox_title {
+    font-family: yekan;
+    font-size: 17px;
+    color: rgb(62, 72, 92);
+    margin-bottom: 1rem;
+}
+
+#point-one{
+    background-color: rgb(244, 244, 245);
+    color: rgb(133, 144, 164);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    direction: ltr;
+    height: 4vh;
+    font-weight: bold;
+}
+
+.product__one {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    align-items: center;
+    border: 1px solid rgb(188, 197, 208);
+    direction: rtl;
+    background-color: rgb(255, 255, 255);
+}
+
+.product__onebox_info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 35%;
+    padding: 12px 11px 12px 0;
+}
+
+.product__one img {
+    width: 35.5%;
+    height: 35vh;
+    margin-right: 1rem;
+}
+
+.product__onebox_point {
+    background-color: rgb(244, 244, 245);
+    color: rgb(133, 144, 164);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    direction: ltr;
+    height: 4vh;
+    font-weight: bold;
+}
+
+.eye__point {
+    font-family: arial;
+    font-size: 13px;
+    margin-right: 0.5rem;
+}
+
+.eye__point svg {
+    padding-right: 5px;
+    font-size: 11px;
+}
+
+.star__point {
+    font-family: arial;
+    font-size: 13px;
+    margin-left: 0.5rem;
+}
+
+#star__special {
+    color: rgb(229, 233, 242) !important;
+}
+
+.product__onebox_productBox {
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-family: vazir;
+    font-size: 17px;
+    transition: all 0.5s ease 0s;
+    color: rgb(67, 67, 67) !important;
+}
+
+.product__onebox_product {
+    text-decoration: none;
+    font-family: arial;
+    font-size: 14px;
+    transition: all 0.5s ease 0s;
+    font-weight: bold;
+    color: rgb(67, 67, 67) !important;
+}
+
+.product__onebox_productBox:hover {
+    color: rgb(165, 209, 34) !important;
+}
+
+.product__onebox_product:hover {
+    color: rgb(165, 209, 34) !important;
+}
+
+.product__onebox_takhfif {
+    font-size: 10px;
+    background-color: rgb(237, 57, 100);
+    color: rgb(255, 255, 255);
+    font-family: vazir;
+    margin-top: 2rem;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    cursor: default;
+    width: 4.3rem;
+}
+
+#onbox_one {
+    margin-right: 1rem;
+    width: 28% !important;
+    height: auto;
+}
+
+.product__onebox_fakePrice {
+    font-size: 13px;
+    font-family: arial;
+    margin: 0.5rem 0px;
+    color: rgb(145, 155, 173);
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+.product__onebox_mainPrice {
+    font-size: 15px;
+    font-family: vazir;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product__onebox_basket {
+    direction: ltr;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+
+.product__onebox_basket button {
+    border: none;
+    background-color: rgb(114, 196, 64);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    text-align: center;
+    width: 82%;
+    height: 2.5rem;
+    color: rgb(255, 255, 255);
+    font-family: yekan;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.product__onebox_basket button:hover {
+    background-color: rgb(93, 176, 43) !important;
+}
+
+.product__onebox_basket svg {
+    color: rgb(255, 255, 255);
+    background-color: rgb(93, 176, 43);
+    padding: 9px;
+    font-size: 22px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+}
+
+.section__banner_delivery {
+    width: 100%;
+    margin: 1.75rem 0px 0px;
+    text-align: center;
+}
+
+.section__banner_delivery img {
+    width: 100%;
+}
+
+.section__banner_tabligh {
+    width: 100%;
+    margin: 1.75rem 0px;
+    text-align: center;
+}
+
+.section__banner_tabligh img {
+    width: 100%;
+}
+
+.section__select {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 100%;
+}
+
+.section__select h6 {
+    font-family: vazir;
+    font-size: 17px;
+    color: rgb(62, 72, 92);
+    margin: 1rem 0px;
+}
+
+.section__select_items {
+    width: 100%;
+    border: 1px solid rgb(188, 197, 208);
+    background-color: rgb(255, 255, 255);
+    padding: 25px 16px 16px 16px;
+}
+
+.section__select_items div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.section__select_link {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 30%;
+    text-decoration: none;
+    color: rgb(62, 72, 92);
+    transition: all 0.5s ease 0s;
+    margin: 0px 1rem !important;
+}
+
+.section__select_link img {
+    width: 100%;
+}
+
+.section__select_link span {
+    font-family: vazir;
+    font-size: 14px;
+    margin: 0px 0px 0.5rem;
+}
+
+.section__select_link:hover {
+    color: rgb(165, 209, 34) !important;
+}
+
+.end__section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.end__section_title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 22.5vw;
+    margin-bottom: 0.5rem;
+    direction: rtl;
+}
+
+.end__section_title h6 {
+    font-family: vazir;
+    margin: 0px;
+    font-size: 17px;
+    cursor: pointer;
+    color: rgb(67, 67, 67);
+    font-weight: normal;
+    transition: all 0.5s ease 0s;
+}
+
+.end__section_title span {
+    width: 0.5px;
+    background-color: rgb(214, 221, 229);
+    height: 2.3rem;
+    margin: 0px 0.75rem;
+}
+
+.end__section_title h6:hover {
+    color: rgb(159, 208, 13);
+}
+
+.row {
+    margin: 0px 0px 0px 11px !important;
+    justify-content: center !important;
+}
+
+.owl-carousel .owl-nav.disabled {
+    position: absolute !important;
+    color: rgb(225, 225, 227) !important;
+    font-weight: normal !important;
+    font-size: 5rem !important;
+    margin-top: -14rem !important;
+    display: block !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    transition: all 0.5s ease 0s;
+    position: relative !important;
+    right: 3.2rem !important;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    transition: all 0.5s ease 0s;
+    position: relative !important;
+    left: 59rem !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover {
+    color: rgb(133, 144, 164) !important;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover {
+    color: rgb(133, 144, 164) !important;
+}
+
+.end__section_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid rgb(188, 197, 208);
+    background-color: rgb(255, 255, 255);
+    height: 22rem;
+    margin-bottom: 1.5rem;
+}
+
+.card__item {
+    background: rgb(250, 250, 250);
+    border: 1px solid rgb(219, 219, 219);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    width: 13.5rem;
+    transition: all 0.5s ease 0s;
+}
+
+.card__item:hover {
+    box-shadow: rgba(178, 180, 182, 0.5) 0px 0px 10px;
+}
+
+.card__item a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+    padding: 7px;
+    height: 100%;
+    justify-content: center;
+}
+
+.card__item:hover>a>.product__onebox_point {
+    opacity: 1;
+}
+
+.card__item a img {
+    width: 63% !important;
+}
+
+.card__item a .product__onebox_point {
+    color: rgb(133, 144, 164);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+    direction: ltr;
+    height: 4vh;
+    font-weight: bold;
+    opacity: 0;
+    margin-bottom: 0.2rem;
+    display: flex !important;
+    background-color: transparent !important;
+    transition: all 0.5s ease 0s !important;
+}
+
+.card__item a .product__onebox_point .star__point {
+    font-family: arial;
+    font-size: 11px;
+    margin-left: 0.5rem;
+    color: rgb(35, 25, 88);
+    font-weight: normal;
+}
+
+.card__item a .product__onebox_point .star__point svg {
+    color: rgb(255, 204, 0) !important;
+}
+
+.card__item a .product__onebox_point .eye__point {
+    font-family: arial;
+    font-size: 12px;
+    margin-right: 0.5rem;
+    color: rgb(35, 25, 88);
+    font-weight: normal;
+}
+
+.card__item a .product__onebox_point .eye__point svg {
+    color: rgb(143, 217, 100) !important;
+}
+
+.card__item a h5 {
+    font-size: 13px;
+    width: 83%;
+    text-align: start;
+    padding: 1rem 0px 0px;
+    border-top: 1px solid rgb(232, 234, 237);
+    font-family: vazir;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    transition: all 0.5s ease 0s;
+    overflow: hidden;
+    white-space: nowrap;
+    direction: rtl;
+    text-overflow: ellipsis;
+}
+
+.card__item:hover>a>.end__section_supplier {
+    color: rgb(159, 208, 13);
+}
+
+.end__section_supplier {
+    width: 83%;
+    text-align: end;
+    color: rgb(153, 174, 198);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: arial;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.end__section_price {
+    width: 83%;
+    text-align: start;
+    font-size: 15px;
+    direction: rtl;
+    color: rgb(51, 51, 51);
+    font-family: vazir;
+    font-weight: bold;
+}
+
+#end__section_intro {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+#end__section_intro img {
+    margin-bottom: 1rem;
+}
+
+#end__section_intro span {
+    font-family: vazir;
+    font-size: 11px;
+    direction: rtl;
+    width: 100%;
+    text-align: center;
+    color: rgb(185, 178, 178);
+}
+
+#loadSlide1 {
+    width: 100%;
+}
+
+#loadSlide2 {
+    width: 100%;
+    display: none;
+}
+
+#end__section_intro2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+#end__section_intro2 img {
+    margin-bottom: 1rem;
+}
+
+#end__section_intro2 span {
+    font-family: vazir;
+    font-size: 11px;
+    direction: rtl;
+    width: 100%;
+    text-align: center;
+    color: rgb(185, 178, 178);
+}
+
+#loadSlide3 {
+    width: 100%;
+}
+
+#loadSlide4 {
+    width: 100%;
+    display: none;
+}
+
+.end__Vlog_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: rtl;
+    margin-bottom: 0.5rem;
+}
+
+.end__Vlog_title a {
+    background: rgb(135, 169, 31);
+    font-size: 14px;
+    font-family: Vazir;
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: all 0.5s ease 0s;
+    color: rgb(255, 255, 255) !important;
+}
+
+.end__Vlog_title a:hover {
+    background-color: rgb(147, 185, 33);
+    color: rgb(95, 124, 18) !important;
+}
+
+.end__Vlog_title span {
+    font-family: vazir;
+    font-size: 18px;
+    color: rgb(135, 169, 31);
+    font-weight: normal;
+}
+
+.card__Vlog {
+    width: 97%;
+    height: 22rem;
+    margin-left: 0rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: end;
+    transition: all 0.5s ease 0s;
+}
+
+.owl-carousel-three .owl-dots.disabled,
+.owl-carousel-three .owl-nav.disabled {
+    transition: all 0.5s ease 0s;
+    position: absolute !important;
+    color: rgb(225, 225, 227) !important;
+    font-weight: normal !important;
+    font-size: 5rem !important;
+    margin-top: -14rem !important;
+    display: block !important;
+}
+
+.owl-carousel-three .owl-nav button.owl-prev {
+    transition: all 0.5s ease 0s;
+    position: relative !important;
+    right: 2rem !important;
+}
+
+.owl-carousel-three .owl-nav button.owl-next {
+    transition: all 0.5s ease 0s;
+    position: relative !important;
+    left: 62.5rem !important;
+}
+
+.owl-carousel-three .owl-nav button.owl-prev:hover {
+    color: rgb(133, 144, 164) !important;
+}
+
+.owl-carousel-three .owl-nav button.owl-next:hover {
+    color: rgb(133, 144, 164) !important;
+}
+
+.card__Vlog h5 {
+    font-size: 14px;
+    text-align: end;
+    font-weight: normal;
+    font-family: vazir;
+    margin-top: 1rem;
+    transition: all 0.5s ease 0s;
+    direction: rtl;
+    color: rgb(67, 67, 67) !important;
+}
+
+.card__Vlog div {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+.card__Vlog div span {
+    font-size: 14px;
+    color: rgb(133, 144, 164);
+    font-weight: normal;
+    font-family: arial;
+    margin-left: 12px;
+}
+
+.card__Vlog div span svg {
+    padding-right: 1px;
+}
+
+.card__Vlog p {
+    font-size: 13px;
+    direction: rtl;
+    font-family: vazir;
+    width: 100%;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-right: 2px;
+    color: rgb(133, 144, 164) !important;
+}
+
+.card__Vlog_link {
+    width: 100%;
+    position: relative;
+    top: 0.5rem;
+    font-size: 15px;
+    left: 1.5rem;
+    font-family: vazir;
+    color: rgb(135, 169, 31) !important;
+}
+
+#end__section_main_vlog {
+    height: 24rem;
+}
+
+.row>.col-14 {
+    width: 99% !important;
+    padding-right: 34px !important;
+}
+
+.card__Vlog:hover h5 {
+    color: rgb(159, 208, 13) !important;
+}
+
+.card__Vlog:hover {
+    box-shadow: rgba(178, 180, 182, 0.5) 0px 0px 10px;
+}
+
+@media (min-width: 1367px) and (max-width: 1536px) {
+    .scope {
+        width: 71% !important;
+    }
+
+    .owl-carousel-three .owl-nav button.owl-prev {
+        right: 1.5rem !important;
+    }
+
+    .owl-carousel-three .owl-nav button.owl-next {
+        left: 61rem !important;
+    }
+}
+
+@media (min-width: 1537px) {
+    .scope {
+        width: 57% !important;
+    }
+
+    .owl-carousel-three .owl-nav button.owl-prev {
+        right: 1.5rem !important;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+        left: 58rem !important;
+    }
+
+    .owl-carousel-three .owl-nav button.owl-next {
+        left: 61rem !important;
+    }
+
+    .product__one img {
+        height: 35vh;
+    }
+}

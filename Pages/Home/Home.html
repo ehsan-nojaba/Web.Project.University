@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داروخانه آنلاین داروکده ، فروش اینترنتی مکمل و لوازم آرایشی بهداشتی | داروکده</title>
+
+    <!-- style css page -->
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="../../Style/main.css">
+    <link rel="shortcut icon" href="../../Image/Logo01.ico" type="image/x-icon">
+    
+
+    <!-- Bootstrap Component -->
+    <link rel="stylesheet" href="../../Component/Bootstrap/bootstrap.css">
+    <script src="../../Component/Bootstrap/bootstrap.js"></script>
+    <script src="../../Component/jquery.js"></script>
+
+    <!-- FontAwsome Component -->
+    <script src="../../Component/FontAwsome/6.2.0/fontawesome.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/solid.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/all.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/brands.js"></script>
+
+    <!-- Owlcarousel Component -->
+    <link rel="stylesheet" href="../../Component/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../Component/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../Component/owl-carousel/owl.carousel.min.three.css">
+    <script src="../../Component/owl-carousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                dots: false,
+                nav: true,
+                responsive: {
+                    350: {
+                        items: 1,
+                        margin:50,
+                        autoplay: false,
+                    },
+                    510: {
+                        items: 2,
+                        margin:30,
+                        autoplay: true,
+                    },
+                    750: {
+                        items: 3,
+                        margin:100,
+                        autoplay: true,
+                    },
+                    1000:{
+                        items: 4,
+                        margin:70,
+                    },
+                    1200: {
+                        items: 4,
+                    },
+                },
+            });
+            $(".owl-carousel-three").owlCarousel({
+                loop: true,
+                margin: 10,
+                dots: false,
+                autoplay: true,
+                nav: true,
+                responsive: {
+                    350: {
+                        items: 1,
+                    },
+                    750: {
+                        items: 2,
+                    },
+                    1000: {
+                        items: 3,
+                        margin:20,
+                    },
+                    1200:{
+                        items:3,
+                    }
+                },
+            });
+        })
+    </script>
+
+    <!-- js Component -->
+    <script src="../../Script/main.js"></script>
+    <script src="../../Script/filterItem.js"></script>
+    <script src="../../Script/addProduct.js"></script>
+    <script src="../../Script/gold-select.js"></script>
+    <script src="../../Script/Timer.js"></script>
+    <script src="../../Script/Timer-responsive.js"></script>
+    <script src="../../Script/RegisterAndLogin.js"></script>
+    <script src="../../Component/Swiper/swiper-element-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 5000,
+            },
+        });
+    </script>
+</head>
+
+<body>
+    <header class="main__header">
+        <div class="Title__Banner">
+            <div></div>
+        </div>
+        <section class="list__info">
+            <div>
+                <a onclick="showForm()" id="list__info_span" onload="UserFullData()" class="list__info_span">ورود کاربر
+                    <i class="fa-solid fa-user"></i></a>
+                <div id="form__login_back">
+                    <div class="form__box_login">
+                        <input autocomplete="off" class="form_login" id="UserName" type="text"
+                            placeholder="شماره تلفن همراه خود را وارد کنید">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="form__box_login">
+                        <input autocomplete="off" class="form_login" id="Password" type="text"
+                            placeholder="رمز عبور خود را وارد کنید">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="form__check">
+                        <input id="checkData" type="checkbox" title="check">
+                        <label for="check">مرا به خاطر بسپار</label>
+                    </div>
+                    <div class="form__btn">
+                        <button onclick="LoadData()">ورود به حساب کاربری</button>
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+                    <div class="form__link">
+                        <a href="../Register/Register.html"><i class="fa-solid fa-user"></i>ثبت نام کاربر جدید</a>
+                    </div>
+                    <div class="form__link">
+                        <a href="../ForgetPassword/ForgetPassword.html"><i class="fa-solid fa-lock"></i>کلمه عبور خود را
+                            فراموش کرده ام</a>
+                    </div>
+                </div>
+                <a href="../Basket/Basket.html" class="list__info_span">پیگری سفارش <i class="fa-solid fa-check-to-slot"></i></a>
+                <span class="list__info_span" id="special__info"> 62747000 - 52862000 - 021 <i class="fa-solid fa-phone"></i></span>
+            </div>
+        </section>
+        <section class="list__Box_Search">
+            <i onclick="showNav()" id="bar__icon" class="fa-solid fa-bars"></i>
+            <div id="special__item" class="list__Box_item">
+                <span class="list__Box_Number">0</span>
+                <i id="icon__basket" class="fa-solid fa-cart-shopping"></i>
+                <a onclick="showBasket()" id="show__basket" href="#" class="list__Box_span">سبد خرید</a>
+                <div class="form__basket_back">
+
+                </div>
+            </div>
+            <div class="list__Box_item">
+                <span id="list__line"></span>
+            </div>
+            <div class="list__Box_item">
+                <input type="text" class="list__box" placeholder="عبارت مورد نظر جهت جستجو وارد کنید">
+                <i id="icon__Search" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="list__Box_item">
+                <a href="Home.html"><img id="Box__img" src="../../Image/SVG/logo.svg" title="Logo"></a>
+            </div>
+        </section>
+        <nav>
+            <ul class="list__items">
+                <li class="list__item">
+                    <span class="list__link">
+                        آرایشی بهداشتی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">محصولات آفتاب</a>
+                                <a href="#" class="list__background_item">مرطوب کننده</a>
+                                <a href="#" class="list__background_item">ضده لک</a>
+                                <a href="#" class="list__background_item">ضد چروک</a>
+                                <a href="#" class="list__background_item">لیفتینگ پوست</a>
+                                <a href="#" class="list__background_item">ترمیم کننده پوست</a>
+                                <a href="#" class="list__background_item">پاکسازی پوست</a>
+                                <a href="#" class="list__background_item">مراقبت مو</a>
+                                <a href="#" class="list__background_item">مو درمانی</a>
+                                <a href="#" class="list__background_item">بهداشت دندان و دهان</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مکمل غذایی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">مکمل آقایان</a>
+                                <a href="#" class="list__background_item">مکمل بانوان</a>
+                                <a href="#" class="list__background_item">مکمل کودکان</a>
+                                <a href="#" class="list__background_item">مکمل گیاهی</a>
+                                <a href="#" class="list__background_item">مکمل ورزشی</a>
+                                <a href="#" class="list__background_item">مکمل کمک درمانی 1</a>
+                                <a href="#" class="list__background_item">مکمل درمانی 2</a>
+                                <a href="#" class="list__background_item">ویتامین و مواد معدنی</a>
+                                <a href="#" class="list__background_item">مکمل تنظیم وزن</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مکمل ورزشی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">پروتئین</a>
+                                <a href="#" class="list__background_item">کربوهیدرات</a>
+                                <a href="#" class="list__background_item">کاهش وزن</a>
+                                <a href="#" class="list__background_item">انرژی زا</a>
+                                <a href="#" class="list__background_item">کراتین</a>
+                                <a href="#" class="list__background_item">گلوتامین</a>
+                                <a href="#" class="list__background_item">بی سی ای ای</a>
+                                <a href="#" class="list__background_item">سی ال ای</a>
+                                <a href="#" class="list__background_item">کارنیتین</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مادر و کودک
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">مادرو بارداری</a>
+                                <a href="#" class="list__background_item">دوران شیردهی</a>
+                                <a href="#" class="list__background_item">شیر خشک و غذای کودک</a>
+                                <a href="#" class="list__background_item">لوازم کودک و نوزاد</a>
+                                <a href="#" class="list__background_item">مکمل مادران</a>
+                                <a href="#" class="list__background_item">مکمل کودکان</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">تجهیزات پزشکی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">تجهیزات پزشکی بدن</a>
+                                <a href="#" class="list__background_item">تجهیزات قند و خون</a>
+                                <a href="#" class="list__background_item">سلامت محیط</a>
+                                <a href="#" class="list__background_item">تجهیزات تسکین دهنده</a>
+                                <a href="#" class="list__background_item">تراز و دماسنج</a>
+                                <a href="#" class="list__background_item">تجهیزات مادر و کودک</a>
+                                <a href="#" class="list__background_item">لوازم فردی</a>
+                                <a href="#" class="list__background_item">ارتوپدی</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <a href="../MagLog/MagLogHome.html" class="list__link">مجله داروکده</a>
+                </li>
+                <li class="list__item">
+                    <a href="../Jamalzadeh/Jamalzadeh.html" class="list__link">داروخانه مرکزی جمالزاده</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="nav__responsive">
+            <div class="div__responsive">
+                <i onclick="showNav()"  class="fa-solid fa-bars"></i>
+                <a target="_blank" href="../Basket/Basket.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <div class="form__basket_back">
+                </div>
+                <a target="_blank" href="../Login/Login.html"><i class="fa-regular fa-user"></i></a>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a href="../Home/Home.html"><img src="../../Image/SVG/logo-short.svg" alt=""></a>
+        </section>
+        <div id="nav__bar">
+            <i onclick="closeBar()" id="close__bar" class="fa-solid fa-xmark"></i>
+            <img src="../../Image/SVG/logo_nav.svg" alt="">
+            <div class="icon__bar">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div id="bar1"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <span class="item__title">آرایشی بهداشتی</span>
+                    </div>
+                    <span class="change1" onclick="showNavBar(1)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>محصولات آفتاب</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مرطوب کننده</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ضد لک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ضد چروک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>لیفتینگ پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ترمیم کننده پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>پاکسازی پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مراقبت مو</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مو (درمانی)</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>بهداشت دهان و دندان</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar2"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-glass-water"></i>
+                        <span class="item__title">مکمل غذایی</span>
+                    </div>
+                    <span class="change2" onclick="showNavBar(2)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>مکمل آقایان</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل بانوان</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل گیاهی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل ورزشی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل کمک درمانی 1</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل کمک درمانی 2</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ویتامین ها مواد معدنی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل تنظیم وزن</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar3"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <span class="item__title">مکمل ورزشی</span>
+                    </div>
+                    <span class="change3" onclick="showNavBar(3)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>پروتئین</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کربوهیدرات</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>آمینو اسید</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کاهش وزن</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>انرژی زا</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کراتین</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>گلوتامین</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar4"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-person-breastfeeding"></i>
+                        <span class="item__title">مادر و کودک</span>
+                    </div>
+                    <span class="change4" onclick="showNavBar(4)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>مادر و بارداری</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>دوره شیردهی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>بهداشت مادر و کودک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>شیر خشک و غذای کودک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>لوازم کودک و نوزاد</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل مادران</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar5"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-kit-medical"></i>
+                        <span class="item__title">تجهیزات پزشکی</span>
+                    </div>
+                    <span class="change5" onclick="showNavBar(5)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>تجهیزات پزشکی بدن</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>تجهیزات قند و خون</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>سلامت محیط</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>تجهیزات تسکین دهنده</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ترازو و دماسنج</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <a target="_blank" href="#" class="link__end_bar">استخدام</a>
+            <a target="_blank" href="#" class="link__end_bar">مجوز و منابع</a>
+            <a target="_blank" href="../AboutUs/AboutUs.html" class="link__end_bar">درباره داروکده</a>
+        </div>
+    </header>
+    <section class="scope__element">
+        <div class="scope">
+            <section class="main__section">
+                <section class="section__Product">
+                    <section class="product__slider">
+                        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false"
+                            space-between="30" centered-slides="true" autoplay-delay="5000"
+                            autoplay-disable-on-interaction="false">
+                            <swiper-slide><a href="../Products/HomeProduct.html"><img src="../../Image/Banner/Crouser-H1.jpg" alt=""></a></swiper-slide>
+                            <swiper-slide><a href="../Products/HomeProduct.html"><img src="../../Image/Banner/Crouser-H2.jpg" alt=""></a></swiper-slide>
+                            <swiper-slide><a href="../Products/HomeProduct.html"><img src="../../Image/Banner/Crouser-H3.jpg" alt=""></a></swiper-slide>
+                            <swiper-slide><a href="../Products/HomeProduct.html"><img src="../../Image/Banner/Crouser-H4.jpg" alt=""></a></swiper-slide>
+                            <swiper-slide><a href="../Products/HomeProduct.html"><img src="../../Image/Banner/Crouser-H5.jpg" alt=""></a></swiper-slide>
+                            <swiper-slide><a href="../Products/HomeProduct.html"><img src="../../Image/Banner/Crouser-H7.jpg" alt=""></a></swiper-slide>
+                        </swiper-container>
+                    </section>
+                    <section class="section__select_product">
+                        <h5 class="gold__title"><span>پیشنهادات طلایی</span> امروز داروکده</h5>
+                        <div class="goldBox__select">
+                            <div onclick="BoxSelect(1)" class="select__box" id="gold__select1" data-select="1">25%</div>
+                            <div onclick="BoxSelect(2)" class="select__box" id="gold__select2" data-select="2">27%</div>
+                            <div onclick="BoxSelect(3)" class="select__box" id="gold__select3" data-select="3">28%</div>
+                            <div onclick="BoxSelect(4)" class="select__box" id="gold__select4" data-select="4">30%</div>
+                            <div onclick="BoxSelect(5)" class="select__box" id="gold__select5" data-select="5">30%</div>
+                            <div onclick="BoxSelect(6)" class="select__box" id="gold__select6"style="color: #fff; background-color: rgb(206, 180, 106);" data-select="6">30%</div>
+                        </div>
+                        <div class="gold__box">
+                            <div class="gold__content" id="item6">
+                                <div class="gold__box_title">
+                                    <h6 id="title6">ماسک مو مغذی با آبکشی موهای آسیب دیده</h6>
+                                    <a href="#">Romina</a>
+                                    <div class="gold__responsive">
+                                        <span class="gold__special_price">126,000</span>
+                                    <span class="gold__price">88,200 تومان</span>
+                                    <div class="gold__basket">
+                                        <button onclick="addProduct(6,88200)">خرید</button>
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </div>
+                                    <div class="gold__timer" id="gold__timer_Expire">
+                                        <div class="gold__timer_title">
+                                            <span>ساعت</span>
+                                            <span>دقیقه</span>
+                                            <span>ثانیه</span>
+                                        </div>
+                                        <div class="gold__timer_box">
+                                            <div class="gold__timer_clock">
+                                                <p id="hour12"></p>
+                                                <span>:</span>
+                                                <p id="minutes12"></p>
+                                                <span>:</span>
+                                                <p id="seconds12"></p>
+                                            </div>
+                                            <span class="timer">فرصت باقیمانده</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="gols__img">
+                                    <a href="#"><img src="../../Image/Product/goldBox/gold-img6.jpg" alt="product"></a>
+                                </div>
+                                <div class="gold__info">
+                                    <div class="gold__point">
+                                        <span><i class="fa-solid fa-star"></i> 3.5</span>
+                                        <span><i class="fa-solid fa-eye"></i> 1K</span>
+                                    </div>
+                                    <span class="gold__special_price">126,000</span>
+                                    <span class="gold__price">88,200 تومان</span>
+                                    <div class="gold__basket">
+                                        <button onclick="addProduct(6,88200)">خرید</button>
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </div>
+                                    <div class="gold__timer" id="gold__timer_Expire">
+                                        <div class="gold__timer_title">
+                                            <span>ساعت</span>
+                                            <span>دقیقه</span>
+                                            <span>ثانیه</span>
+                                        </div>
+                                        <div class="gold__timer_box">
+                                            <div class="gold__timer_clock">
+                                                <p id="hour6"></p>
+                                                <span>:</span>
+                                                <p id="minutes6"></p>
+                                                <span>:</span>
+                                                <p id="seconds6"></p>
+                                            </div>
+                                            <span class="timer">فرصت باقیمانده</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gold__content" id="item5">
+                                <div class="gold__box_title">
+                                    <h6 id="title5">سی سی کرم 6 در 1 پوست تیره</h6>
+                                    <a href="#">Romina</a>
+                                    <div class="gold__responsive">
+                                        <span class="gold__special_price">165,600</span>
+                                        <span class="gold__price">116,000 تومان</span>
+                                        <div class="gold__basket">
+                                            <button onclick="addProduct(5,116000)">خرید</button>
+                                            <i class="fa-solid fa-basket-shopping"></i>
+                                        </div>
+                                        <div class="gold__timer">
+                                            <div class="gold__timer_title">
+                                                <span>ساعت</span>
+                                                <span>دقیقه</span>
+                                                <span>ثانیه</span>
+                                            </div>
+                                            <div class="gold__timer_box">
+                                                <div class="gold__timer_clock">
+                                                    <p id="hour5"></p>
+                                                    <span>:</span>
+                                                    <p id="minutes5"></p>
+                                                    <span>:</span>
+                                                    <p id="seconds5"></p>
+                                                </div>
+                                                <span class="timer">فرصت باقیمانده</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gols__img">
+                                    <a href="#"><img src="../../Image/Product/goldBox/gold-img5.jpg" alt="product"></a>
+                                </div>
+                                <div class="gold__info">
+                                    <div class="gold__point">
+                                        <span><i class="fa-solid fa-star"></i> 3.5</span>
+                                        <span><i class="fa-solid fa-eye"></i> 664</span>
+                                    </div>
+                                    <span class="gold__special_price">165,600</span>
+                                    <span class="gold__price">116,000 تومان</span>
+                                    <div class="gold__basket">
+                                        <button onclick="addProduct(5,116000)">خرید</button>
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </div>
+                                    <div class="gold__timer">
+                                        <div class="gold__timer_title">
+                                            <span>ساعت</span>
+                                            <span>دقیقه</span>
+                                            <span>ثانیه</span>
+                                        </div>
+                                        <div class="gold__timer_box">
+                                            <div class="gold__timer_clock">
+                                                <p id="hour11"></p>
+                                                <span>:</span>
+                                                <p id="minutes11"></p>
+                                                <span>:</span>
+                                                <p id="seconds11"></p>
+                                            </div>
+                                            <span class="timer">فرصت باقیمانده</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gold__content" id="item4">
+                                <div class="gold__box_title">
+                                    <h6 id="title4">ماسک مو مغذی با آبکشی موهای خشک</h6>
+                                    <a href="#">Romina</a>
+                                    <div class="gold__responsive">
+                                        <span class="gold__special_price">90,000</span>
+                                        <span class="gold__price">63,000 تومان</span>
+                                        <div class="gold__basket">
+                                            <button onclick="addProduct(4,63000)">خرید</button>
+                                            <i class="fa-solid fa-basket-shopping"></i>
+                                        </div>
+                                        <div class="gold__timer">
+                                            <div class="gold__timer_title">
+                                                <span>ساعت</span>
+                                                <span>دقیقه</span>
+                                                <span>ثانیه</span>
+                                            </div>
+                                            <div class="gold__timer_box">
+                                                <div class="gold__timer_clock">
+                                                    <p id="hour4"></p>
+                                                    <span>:</span>
+                                                    <p id="minutes4"></p>
+                                                    <span>:</span>
+                                                    <p id="seconds4"></p>
+                                                </div>
+                                                <span class="timer">فرصت باقیمانده</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gols__img">
+                                    <a href="#"><img src="../../Image/Product/goldBox/gold-img4.jpg" alt="product"></a>
+                                </div>
+                                <div class="gold__info">
+                                    <div class="gold__point">
+                                        <span><i class="fa-solid fa-star"></i> 3.5</span>
+                                        <span><i class="fa-solid fa-eye"></i> 1K</span>
+                                    </div>
+                                    <span class="gold__special_price">90,000</span>
+                                    <span class="gold__price">63,000 تومان</span>
+                                    <div class="gold__basket">
+                                        <button onclick="addProduct(4,63000)">خرید</button>
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </div>
+                                    <div class="gold__timer">
+                                        <div class="gold__timer_title">
+                                            <span>ساعت</span>
+                                            <span>دقیقه</span>
+                                            <span>ثانیه</span>
+                                        </div>
+                                        <div class="gold__timer_box">
+                                            <div class="gold__timer_clock">
+                                                <p id="hour10"></p>
+                                                <span>:</span>
+                                                <p id="minutes10"></p>
+                                                <span>:</span>
+                                                <p id="seconds10"></p>
+                                            </div>
+                                            <span class="timer">فرصت باقیمانده</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gold__content" id="item3">
+                                <div class="gold__box_title">
+                                    <h6 id="title3">هیالورون سائور پلاس کلاژن و بیوتین</h6>
+                                    <a href="#">Eurho Vital</a>
+                                    <div class="gold__responsive">
+                                        <span class="gold__special_price">228,900</span>
+                                        <span class="gold__price">164,900 تومان</span>
+                                        <div class="gold__basket">
+                                            <button onclick="addProduct(3,164900)">خرید</button>
+                                            <i class="fa-solid fa-basket-shopping"></i>
+                                        </div>
+                                        <div class="gold__timer">
+                                            <div class="gold__timer_title">
+                                                <span>ساعت</span>
+                                                <span>دقیقه</span>
+                                                <span>ثانیه</span>
+                                            </div>
+                                            <div class="gold__timer_box">
+                                                <div class="gold__timer_clock">
+                                                    <p id="hour3"></p>
+                                                    <span>:</span>
+                                                    <p id="minutes3"></p>
+                                                    <span>:</span>
+                                                    <p id="seconds3"></p>
+                                                </div>
+                                                <span class="timer">فرصت باقیمانده</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gols__img">
+                                    <a href="#"><img src="../../Image/Product/goldBox/gold-img3.jpg" alt="product"></a>
+                                </div>
+                                <div class="gold__info">
+                                    <div class="gold__point">
+                                        <span><i class="fa-solid fa-star"></i> 3.6</span>
+                                        <span><i class="fa-solid fa-eye"></i> 22K</span>
+                                    </div>
+                                    <span class="gold__special_price">228,900</span>
+                                    <span class="gold__price">164,900 تومان</span>
+                                    <div class="gold__basket">
+                                        <button onclick="addProduct(3,164900)">خرید</button>
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </div>
+                                    <div class="gold__timer">
+                                        <div class="gold__timer_title">
+                                            <span>ساعت</span>
+                                            <span>دقیقه</span>
+                                            <span>ثانیه</span>
+                                        </div>
+                                        <div class="gold__timer_box">
+                                            <div class="gold__timer_clock">
+                                                <p id="hour9"></p>
+                                                <span>:</span>
+                                                <p id="minutes9"></p>
+                                                <span>:</span>
+                                                <p id="seconds9"></p>
+                                            </div>
+                                            <span class="timer">فرصت باقیمانده</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gold__content" id="item2">
+                                <div class="gold__box_title">
+                                    <h6 id="title2">مولتی ویت A تا Z</h6>
+                                    <a href="#">Apovital</a>
+                                    <div class="gold__responsive">
+                                        <span class="gold__special_price">104,700</span>
+                                        <span class="gold__price">76,400 تومان</span>
+                                        <div class="gold__basket">
+                                            <button onclick="addProduct(2,76400)">خرید</button>
+                                            <i class="fa-solid fa-basket-shopping"></i>
+                                        </div>
+                                        <div class="gold__timer">
+                                            <div class="gold__timer_title">
+                                                <span>ساعت</span>
+                                                <span>دقیقه</span>
+                                                <span>ثانیه</span>
+                                            </div>
+                                            <div class="gold__timer_box">
+                                                <div class="gold__timer_clock">
+                                                    <p id="hour2"></p>
+                                                    <span>:</span>
+                                                    <p id="minutes2"></p>
+                                                    <span>:</span>
+                                                    <p id="seconds2"></p>
+                                                </div>
+                                                <span class="timer">فرصت باقیمانده</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gols__img">
+                                    <a href="#"><img src="../../Image/Product/goldBox/gold-img2.jpg" alt="product"></a>
+                                </div>
+                                <div class="gold__info">
+                                    <div class="gold__point">
+                                        <span><i class="fa-solid fa-star"></i> 3.3</span>
+                                        <span><i class="fa-solid fa-eye"></i> 15K</span>
+                                    </div>
+                                    <span class="gold__special_price">104,700</span>
+                                    <span class="gold__price">76,400 تومان</span>
+                                    <div class="gold__basket">
+                                        <button onclick="addProduct(2,76400)">خرید</button>
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </div>
+                                    <div class="gold__timer">
+                                        <div class="gold__timer_title">
+                                            <span>ساعت</span>
+                                            <span>دقیقه</span>
+                                            <span>ثانیه</span>
+                                        </div>
+                                        <div class="gold__timer_box">
+                                            <div class="gold__timer_clock">
+                                                <p id="hour8"></p>
+                                                <span>:</span>
+                                                <p id="minutes8"></p>
+                                                <span>:</span>
+                                                <p id="seconds8"></p>
+                                            </div>
+                                            <span class="timer">فرصت باقیمانده</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gold__content" id="item1">
+                                <div class="gold__box_title">
+                                    <h6 id="title1">سلن پلاس استار ویت 40 عددی</h6>
+                                    <a href="#">Star Vit</a>
+                                    <div class="gold__responsive">
+                                        <span class="gold__special_price">100,300</span>
+                                        <span class="gold__price">75,300 تومان</span>
+                                        <div class="gold__basket">
+                                            <button onclick="addProduct(1,75300)">خرید</button>
+                                            <i class="fa-solid fa-basket-shopping"></i>
+                                        </div>
+                                        <div class="gold__timer">
+                                            <div class="gold__timer_title">
+                                                <span>ساعت</span>
+                                                <span>دقیقه</span>
+                                                <span>ثانیه</span>
+                                            </div>
+                                            <div class="gold__timer_box">
+                                                <div class="gold__timer_clock">
+                                                    <p id="hour1"></p>
+                                                    <span>:</span>
+                                                    <p id="minutes1"></p>
+                                                    <span>:</span>
+                                                    <p id="seconds1"></p>
+                                                </div>
+                                                <span class="timer">فرصت باقیمانده</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gols__img">
+                                    <a href="#"><img src="../../Image/Product/goldBox/gold-img1.jpg" alt="product"></a>
+                                </div>
+                                <div class="gold__info">
+                                    <div class="gold__point">
+                                        <span><i class="fa-solid fa-star"></i> 3.3</span>
+                                        <span><i class="fa-solid fa-eye"></i> 4K</span>
+                                    </div>
+                                    <span class="gold__special_price">100,300</span>
+                                    <span class="gold__price">75,300 تومان</span>
+                                    <div class="gold__basket">
+                                        <button onclick="addProduct(1,75300)">خرید</button>
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </div>
+                                    <div class="gold__timer">
+                                        <div class="gold__timer_title">
+                                            <span>ساعت</span>
+                                            <span>دقیقه</span>
+                                            <span>ثانیه</span>
+                                        </div>
+                                        <div class="gold__timer_box">
+                                            <div class="gold__timer_clock">
+                                                <p id="hour7"></p>
+                                                <span>:</span>
+                                                <p id="minutes7"></p>
+                                                <span>:</span>
+                                                <p id="seconds7"></p>
+                                            </div>
+                                            <span class="timer">فرصت باقیمانده</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section__product_onebox">
+                        <h6 class="product__onebox_title">در دنیای مکمل ها چه خبر ؟</h6>
+                        <div class="product__one">
+                            <div class="product__onebox_info">
+                                <div id="point-one" class="product__onebox_point">
+                                    <span class="star__point">
+                                        <i class="fa-solid fa-star" title="poor"></i>
+                                        <i class="fa-solid fa-star" title="poor"></i>
+                                        <i class="fa-solid fa-star" title="poor"></i>
+                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                        2.9
+                                    </span>
+                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>12K</span>
+                                </div>
+                                <a href="#" id="title7" class="product__onebox_productBox">ملاتونین سپید طب</a>
+                                <a href="#" class="product__onebox_product">Sepid Teb</a>
+                                <span class="product__onebox_takhfif">20.0% تخفیف</span>
+                                <span class="product__onebox_fakePrice">142,400</span>
+                                <span class="product__onebox_mainPrice">114,000 تومان</span>
+                                <div class="product__onebox_basket">
+                                    <button onclick="addProduct(7,114000)">خرید</button>
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </div>
+                            </div>
+                            <img id="onbox_one" src="../../Image/Product/Product_One2.jpg" alt="product">
+                            <img src="../../Image/Product/Product_One1.jpg" alt="banner-product">
+                        </div>
+                    </section>
+                    <section class="section__banner_delivery">
+                        <img src="../../Image/Banner/Banner-S9.jpg" alt="">
+                    </section>
+                    <section class="section__select">
+                        <h6>گروه منتخب محصولات</h6>
+                        <div class="section__select_items">
+                            <div>
+                                <a href="#" class="section__select_link">
+                                    <img src="../../Image/Product/imgSelect/img_select3.jpg" alt="">
+                                    <span>تنظیم وزن</span>
+                                </a>
+                                <a href="#" class="section__select_link">
+                                    <img src="../../Image/Product/imgSelect/img_select2.jpg" alt="">
+                                    <span>مکمل ورزشی</span>
+                                </a>
+                                <a href="#" class="section__select_link">
+                                    <img src="../../Image/Product/imgSelect/img_select1.jpg" alt="">
+                                    <span>شامپو</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="section__select_link">
+                                    <img src="../../Image/Product/imgSelect/img_select6.jpg" alt="">
+                                    <span>ضد لک</span>
+                                </a>
+                                <a href="#" class="section__select_link">
+                                    <img src="../../Image/Product/imgSelect/img_select5.jpg" alt="">
+                                    <span>رنگ مو , ابرو و مژه</span>
+                                </a>
+                                <a href="#" class="section__select_link">
+                                    <img src="../../Image/Product/imgSelect/img_select4.jpg" alt="">
+                                    <span>ضد چروک</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="section__Banner">
+                    <section class="section__banners">
+                        <a class="section__banner"><img src="../../Image/Banner/Banner-S1.jpg" alt=""></a>
+                        <a class="section__banner"><img src="../../Image/Banner/Banner-S2.jpg" alt=""></a>
+                        <a href="#" class="section__banner">
+                            <img src="../../Image/Banner/Banner-S3.jpg" alt="Banner">
+                            <div>ارسال رایگان به سراسر کشور</div>
+                        </a>
+                        <a class="section__banner"><img src="../../Image/Banner/Banner-S4.jpg" alt=""></a>
+                        <a href="#" class="section__banner">
+                            <img src="../../Image/Banner/Banner-S5.jpg" alt="Banner">
+                            <div>ارسال رایگان به سراسر کشور</div>
+                        </a>
+                        <a href="#" class="section__banner">
+                            <img src="../../Image/Banner/Banner-S6.jpg" alt="Banner">
+                            <div>ارسال رایگان به سراسر کشور</div>
+                        </a>
+                        <a href="#" class="section__banner">
+                            <img src="../../Image/Banner/Banner-S7.jpg" alt="Banner">
+                            <div>ارسال رایگان به سراسر کشور</div>
+                        </a>
+                    </section>
+                </section>
+            </section>
+            <section class="end__section">
+                <!--Owl-Carousel-1-->
+                <div class="end__section_title">
+                    <h6 onclick="clickSlide(1)" id="title__items1">آرایشی (جدید)</h6>
+                    <span></span>
+                    <h6 onclick="clickSlide(2)" id="title__items2">آرایشی (پرفروش)</h6>
+                </div>
+                <section class="end__section_main">
+                    <div id="end__section_intro">
+                        <img src="../../Image/Loader-intro.gif" alt="loding">
+                        <span>درحال دریافت اطلاعات...</span>
+                    </div>
+                    <div id="loadSlide1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <div class="owl-carousel ">
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card1.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.5
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>0</span>
+                                                </div>
+                                                <h5> پد جاذب روغن غذا 20 عددی </h5>
+                                                <span class="end__section_supplier">Kichi</span>
+                                                <span class="end__section_price">29,100 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card2.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.5
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>2</span>
+                                                </div>
+                                                <h5>نوار بهداشتی نیمه ضخیم مشبک</h5>
+                                                <span class="end__section_supplier">Molped</span>
+                                                <span class="end__section_price">30,500 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card3.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.5
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>3</span>
+                                                </div>
+                                                <h5>کرم ضد آفتاب کودک سینره SPF30</h5>
+                                                <span class="end__section_supplier">Cinere</span>
+                                                <span class="end__section_price">180,000 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card4.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.5
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>4</span>
+                                                </div>
+                                                <h5> کرم مرطوب کننده روغن آووکادو و عصاره کالاندولا </h5>
+                                                <span class="end__section_supplier">Iplus</span>
+                                                <span class="end__section_price">94,500 تومان</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="loadSlide2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <div class="owl-carousel ">
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card5.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.8
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>47K</span>
+                                                </div>
+                                                <h5>ام تی زد 100 گرمی</h5>
+                                                <span class="end__section_supplier">Dineh</span>
+                                                <span class="end__section_price">17,000 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card6.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.4
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>261K</span>
+                                                </div>
+                                                <h5>رژواسیل</h5>
+                                                <span class="end__section_supplier">Scar Heal</span>
+                                                <span class="end__section_price">596,000 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card7.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        3.4
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>41K</span>
+                                                </div>
+                                                <h5> محلول ضد شوره و ضد خارش نلا نازول </h5>
+                                                <span class="end__section_supplier">Nela</span>
+                                                <span class="end__section_price">99,000 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card8.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        4.5
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>328K</span>
+                                                </div>
+                                                <h5>ژل کنتراکتیوبکس</h5>
+                                                <span class="end__section_supplier">Merz</span>
+                                                <span class="end__section_price">249,300 تومان</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section__banner_tabligh">
+                    <img src="../../Image/Banner/Banner-S10.jpg" alt="">
+                </section>
+                <!--Owl-Carousel-2-->
+                <div class="end__section_title">
+                    <h6 onclick="clickSlide(3)" id="title__items3">مکمل (جدید)</h6>
+                    <span></span>
+                    <h6 onclick="clickSlide(4)" id="title__items4">مکمل (پرفروش)</h6>
+                </div>
+                <section class="end__section_main">
+                    <div id="end__section_intro2">
+                        <img src="../../Image/Loader-intro.gif" alt="loding">
+                        <span>درحال دریافت اطلاعات...</span>
+                    </div>
+                    <div id="loadSlide3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-11">
+                                    <div class="owl-carousel ">
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card9.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.5
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>0</span>
+                                                </div>
+                                                <h5>ویتامین سی مگنوم ویتامینز 30 عددی</h5>
+                                                <span class="end__section_supplier">Magnum Vitamins</span>
+                                                <span class="end__section_price">120,000 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card10.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.5
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>0</span>
+                                                </div>
+                                                <h5>ایرافرتیل</h5>
+                                                <span class="end__section_supplier">Darou Darman Parmida</span>
+                                                <span class="end__section_price">687,800 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card11.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.5
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>0</span>
+                                                </div>
+                                                <h5>پیلفود کمپلکس پست پارتوم</h5>
+                                                <span class="end__section_supplier">Darou Darman Parmida</span>
+                                                <span class="end__section_price">686,700 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card12.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.5
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>0</span>
+                                                </div>
+                                                <h5>ال کارنیتین و ال آرژینین</h5>
+                                                <span class="end__section_supplier">Eurho Vital</span>
+                                                <span class="end__section_price">196,200 تومان</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="loadSlide4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <div class="owl-carousel ">
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card13.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.7
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>118K</span>
+                                                </div>
+                                                <h5>اولترا لیکوپن 15 میلیگرم</h5>
+                                                <span class="end__section_supplier">Vitabiotics</span>
+                                                <span class="end__section_price">327,000 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card14.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        3.8
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>481K</span>
+                                                </div>
+                                                <h5>اسلیم مکس</h5>
+                                                <span class="end__section_supplier">Ghaem Darou</span>
+                                                <span class="end__section_price">40,000 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card15.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        3.5
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>66K</span>
+                                                </div>
+                                                <h5>آپتامیل شیر خشک کودکان بالای یکسال</h5>
+                                                <span class="end__section_supplier">Nutricia</span>
+                                                <span class="end__section_price">66,800 تومان</span>
+                                            </a>
+                                        </div>
+                                        <div class="card__item">
+                                            <a href="#">
+                                                <img src="../../Image/Product/ProductCard/Pr-Card16.jpg" alt="product">
+                                                <div id="display__point" class="product__onebox_point">
+                                                    <span class="star__point">
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor"></i>
+                                                        <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                                        4.2
+                                                    </span>
+                                                    <span class="eye__point"><i class="fa-solid fa-eye"></i>1746K</span>
+                                                </div>
+                                                <h5>هیرویت</h5>
+                                                <span class="end__section_supplier">Health Aid</span>
+                                                <span class="end__section_price">81,000 تومان</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section__banner_tabligh">
+                    <img src="../../Image/Banner/Banner-S11.jpg" alt="">
+                </section>
+                <div class="end__Vlog_title">
+                    <span>آخرین مقالات</span>
+                    <a href="../MagLog/MagLogHome.html">مشاهده همه</a>
+                </div>
+                <section class="end__section_main" id="end__section_main_vlog">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-14">
+                                <div class="owl-carousel-three">
+                                    <div class="card__Vlog">
+                                        <img src="../../Image/Banner/Vlog/VB-1.jpg" alt="Vlog">
+                                        <h5>درمان لک با ترانگزامیک اسید برای اولین بار در ایران</h5>
+                                        <div>
+                                            <span><i class="fa-solid fa-eye"></i> 6045</span>
+                                            <span><i class="fa-solid fa-heart"></i> 0</span>
+                                        </div>
+                                        <p>در این مقاله از مجله داروکده با ترکیب ضد لک ترانگزامیک اسید بیشتر آشنا شوید.</p>
+                                        <a class="card__Vlog_link" href="#">مشاهده</a>
+                                    </div>
+                                    <div class="card__Vlog">
+                                        <img src="../../Image/Banner/Vlog/VB-2.jpg" alt="Vlog">
+                                        <h5>واکسن گارداسیل</h5>
+                                        <div>
+                                            <span><i class="fa-solid fa-eye"></i> 6303</span>
+                                            <span><i class="fa-solid fa-heart"></i> 2</span>
+                                        </div>
+                                        <p>در این قسمت از مجله داروکده درباره ویروس HPV و واکسن گارداسیل بیشتر بخوانید.</p>
+                                        <a class="card__Vlog_link" href="#">مشاهده</a>
+                                    </div>
+                                    <div class="card__Vlog">
+                                        <img src="../../Image/Banner/Vlog/VB-3.jpg" alt="Vlog">
+                                        <h5>16 علت اصلی ریزش مو</h5>
+                                        <div>
+                                            <span><i class="fa-solid fa-eye"></i> 3107</span>
+                                            <span><i class="fa-solid fa-heart"></i> 0</span>
+                                        </div>
+                                        <p>در این مقاله از مجله داروکده درباره ریزش مو و علت های ایجاد آن بخوانید.</p>
+                                        <a class="card__Vlog_link" href="#">مشاهده</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+    <footer class="main__footer">
+        <section class="footer__other_items">
+            <ul>
+                <li><a href="../Home/Home.html">صفحه نخست</a></li>
+                <li><a href="../Login/Login.html">کاربران</a></li>
+                <li><a href="../Basket/Basket.html">پیگیری سفارش</a></li>
+                <li><a href="../MagLog/MagLogHome.html">مجله داروکده</a></li>
+                <li><a href="#">ویکی کده</a></li>
+                <li><a href="#">کمپین مصرف کنندگان</a></li>
+                <li><a href="#">فرصت های شغلی</a></li>
+                <li><a href="../Basket/Basket.html">راهنمایی خرید</a></li>
+            </ul>
+        </section>
+        <section class="footer__social_icon">
+            <div class="footer__icon">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a id="footer__aparat" href="#">
+                    <img id="aparat1" src="../../Image/SVG/icons-aparat.png" alt="aparat">
+                    <img id="aparat2" src="../../Image/SVG/icons-aparat1.png" alt="aparat">
+                </a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <img id="eNamad__icon" width="5%" src="../../Image/eNamadLogo.jpg" alt="eNamad.ir">
+            <section class="footer__list_info">
+                <a href="../Jamalzadeh/Jamalzadeh.html"><i class="fa-solid fa-lock"></i> داروخانه مرکزی جمالزاده</a>
+                <a href="../ContactUs/ContactUs.html"><i class="fa-solid fa-phone"></i> تماس با ما</a>
+                <a href="../AboutUs/AboutUs.html"><i class="fa-solid fa-user"></i> درباره ما</a>
+            </section>
+            <section class="footer__info_address">
+                <span class="info__address">تهران - خیابان جمالزاده شمالی - 200 متر بالاتر از خیابان فرصت - نبش کوچه
+                    یزدان شناس - پلاک 251 - داروخانه مرکزی جمالزاده</span>
+                <span class="info__call">62747000 - 52862000 - 021</span>
+            </section>
+            <span class="end-message">طراحی و توسعه توسط احسان نجباء ( 1402-1401 )</span>
+        </section>
+    </footer>
+</body>
+</html>

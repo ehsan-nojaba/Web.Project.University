@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سفارش محصول | داروکده</title>
+
+    <!-- style css page -->
+    <link rel="stylesheet" href="Basket.css">
+    <link rel="stylesheet" href="../../Style/main.css">
+    <link rel="shortcut icon" href="../../Image/Logo01.ico" type="image/x-icon">
+    
+    <!-- Bootstrap Component -->
+    <link rel="stylesheet" href="../../Component/Bootstrap/bootstrap.css">
+    <script src="../../Component/Bootstrap/bootstrap.js"></script>
+    <script src="../../Component/jquery.js"></script>
+
+    <!-- FontAwsome Component -->
+    <script src="../../Component/FontAwsome/6.2.0/fontawesome.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/solid.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/all.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/brands.js"></script>
+
+    <!-- js Component -->
+    <script src="../../Script/main.js"></script>
+    <script src="../../Script/BasketSetting.js"></script>
+    <script src="../../Script/filterItem.js"></script>
+    <script src="../../Script/addProduct.js"></script>
+    <script src="../../Script/RegisterAndLogin.js"></script>
+</head>
+<body>
+    <header class="main__header">
+        <div class="Title__Banner">
+            <div></div>
+        </div>
+        <section class="list__info">
+            <div>
+                <a onclick="showForm()" id="list__info_span" onload="UserFullData()" class="list__info_span">ورود کاربر
+                    <i class="fa-solid fa-user"></i></a>
+                <div id="form__login_back">
+                    <div class="form__box_login">
+                        <input autocomplete="off" class="form_login" id="UserName" type="text"
+                            placeholder="شماره تلفن همراه خود را وارد کنید">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="form__box_login">
+                        <input autocomplete="off" class="form_login" id="Password" type="text"
+                            placeholder="رمز عبور خود را وارد کنید">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="form__check">
+                        <input id="checkData" type="checkbox" title="check">
+                        <label for="check">مرا به خاطر بسپار</label>
+                    </div>
+                    <div class="form__btn">
+                        <button onclick="LoadData()">ورود به حساب کاربری</button>
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+                    <div class="form__link">
+                        <a href="../Register/Register.html"><i class="fa-solid fa-user"></i>ثبت نام کاربر جدید</a>
+                    </div>
+                    <div class="form__link">
+                        <a href="../ForgetPassword/ForgetPassword.html"><i class="fa-solid fa-lock"></i>کلمه عبور خود را
+                            فراموش کرده ام</a>
+                    </div>
+                </div>
+                <a href="../Basket/Basket.html" class="list__info_span">پیگری سفارش <i class="fa-solid fa-check-to-slot"></i></a>
+                <span class="list__info_span" id="special__info"> 62747000 - 52862000 - 021 <i class="fa-solid fa-phone"></i></span>
+            </div>
+        </section>
+        <section class="list__Box_Search">
+            <i onclick="showNav()" id="bar__icon" class="fa-solid fa-bars"></i>
+            <div id="special__item" class="list__Box_item">
+                <span class="list__Box_Number">0</span>
+                <i id="icon__basket" class="fa-solid fa-cart-shopping"></i>
+                <a onclick="showBasket()" id="show__basket" href="#" class="list__Box_span">سبد خرید</a>
+                <div class="form__basket_back">
+
+                </div>
+            </div>
+            <div class="list__Box_item">
+                <span id="list__line"></span>
+            </div>
+            <div class="list__Box_item">
+                <input type="text" class="list__box" placeholder="عبارت مورد نظر جهت جستجو وارد کنید">
+                <i id="icon__Search" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="list__Box_item">
+                <a href="../Home/Home.html"><img id="Box__img" src="../../Image/SVG/logo.svg" title="Logo"></a>
+            </div>
+        </section>
+        <nav>
+            <ul class="list__items">
+                <li class="list__item">
+                    <span class="list__link">
+                        آرایشی بهداشتی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">محصولات آفتاب</a>
+                                <a href="#" class="list__background_item">مرطوب کننده</a>
+                                <a href="#" class="list__background_item">ضده لک</a>
+                                <a href="#" class="list__background_item">ضد چروک</a>
+                                <a href="#" class="list__background_item">لیفتینگ پوست</a>
+                                <a href="#" class="list__background_item">ترمیم کننده پوست</a>
+                                <a href="#" class="list__background_item">پاکسازی پوست</a>
+                                <a href="#" class="list__background_item">مراقبت مو</a>
+                                <a href="#" class="list__background_item">مو درمانی</a>
+                                <a href="#" class="list__background_item">بهداشت دندان و دهان</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مکمل غذایی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">مکمل آقایان</a>
+                                <a href="#" class="list__background_item">مکمل بانوان</a>
+                                <a href="#" class="list__background_item">مکمل کودکان</a>
+                                <a href="#" class="list__background_item">مکمل گیاهی</a>
+                                <a href="#" class="list__background_item">مکمل ورزشی</a>
+                                <a href="#" class="list__background_item">مکمل کمک درمانی 1</a>
+                                <a href="#" class="list__background_item">مکمل درمانی 2</a>
+                                <a href="#" class="list__background_item">ویتامین و مواد معدنی</a>
+                                <a href="#" class="list__background_item">مکمل تنظیم وزن</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مکمل ورزشی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">پروتئین</a>
+                                <a href="#" class="list__background_item">کربوهیدرات</a>
+                                <a href="#" class="list__background_item">کاهش وزن</a>
+                                <a href="#" class="list__background_item">انرژی زا</a>
+                                <a href="#" class="list__background_item">کراتین</a>
+                                <a href="#" class="list__background_item">گلوتامین</a>
+                                <a href="#" class="list__background_item">بی سی ای ای</a>
+                                <a href="#" class="list__background_item">سی ال ای</a>
+                                <a href="#" class="list__background_item">کارنیتین</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مادر و کودک
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">مادرو بارداری</a>
+                                <a href="#" class="list__background_item">دوران شیردهی</a>
+                                <a href="#" class="list__background_item">شیر خشک و غذای کودک</a>
+                                <a href="#" class="list__background_item">لوازم کودک و نوزاد</a>
+                                <a href="#" class="list__background_item">مکمل مادران</a>
+                                <a href="#" class="list__background_item">مکمل کودکان</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">تجهیزات پزشکی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">تجهیزات پزشکی بدن</a>
+                                <a href="#" class="list__background_item">تجهیزات قند و خون</a>
+                                <a href="#" class="list__background_item">سلامت محیط</a>
+                                <a href="#" class="list__background_item">تجهیزات تسکین دهنده</a>
+                                <a href="#" class="list__background_item">تراز و دماسنج</a>
+                                <a href="#" class="list__background_item">تجهیزات مادر و کودک</a>
+                                <a href="#" class="list__background_item">لوازم فردی</a>
+                                <a href="#" class="list__background_item">ارتوپدی</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <a href="../MagLog/MagLogHome.html" class="list__link">مجله داروکده</a>
+                </li>
+                <li class="list__item">
+                    <a href="../Jamalzadeh/Jamalzadeh.html" class="list__link">داروخانه مرکزی جمالزاده</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="nav__responsive">
+            <div class="div__responsive">
+                <i onclick="showNav()"  class="fa-solid fa-bars"></i>
+                <a target="_blank" href="../Basket/Basket.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <div class="form__basket_back">
+                </div>
+                <a target="_blank" href="../Login/Login.html"><i class="fa-regular fa-user"></i></a>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a href="../Home/Home.html"><img src="../../Image/SVG/logo-short.svg" alt=""></a>
+        </section>
+        <div id="nav__bar">
+            <i onclick="closeBar()" id="close__bar" class="fa-solid fa-xmark"></i>
+            <img src="../../Image/SVG/logo_nav.svg" alt="">
+            <div class="icon__bar">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div id="bar1"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <span class="item__title">آرایشی بهداشتی</span>
+                    </div>
+                    <span class="change1" onclick="showNavBar(1)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>محصولات آفتاب</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مرطوب کننده</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ضد لک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ضد چروک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>لیفتینگ پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ترمیم کننده پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>پاکسازی پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مراقبت مو</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مو (درمانی)</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>بهداشت دهان و دندان</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar2"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-glass-water"></i>
+                        <span class="item__title">مکمل غذایی</span>
+                    </div>
+                    <span class="change2" onclick="showNavBar(2)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>مکمل آقایان</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل بانوان</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل گیاهی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل ورزشی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل کمک درمانی 1</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل کمک درمانی 2</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ویتامین ها مواد معدنی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل تنظیم وزن</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar3"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <span class="item__title">مکمل ورزشی</span>
+                    </div>
+                    <span class="change3" onclick="showNavBar(3)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>پروتئین</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کربوهیدرات</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>آمینو اسید</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کاهش وزن</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>انرژی زا</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کراتین</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>گلوتامین</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar4"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-person-breastfeeding"></i>
+                        <span class="item__title">مادر و کودک</span>
+                    </div>
+                    <span class="change4" onclick="showNavBar(4)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>مادر و بارداری</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>دوره شیردهی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>بهداشت مادر و کودک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>شیر خشک و غذای کودک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>لوازم کودک و نوزاد</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل مادران</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar5"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-kit-medical"></i>
+                        <span class="item__title">تجهیزات پزشکی</span>
+                    </div>
+                    <span class="change5" onclick="showNavBar(5)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>تجهیزات پزشکی بدن</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>تجهیزات قند و خون</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>سلامت محیط</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>تجهیزات تسکین دهنده</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ترازو و دماسنج</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <a target="_blank" href="#" class="link__end_bar">استخدام</a>
+            <a target="_blank" href="#" class="link__end_bar">مجوز و منابع</a>
+            <a target="_blank" href="../AboutUs/AboutUs.html" class="link__end_bar">درباره داروکده</a>
+        </div>
+    </header>
+    <main>
+        <div class="scope__basket">
+            <header id="title__one" class="header__main">
+                <a href="../Home/Home.html">صفحه نخست</a>
+                <span>></span>
+                <a href="Basket.html">سفارش محصول</a>
+            </header>
+            <section class="basket__step">
+                <div class="basket__middel">
+                    <div class="end__status ">
+                        <div class="basket__status_select">
+                            <i id="step5">5</i>
+                        </div>
+                        <span id="stepSpan5">پرداخت</span>
+                    </div>
+                    <div class="basket__status">
+                        <div class="basket__status_select">
+                            <i id="step4">4</i>
+                        </div>
+                        <span id="stepSpan4">پیش فاکتور</span>
+                    </div>
+                    <div class="basket__status">
+                        <div class="basket__status_select">
+                            <i id="step3">3</i>
+                        </div>
+                        <span id="stepSpan3">نحوه ارسال</span>
+                    </div>
+                    <div class="basket__status">
+                        <div class="basket__status_select">
+                            <i id="step2">2</i>
+                        </div>
+                        <span id="stepSpan2">اطلاعات خریدار</span>
+                    </div>
+                    <div class="basket__status after__border">
+                        <div class="basket__status_select">
+                            <i id="step1">1</i>
+                        </div>
+                        <span id="stepSpan1">لیست سفارشات</span>
+                    </div>
+                </div>
+            </section>
+            <section class="basket__box">
+                <h4 class="basket__box_title">لیست سفارشات ( 1 عدد کالا )</h4>
+                <span class="basket__box_nav_title">لطفا قبل از ثبت سفارش از نوع , تعداد و قیمت محصولات مورد درخواست خود اطمینان حاصل نمایید .</span>
+                <div class="main__basket">
+                    <ul>
+                        <li>قیمت کل</li>
+                        <li>قیمت واحد</li>
+                        <li>تعداد</li>
+                        <li>عنوان</li>
+                    </ul>
+                    <div class="basket__data">
+                        
+                    </div>
+                </div>
+                <div class="basket__box_price">
+                    <div class="basket__price">
+                        <span id="mainprice">0</span>
+                        <span>جمع کل</span>
+                    </div>
+                    <div class="basket__price">
+                        <span> 0 تومان</span>
+                        <span>تخفیف مستقیم</span>
+                    </div>
+                    <div class="basket__price full__prices">
+                        <span id="fullprice">0</span>
+                        <span>مبلغ قابل پرداخت</span>
+                    </div>
+                </div>
+            </section>
+            <section id="basket__intfo1" class="basket__full_info">
+                <h5>اطلاعات خرید</h6>
+                <span>اطلاعات فرد تحویل گیرنده را به دقت وارد نمایید</span>
+                <div>
+                    <label id="firstname" for="firstname">نام</label>
+                    <input type="text" title="firstname" name="firstname">
+                </div>
+                <div>
+                    <label id="lastname" for="lastname">نام خانوادگی</label>
+                    <input type="text" title="lastname" name="lastname">
+                </div>
+                <div>
+                    <label id="mobile" for="mobile">شماره تلفن همراه</label>
+                    <input type="text" title="mobile" name="mobile">
+                </div>
+            </section>
+            <section id="basket__intfo2" class="basket__full_info">
+                <h5>آدرس تحویل گیرنده</h6>
+                <span>آدرس و اطلاعات محل تحویل را به دقت وارد نمایید .</span>
+                <div>
+                    <label id="mobileFix" for="mobileFix">شماره تلفن ثابت</label>
+                    <input type="text" title="mobileFix" name="mobileFix">
+                </div>
+                <div>
+                    <label id="State" for="State">استان</label>
+                    <select title="State" name="State">
+                        <option value="0">تهران</option>
+                        <option value="1">مشهد</option>
+                        <option value="2">شیراز</option>
+                        <option value="3">اردبیل</option>
+                    </select>
+                </div>
+                <div>
+                    <label id="City" for="City">شهر</label>
+                    <select title="City" name="City">
+                        <option value="0">تهران</option>
+                        <option value="1">پردیس</option>
+                        <option value="2">پیشوا</option>
+                        <option value="3">اسلام شهر</option>
+                    </select>
+                </div>
+                <div>
+                    <label id="District" for="District">محله</label>
+                    <select title="District" name="District">
+                        <option value="0">تهران پارس</option>
+                        <option value="1">آرژانتین</option>
+                        <option value="2">شهرک غرب</option>
+                        <option value="3">نارمک</option>
+                    </select>
+                </div>
+                <div>
+                    <label id="address" for="address">آدرس</label>
+                    <div class="box__address">
+                        <textarea name="address" title="address"></textarea>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.023935389661!2d51.3915237!3d35.7010286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.   1!3m3!1m2!1s0x3f8e011d1b6ca4ed%3A0x84c14853fc8780ee!2sTehran%20Province%2C%20Tehran%2C%20Enghelab%20Sq%2C%20Iran!5e0!3m2!1sen!2snl!4v1678962125150!5m2!1sen!2snl" width="250" height="150"     style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div>
+                    <label id="PostCode" for="PostCode">کد پستی</label>
+                    <input type="text" title="PostCode" name="PostCode">
+                </div>
+            </section>
+            <section id="basket__intfo3" class="basket__full_info">
+                <h5>توضیحات</h6>
+                <span>در صورت تمایل موارد قابل ذکر قبل از ارسال سفارش را در کادر زیر وارد نمایید .</span>
+                <div>
+                    <label id="Description" for="Description">توضیحات</label>
+                    <textarea name="Description" title="Description"></textarea>
+                </div>
+            </section>
+            <section id="deliver1" class="basket__delivery_info">
+                <h5>نحوه ارسال</h6>
+                <span>نحوه ارسال سفارش خود را با توجه به هزینه و شرایط آن مشخص نمایید .</span>
+                <div class="basket__delivery">
+                    <section class="radio__box_part">
+                        <div>
+                            <input checked type="radio" name="radioDelivery" title="radioDelivery">
+                        </div>
+                        <span>ارسال به وسیله پست</span>
+                    </section>
+                    <i id="slideShowIcon" onclick="slideUpDown()" class="fa-solid fa-chevron-up"></i>
+                </div>
+                <div class="basket__delivery_select">
+                    <div class="box__delivery_select">
+                        <div class="delivery__selector">
+                            <input type="radio" name="deliverySelect" title="radio">
+                            <label for="radio">پست سفارشی</label>
+                        </div>
+                        <div class="delivery__title">
+                            <h6>هزینه ارسال سفارش شما با پست سفارشی رایگان می باشد</h6>
+                            <span>زمان تحویل این سفارش به پست جمعه 1401/12/26 ( امروز ) می باشد.</span>
+                        </div>
+                    </div>
+                    <div class="box__delivery_select">
+                        <div class="delivery__selector">
+                            <input checked="checked" style="margin-left: 23px;" type="radio" name="deliverySelect" title="radio">
+                            <label style="color: #3E485c;" for="radio">پست پیشتاز</label>
+                        </div>
+                        <div class="delivery__title">
+                            <h6 style="color: #7a9b14;">هزینه ارسال سفارش شما با پست پیشتاز رایگان می باشد</h6>
+                            <span style="color: #5b5b5b;">زمان تحویل این سفارش به پست جمعه 1401/12/26 ( امروز ) می باشد.</span>
+                        </div>
+                    </div>
+                    <div class="box__delivery_select">
+                        <div class="delivery__selector">
+                            <input style="margin-left: 52px;" type="radio" name="deliverySelect" title="radio">
+                            <label for="radio">تیپاکس</label>
+                        </div>
+                        <div class="delivery__title">
+                            <h6>هزینه ارسال سفارش شما با پست تیپاکس رایگان می باشد</h6>
+                            <span>حدود زمان تحویل ، پس از تایید سفارش حداکثر 3 روز کاری می باشد .</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="deliver2" class="basket__delivery_info">
+                <h5>بسته بندی</h6>
+                <span>تمامی اقلام شکستنی سفارشات دارای بسته بندی ضد ضربه خواهد بود .</span>
+                <div class="basket__delivery">
+                    <section class="radio__box_part">
+                        <div>
+                            <input checked="checked" type="radio" name="radioPack" title="radioPack">
+                        </div>
+                        <span>بسته بندی داروکده ( رایگان )</span>
+                    </section>
+                    <i id="delivery__icon" class="fa-solid fa-basket-shopping"></i>
+                </div>
+                <div class="detail">
+                    <div>
+                        <span>هزینه بسته بندی</span>
+                        <span>رایگان</span>
+                    </div>
+                </div>
+            </section>
+            <section id="factor" class="basket__delivery_info">
+                <h5>پیش فاکتور</h6>
+                <span>در صورتی که کد تخفیف دارید می توانید آنرا در این صفحه وارد و استفاده نمایید .</span>
+                <div class="basket__delivery">
+                    <section class="radio__box_part">
+                        <div>
+                            <input onclick="slideUpDownCheck()" id="checkBox__Status" type="checkbox" name="checkbox" title="checkbox">
+                        </div>
+                        <span>کد تخفیف دارم</span>
+                    </section>
+                    <i id="checkIcon" class="fa-solid fa-chevron-up"></i>
+                </div>
+                <div class="basket__factor_select">
+                    <button>بررسی و اعمال</button>
+                    <input type="text" title="تخفیف">
+                    <label for="discunt">کد تخفیف</label>
+                </div>
+                <div style="margin-top:1.5rem" class="basket__delivery">
+                    <span id="span__product">اقلام سفارش شما ( 2 محصول )</span>
+                    <i onclick="itemBuy()" id="checkIconItem" class="fa-solid fa-chevron-up"></i>
+                </div>
+                <div id="factor__items" class="basket__factor_select">
+    
+                </div>
+                <div class="basket__delivery">
+                    <span id="span__gif">هدایا و نمونه محصولاتی که شما در این سفارش دریافت می کنید</span>
+                    <i onclick="GiftSend()" id="checkIconGift" class="fa-solid fa-chevron-up"></i>
+                </div>
+                <div class="basket__factor_gift">
+                    <span class="gif"><i class="fa-solid fa-gift"></i>  هدیه داروکده</span>
+                    <span>ب کمپلکس آپوويتال</span>
+                </div>
+                <div class="main__factor">
+                    <div class="box__full_factor">
+                        <span>جمع کل</span>
+                        <span id="full"></span>
+                    </div>
+                    <div class="box__full_factor">
+                        <span>تخفیف مستقیم</span>
+                        <span>0</span>
+                    </div>
+                    <div class="box__full_factor">
+                        <span>هزینه بسته بندی</span>
+                        <span>رایگان</span>
+                    </div>
+                    <div class="box__full_factor">
+                        <span>هزینه ارسال</span>
+                        <span>رایگان</span>
+                    </div>
+                    <div class="box__full_factor">
+                        <span>کد تخفیف</span>
+                        <span>0</span>
+                    </div>
+                    <div class="box__full_factor">
+                        <span>مبلغ قابل پرداخت</span>
+                        <span id="fullPrices"></span>
+                    </div>
+                </div>
+            </section>
+            <section id="buy__show" class="basket__delivery_info">
+                <h5>پرداخت</h6>
+                <span>جهت نهایی شدن ثبت سفارش و آغاز روند ارسال لطفا یکی از روشهای ممکن زیر را جهت پرداخت انتخاب نمایید .</span>
+                <div class="main__factor">
+                    <div class="box__full_factor">
+                        <span>جمع کل</span>
+                        <span id="fullPay"></span>
+                    </div>
+                    <div class="box__full_factor">
+                        <span>تخفیف مستقیم</span>
+                        <span>0</span>
+                    </div>
+                    <div class="box__full_factor">
+                        <span>هزینه بسته بندی</span>
+                        <span>رایگان</span>
+                    </div>
+                    <div class="box__full_factor">
+                        <span>هزینه ارسال</span>
+                        <span>رایگان</span>
+                    </div>
+                    <div class="box__full_factor">
+                        <span>کد تخفیف</span>
+                        <span>0</span>
+                    </div>
+                    <div class="box__full_factor">
+                        <span>مبلغ قابل پرداخت</span>
+                        <span id="fullBuy"></span>
+                    </div>
+                </div>
+                <div id="pay__money" class="basket__buy">
+                    <section class="radio__box_part">
+                        <div class="buy__check">
+                            <input checked="checked" type="radio" name="radio" title="radio">
+                        </div>
+                        <div class="basket__buy_title">
+                            <span class="money__title">پرداخت آنلاین</span>
+                            <span>با تمامی کارتهای عضو شتاب می توانید بدون توجه به نام درگاه انتخابی پرداخت نمایید</span>
+                        </div>
+                    </section>
+                    <i id="PayMoney" onclick="showPayMoney()" class="fa-solid fa-chevron-up"></i>
+                </div>
+                <div class="basket__buy_select">
+                    <div class="buy__info">
+                        <input checked type="radio" title="radioBuy">
+                        <img src="../../Image/Banner/Bank_Saman.png" alt="Bank_Saman">
+                        <span> درگاه 1 : تمامی کارت های عضو شتاب</span>
+                    </div>
+                    <div class="btn__buy">
+                        <button onclick="resultBuy()">پرداخت و ثبت نهایی</button>
+                    </div>
+                </div>
+            </section>
+            <div class="box__leaf">
+                <span class="box__leaf_title"><i class="fa-solid fa-leaf"></i>  با عدم دریافت فاکتور کاغذی ، به سبز ماندن زمین کمک کنیم .</span>
+                <div class="box__leaf_check">
+                    <label for="leaf-check">من <span style="color: #67c23a;">درختان</span> را دوست دارم و مایل به دریافت فاکتور کاغذی در هنگام تحویل نیستم .</label>
+                    <input title="check" checked="checked" type="checkbox" name="leaf-check">
+                </div>
+                <div class="box__leaf_check">
+                    <label for="leaf-check">مایل به دریافت مجله <span style="color: #67c23a;">پیک سلامت</span> داروکده نیستم</label>
+                    <input title="check" checked="checked" type="checkbox" name="leaf-check">
+                </div>
+            </div>
+            <div id="style__Btn"><a href="#"><button onclick="addProductPart()" class="basket__btn_add_data">  تایید و ادامه ثبت سفارش </button></a></div>
+            <div class="important__message">
+                <span style="margin-bottom: 1rem;"><i class="fa-solid fa-circle-exclamation"></i> توجه </span>
+                <span>1 - کلیه محصولات معرفی شده موجود در وب سایت داروکده دارای مجوز رسمی از وزارت بهداشت درمان و آموزش پزشکی می باشد .</span>
+                <span>2 - داروکده به هیچ عنوان امکان ارسال اقلام دارویی که ملزم به ارائه نسخه پزشک می باشد را ندارد .</span>
+            </div>
+        </div>
+    </main>
+    <footer class="main__footer" id="basket__footer">
+        <section class="footer__other_items">
+            <ul>
+                <li><a href="../Home/Home.html">صفحه نخست</a></li>
+                <li><a href="../Login/Login.html">کاربران</a></li>
+                <li><a href="../Basket/Basket.html">پیگیری سفارش</a></li>
+                <li><a href="../MagLog/MagLogHome.html">مجله داروکده</a></li>
+                <li><a href="#">ویکی کده</a></li>
+                <li><a href="#">کمپین مصرف کنندگان</a></li>
+                <li><a href="#">فرصت های شغلی</a></li>
+                <li><a href="../Basket/Basket.html">راهنمایی خرید</a></li>
+            </ul>
+        </section>
+        <section class="footer__social_icon">
+            <div class="footer__icon">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a id="footer__aparat" href="#">
+                    <img id="aparat1" src="../../Image/SVG/icons-aparat.png" alt="aparat">
+                    <img id="aparat2" src="../../Image/SVG/icons-aparat1.png" alt="aparat">
+                </a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <img id="eNamad__icon" width="5%" src="../../Image/eNamadLogo.jpg" alt="eNamad.ir">
+            <section class="footer__list_info">
+                <a href="../Jamalzadeh/Jamalzadeh.html"><i class="fa-solid fa-lock"></i> داروخانه مرکزی جمالزاده</a>
+                <a href="../ContactUs/ContactUs.html"><i class="fa-solid fa-phone"></i> تماس با ما</a>
+                <a href="../AboutUs/AboutUs.html"><i class="fa-solid fa-user"></i> درباره ما</a>
+            </section>
+            <section class="footer__info_address">
+                <span class="info__address">تهران - خیابان جمالزاده شمالی - 200 متر بالاتر از خیابان فرصت - نبش کوچه
+                    یزدان شناس - پلاک 251 - داروخانه مرکزی جمالزاده</span>
+                <span class="info__call">62747000 - 52862000 - 021</span>
+            </section>
+            <span class="end-message">طراحی و توسعه توسط احسان نجباء ( 1402-1401 )</span>
+        </section>
+    </footer>
+</body>
+</html>

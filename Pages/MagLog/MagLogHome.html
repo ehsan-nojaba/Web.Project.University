@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجله داروکده</title>
+
+    <!-- style css page -->
+    <link rel="stylesheet" href="MagLogHome.css">
+    <link rel="shortcut icon" href="../../Image/Logo01.ico" type="image/x-icon">
+
+    <!-- Bootstrap Component -->
+    <link rel="stylesheet" href="../../Component/Bootstrap/bootstrap.css">
+    <script src="../../Component/Bootstrap/bootstrap.js"></script>
+    <script src="../../Component/jquery.js"></script>
+
+    <!-- FontAwsome Component -->
+    <script src="../../Component/FontAwsome/6.2.0/fontawesome.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/solid.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/all.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/brands.js"></script>
+
+    <!-- js -->
+    <script src="../../Script/Video.js"></script>
+    <script src="../../Script/Vlog.js"></script>
+    <script src="../../Component/Swiper/swiper-elements-bundle.min.js"></script>
+
+</head>
+<body>
+    <header class="main__Header">
+        <ul>
+            <li class="header__li_img"><img src="../../Image/SVG/logoMag.svg" alt="MagLog"></li>
+            <li class="header__li"><a href="#">مجله داروکده</a></li>
+            <li class="header__li"><a href="#">مقالات</a></li>
+            <li class="header__li"><a href="#">ویدیوها</a></li>
+            <li class="header__li"><a href="#">نویسندگان</a></li>
+            <li class="header__li"><a href="#">درباره مجله</a></li>
+            <li class="header__li"><a style="color: #66C23A !important;" href="../Home/Home.html">داروکده</a></li>
+            <li class="header__li"><a href="#" title="login"><i class="fa-regular fa-circle-user"></i></a></li>
+        </ul>
+        <div class="box__responsive">
+            <i onclick="showNavBar()" id="nav__bar_icon" class="fa-solid fa-bars"></i>
+            <img src="../../Image/SVG/logoMag.svg" alt="MagLog">
+            <i class="fa-regular fa-circle-user"></i>
+        </div>
+    </header>
+    <section class="nav__bar">
+        <div class="nav__items">
+            <div class="item">
+                <a href="#">مجله داروکده</a>
+            </div>
+            <div class="item">
+                <a href="#">مقالات</a>
+                <i onclick="showItemNav(1)" id="ic1" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div id="dw1">
+                <div class="down__items">
+                    <span>تغذیه</span>
+                    <span>پوست</span>
+                    <span>مو</span>
+                    <span>تنظیم وزن</span>
+                    <span>بیماریها</span>
+                    <span>روانشناسی</span>
+                    <span>موفقیت</span>
+                    <span>سایر مقالات</span>
+                    <span>مکمل غذایی</span>
+                    <span>دهان و دندان</span>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#">ویدیو ها</a>
+                <i onclick="showItemNav(2)" id="ic2" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div id="dw2">
+                <div class="down__items">
+                    <span>تغذیه</span>
+                    <span>پوست</span>
+                    <span>مو</span>
+                    <span>تنظیم وزن</span>
+                    <span>بیماریها</span>
+                    <span>روانشناسی</span>
+                    <span>موفقیت</span>
+                    <span>سایر مقالات</span>
+                    <span>مکمل غذایی</span>
+                    <span>دهان و دندان</span>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#">نویسندگان</a>
+            </div>
+            <div class="item">
+                <a href="#">درباره مجله</a>
+            </div>
+            <div class="item">
+                <a href="../Home/Home.html">داروکده</a>
+            </div>
+        </div>
+    </section>
+    <nav class="main__nav">
+        <div class="nav__box">
+            <span class="nav__title">موضوعات داغ</span>
+            <a class="nav__items_link" href="#">#مکمل غذایی</a>
+            <a class="nav__items_link" href="#">#بیماریها</a>
+            <a class="nav__items_link" href="#">#پوست</a>
+            <a class="nav__items_link" href="#">#مکمل ورزشی</a>
+            <a class="nav__items_link" href="#">#تغذیه</a>
+        </div>
+        <div class="nav__box_vlog">
+            <div class="box__vlog">
+                <a href="#">
+                    <img src="../../Image/Banner/Vlog/VB-3.jpg" alt="وبلاگ">
+                    <span>16 علت اصلی ریزش مو</span>
+                </a>
+            </div>
+            <div class="box__vlog">
+                <a href="#">
+                    <img src="../../Image/Banner/Vlog/VB-2.jpg" alt="وبلاگ">
+                    <span>واکسن گارداسیل</span>
+                </a>
+            </div>
+            <div class="boxs__vlog">
+                <div class="boxs__vlog_item">
+                    <a href="#">
+                        <img src="../../Image/Banner/Vlog/VB-1.jpg" alt="وبلاگ">
+                        <span>درمان لک با ترانگزامیک اسید برای اولین بار در ایران</span>
+                    </a>
+                </div>
+                <div class="boxs__vlog_item">
+                    <a href="#">
+                        <img src="../../Image/Banner/Vlog/VB-4.jpg" alt="وبلاگ">
+                        <span>هشدار ورود زیر سویه جدید کرونا XBB و BQ.1</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav__box_vlog_slide">
+            <swiper-container class="mySwiper" pagination="true">
+                <swiper-slide>
+                    <img src="../../Image/Banner/Vlog/VB-3.jpg" alt="">
+                    <span>16 علت اصلی ریزش مو</span>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="../../Image/Banner/Vlog/VB-1.jpg" alt="">
+                    <span>درمان لک با ترانگزامیک اسید برای اولین بار در ایران</span>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="../../Image/Banner/Vlog/VB-2.jpg" alt="">
+                    <span>واکسن گارداسیل</span>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="../../Image/Banner/Vlog/VB-4.jpg" alt="">
+                    <span>هشدار ورود زیر سویه جدید کرونا XBB و BQ.1</span>
+                </swiper-slide>
+            </swiper-container>
+        </div>
+    </nav>
+    <section class="section__first">
+        <div class="special__mag_box">
+            <div class="special__mag">
+                <span class="special__title">منتخب سردبیر</span>
+                <section class="main__box_mag">
+                    <a href="#" class="box">
+                        <div class="box__title">
+                            <span>بیماری ها</span>
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <img id="img__mag" src="../../Image/Banner/Vlog/VB-8.jpg" alt="بلاگ">
+                        <span id="main__title">اسپری پی اچ آر 160 و بهبود عوارض ریوی کووید 19</span>
+                        <div class="box__info">
+                            <img src="../../Image/Person/A4.jpg" alt="person">
+                            <span class="name">دکتر احسان عبادی</span>
+                        </div>
+                        <span class="date__publish">سه شنبه 18 شهریور 1398</span>
+                    </a>
+                    <a href="#" class="box">
+                        <div class="box__title">
+                            <span>مکمل غذایی</span>
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <img id="img__mag" src="../../Image/Banner/Vlog/VB-7.jpg" alt="بلاگ">
+                        <span id="main__title"> همه چیز درباره ویتامین ب کمپلکس </span>
+                        <div class="box__info">
+                            <img src="../../Image/Person/A3.jpg" alt="person">
+                            <span class="name">افسانه ضیایی</span>
+                        </div>
+                        <span class="date__publish">یکشنبه 24 آذر 1398</span>
+                    </a>
+                    <a href="#" class="box">
+                        <div class="box__title">
+                            <span>مکمل غذایی</span>
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <img id="img__mag" src="../../Image/Banner/Vlog/VB-6.jpg" alt="بلاگ">
+                        <span id="main__title"> راهنمای خرید از وب سایت داروکده </span>
+                        <div class="box__info">
+                            <img src="../../Image/Person/A2.jpg" alt="person">
+                            <span class="name"> بابک روکی </span>
+                        </div>
+                        <span class="date__publish">پنجشنبه 18 آبان 1396</span>
+                    </a>
+                    <a href="#" class="box">
+                        <div class="box__title">
+                            <span>مکمل غذایی</span>
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <img id="img__mag" src="../../Image/Banner/Vlog/VB-5.jpg" alt="بلاگ">
+                        <span id="main__title"> مکمل تریبولوس (Tribulus Terrestris) و اثر آن بر رشد عضله </span>
+                        <div class="box__info">
+                            <img src="../../Image/Person/A1.jpg" alt="person">
+                            <span class="name">دکتر کوشا شهیدی</span>
+                        </div>
+                        <span class="date__publish">دوشنبه 17 اردیبهشت 1397</span>
+                    </a>
+                    <swiper-container id="swSlide1" class="mySwiper" pagination="false" pagination-clickable="false" space-between="30"slides-per-view="2">
+                        <swiper-slide>
+                            <a href="#" class="box">
+                                <div class="box__title">
+                                    <span>بیماری ها</span>
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <img id="img__mag" src="../../Image/Banner/Vlog/VB-8.jpg" alt="بلاگ">
+                                <span id="main__title">اسپری پی اچ آر 160 و بهبود عوارض ریوی کووید 19</span>
+                                <div class="box__info">
+                                    <img src="../../Image/Person/A4.jpg" alt="person">
+                                    <span class="name">دکتر احسان عبادی</span>
+                                </div>
+                                <span class="date__publish">سه شنبه 18 شهریور 1398</span>
+                            </a>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <a href="#" class="box">
+                                <div class="box__title">
+                                    <span>مکمل غذایی</span>
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <img id="img__mag" src="../../Image/Banner/Vlog/VB-7.jpg" alt="بلاگ">
+                                <span id="main__title"> همه چیز درباره ویتامین ب کمپلکس </span>
+                                <div class="box__info">
+                                    <img src="../../Image/Person/A3.jpg" alt="person">
+                                    <span class="name">افسانه ضیایی</span>
+                                </div>
+                                <span class="date__publish">یکشنبه 24 آذر 1398</span>
+                            </a>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <a href="#" class="box">
+                                <div class="box__title">
+                                    <span>مکمل غذایی</span>
+                                    <i class="fa-solid fa-video"></i>
+                                </div>
+                                <img id="img__mag" src="../../Image/Banner/Vlog/VB-6.jpg" alt="بلاگ">
+                                <span id="main__title"> راهنمای خرید از وب سایت داروکده </span>
+                                <div class="box__info">
+                                    <img src="../../Image/Person/A2.jpg" alt="person">
+                                    <span class="name"> بابک روکی </span>
+                                </div>
+                                <span class="date__publish">پنجشنبه 18 آبان 1396</span>
+                            </a>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <a href="#" class="box">
+                                <div class="box__title">
+                                    <span>مکمل غذایی</span>
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <img id="img__mag" src="../../Image/Banner/Vlog/VB-5.jpg" alt="بلاگ">
+                                <span id="main__title"> مکمل تریبولوس (Tribulus Terrestris) و اثر آن بر رشد عضله </span>
+                                <div class="box__info">
+                                    <img src="../../Image/Person/A1.jpg" alt="person">
+                                    <span class="name">دکتر کوشا شهیدی</span>
+                                </div>
+                                <span class="date__publish">دوشنبه 17 اردیبهشت 1397</span>
+                            </a>
+                        </swiper-slide>
+                    </swiper-container>
+                    <swiper-container id="swSlide2" class="mySwiper" pagination="false" pagination-clickable="false" space-between="30"slides-per-view="1">
+                        <swiper-slide>
+                            <a href="#" class="box">
+                                <div class="box__title">
+                                    <span>بیماری ها</span>
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <img id="img__mag" src="../../Image/Banner/Vlog/VB-8.jpg" alt="بلاگ">
+                                <span id="main__title">اسپری پی اچ آر 160 و بهبود عوارض ریوی کووید 19</span>
+                                <div class="box__info">
+                                    <img src="../../Image/Person/A4.jpg" alt="person">
+                                    <span class="name">دکتر احسان عبادی</span>
+                                </div>
+                                <span class="date__publish">سه شنبه 18 شهریور 1398</span>
+                            </a>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <a href="#" class="box">
+                                <div class="box__title">
+                                    <span>مکمل غذایی</span>
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <img id="img__mag" src="../../Image/Banner/Vlog/VB-7.jpg" alt="بلاگ">
+                                <span id="main__title"> همه چیز درباره ویتامین ب کمپلکس </span>
+                                <div class="box__info">
+                                    <img src="../../Image/Person/A3.jpg" alt="person">
+                                    <span class="name">افسانه ضیایی</span>
+                                </div>
+                                <span class="date__publish">یکشنبه 24 آذر 1398</span>
+                            </a>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <a href="#" class="box">
+                                <div class="box__title">
+                                    <span>مکمل غذایی</span>
+                                    <i class="fa-solid fa-video"></i>
+                                </div>
+                                <img id="img__mag" src="../../Image/Banner/Vlog/VB-6.jpg" alt="بلاگ">
+                                <span id="main__title"> راهنمای خرید از وب سایت داروکده </span>
+                                <div class="box__info">
+                                    <img src="../../Image/Person/A2.jpg" alt="person">
+                                    <span class="name"> بابک روکی </span>
+                                </div>
+                                <span class="date__publish">پنجشنبه 18 آبان 1396</span>
+                            </a>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <a href="#" class="box">
+                                <div class="box__title">
+                                    <span>مکمل غذایی</span>
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <img id="img__mag" src="../../Image/Banner/Vlog/VB-5.jpg" alt="بلاگ">
+                                <span id="main__title"> مکمل تریبولوس (Tribulus Terrestris) و اثر آن بر رشد عضله </span>
+                                <div class="box__info">
+                                    <img src="../../Image/Person/A1.jpg" alt="person">
+                                    <span class="name">دکتر کوشا شهیدی</span>
+                                </div>
+                                <span class="date__publish">دوشنبه 17 اردیبهشت 1397</span>
+                            </a>
+                        </swiper-slide>
+                    </swiper-container>
+                </section>
+                <a href="#" id="special__title_link">مشاهده همه</a>
+            </div>
+        </div>
+    </section>
+    <section class="section__second">
+        <div class="div__third">
+            <span class="div__third_header">محبوب ترین ها</span>
+            <div class="div__third_title">
+                <a href="#">
+                    <img src="../../Image/Product/Mag/Mag-6.jpg" alt="وبلاگ">
+                    <h6>برای داشتن موی سالم چه روتینی داشته باشیم؟</h6>
+                    <span>یکشنبه 20 شهریور 1401</span>
+                </a>
+            </div>
+            <div class="div__third_box">
+                <a href="#">
+                    <img src="../../Image/Product/Mag/Mag-7.jpg" alt="وبلاگ">
+                    <div>
+                        <span>مکمل های حاوی نخل اره ای یا saw palmetto به جلوگیری از ریزش مو کمک می کنند؟</span>
+                        <span id="div__third_box_footer">سه شنبه 08 بهمن 1398</span>
+                    </div>
+                </a>
+            </div>  
+            <div class="div__third_box">
+                <a href="#">
+                <img src="../../Image/Product/Mag/Mag-8.jpg" alt="وبلاگ">
+                <div>
+                        <span>رژیم کتوژنیک چیست؟</span>
+                        <span id="div__third_box_footer">شنبه 28 دی 1398</span>
+                </div>
+                </a>
+            </div>
+            <div class="div__third_box">
+                <a href="#">
+                <img src="../../Image/Product/Mag/Mag-9.jpg" alt="وبلاگ">
+                    <div>
+                        <span>Intermittent fasting یا ناشتایی متناوب، پدیده ای در دنیای رژیم های غذایی</span>
+                        <span id="div__third_box_footer">شنبه 28 دی 1398</span>
+                    </div>
+                </a>
+            </div>
+            <div class="div__third_box">
+                <a href="#">
+                <img src="../../Image/Product/Mag/Mag-10.jpg" alt="وبلاگ">
+                    <div>
+                        <span>درباره رژیم گیاهخواری چه می دانید؟</span>
+                        <span id="div__third_box_footer">شنبه 05 بهمن 1398</span>
+                    </div>
+                </a>
+            </div>
+            <div class="div__third_box">
+                <a href="#">
+                <img src="../../Image/Product/Mag/Mag-11.jpg" alt="وبلاگ">
+                    <div>
+                        <span>رپورتاژ- همه چیز درباره مکمل ماکا</span>
+                        <span id="div__third_box_footer">سه شنبه 13 اسفند 1398</span>
+                    </div>
+                </a>
+            </div>
+            <div class="div__third_box">
+                <a href="#">
+                <img src="../../Image/Product/Mag/Mag-12.jpg" alt="وبلاگ">
+                    <div>
+                        <span>اطلاعیه : استخدام در داروکده</span>
+                        <span id="div__third_box_footer">سه شنبه 12 فروردین 1399</span>
+                    </div>
+                </a>
+            </div> 
+            <a id="Latest__News_title_link" href="#" class="Latest__News_title">مشاهده عناوین بیشتر</a>
+        </div>
+        <div class="div__second">
+            <span class="div__second_title">پربازدید ترین ها</span>
+            <div class="div__second_box">
+                <div class="view__first">
+                    <img src="../../Image/Product/Mag/Mag-1.jpg" alt="پربازدید ترین">
+                </div>
+                <div class="view__second">
+                    <div class="view__second_header">
+                        <div class="second_header">
+                            <a href="#">مقالات</a>
+                            <a href="#">ورزشی</a>
+                        </div>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                    <a href="#" class="view__second_title">هفت برنامه ی تمرینی عضلات پا</a>
+                    <p>
+                        در این مقاله به معرفی 7 برنامه مناسب عضلات پا می پردازیم. هر کدام از برنامه های 7 گانه تمرکز خاصی روی عضلات پا دارند.
+                    </p>
+                    <div class="view__second_footer">
+                        <img src="../../Image/Person/A1.jpg" alt="person">
+                        <a href="#">دکتر کوشا شهیدی</a>
+                        <span>سه شنبه 02 مرداد 1397</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div__second_box">
+                <div class="view__first">
+                    <img src="../../Image/Product/Mag/Mag-2.jpg" alt="پربازدید ترین">
+                </div>
+                <div class="view__second">
+                    <div class="view__second_header">
+                        <div class="second_header">
+                            <a href="#">مقالات</a>
+                            <a href="#">پوست</a>
+                        </div>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                    <a href="#" class="view__second_title">چگونه از پوست دور چشم خود محافظت کنم تا همیشه جوان و زیبا بماند؟</a>
+                    <p>
+                        پوست دور چشم به علت نازک بودن بسیار حساس است. در این مقاله در مورد پوست دور چشم و محافظت از آن بیشتر توضیح می دهیم.
+                    </p>
+                    <div class="view__second_footer">
+                        <img src="../../Image/Person/A5.jpg" alt="person">
+                        <a href="#">دکتر محذثه شوقی</a>
+                        <span>چهارشنبه 12 آذر 1393 </span>
+                    </div>
+                </div>
+            </div>
+            <div class="div__second_box">
+                <div class="view__first">
+                    <img src="../../Image/Product/Mag/Mag-3.jpg" alt="پربازدید ترین">
+                </div>
+                <div class="view__second">
+                    <div class="view__second_header">
+                        <div class="second_header">
+                            <a href="#">مقالات</a>
+                            <a href="#">مکمل ورزشی</a>
+                        </div>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                    <a href="#" class="view__second_title">(Taurine) تائورین چیست؟</a>
+                    <p>
+                        آیا می دانید تائورین چیست و در بدن چه کارایی دارد؟ منابع تامین آن کدامند؟ برای دانستن این سوالات و سوال های دیگر در مورد تائورین این مطلب را مطالعه کنید.
+                    </p>
+                    <div class="view__second_footer">
+                        <img src="../../Image/Person/A1.jpg" alt="person">
+                        <a href="#">دکتر کوشا شهیدی</a>
+                        <span>یکشنبه 10 دی 1396</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div__second_box">
+                <div class="view__first">
+                    <img src="../../Image/Product/Mag/Mag-4.jpg" alt="پربازدید ترین">
+                </div>
+                <div class="view__second">
+                    <div class="view__second_header">
+                        <div class="second_header">
+                            <a href="#">مقالات</a>
+                            <a href="#">مکمل غذایی</a>
+                        </div>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                    <a href="#" class="view__second_title">ماکا چیست؟ فواید مصرف آن را بهتر بدانیم</a>
+                    <p>
+                        ماکا گیاهی خوراکی است که بیشتر ریشه آن مورد استفاده قرار می گیرد. در این مقاله از مجله داروکده درباره ماکا و خواص آن بخوانید.
+                    </p>
+                    <div class="view__second_footer">
+                        <img src="../../Image/Person/A6.jpg" alt="person">
+                        <a href="#">مهسا رضایی</a>
+                        <span>شنبه 16 فروردین 1399</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div__second_box">
+                <div class="view__first">
+                    <img src="../../Image/Product/Mag/Mag-5.jpg" alt="پربازدید ترین">
+                </div>
+                <div class="view__second">
+                    <div class="view__second_header">
+                        <div class="second_header">
+                            <a href="#">مقالات</a>
+                            <a href="#">مکمل غذایی</a>
+                        </div>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                    <a href="#" class="view__second_title">5 ویتامین مهم جهت رشد و بازسازی عضله</a>
+                    <p>
+                        بعد از اتمام تمرین، رشد عضله و ترمیم آن به ویتامین ها و مواد معدنی گوناگونی نیاز دارد. در این مطلب به معرفی نقش 5 ویتامین مهم می پردازیم.
+                    </p>
+                    <div class="view__second_footer">
+                        <img src="../../Image/Person/A1.jpg" alt="person">
+                        <a href="#">دکتر کوشا شهیدی</a>
+                        <span>چهارشنبه 20 دی 1396</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div__first">
+            <a href="#" class="div__banner">
+                <img src="../../Image/Banner/Banner-S13.jpg" alt="بنر">
+                <span>مکمل افزایش تستوسترن</span>
+            </a>
+            <a href="#" class="div__banner">
+                <img src="../../Image/Banner/Banner-S14.jpg" alt="بنر">
+                <span>مکمل کربو فایت</span>
+            </a>
+            <a href="#" class="div__banner">
+                <img src="../../Image/Banner/Banner-S15.jpg" alt="بنر">
+                <span>مکمل ال آرژنین کارن</span>
+            </a>
+            <div class="Latest__News">
+                <span class="Latest__News_title">جدیدترین مطالب</span>
+                <div><a class="Latest__News_link" href="#">هشدار ورود زیر سویه جدید کرونا XBB و BQ.1</a></div>
+                <div><a class="Latest__News_link" href="#">امگا 3 انتریک کوتد هلثی وی و نقش آن در سلامت بدن</a></div>
+                <div><a class="Latest__News_link" href="#">ریزش موی سکه‌ای</a></div>
+                <div><a class="Latest__News_link" href="#">آشنایی با مکمل رنانکس شرکت کارنیک دارو</a></div>
+                <div><a class="Latest__News_link" href="#">ریزش مو و جواب سوالات پر تکرار شما</a></div>
+                <a id="Latest__News_title_link" href="#" class="Latest__News_title">مشاهده عناوین بیشتر</a>
+            </div>
+        </div>
+    </section>
+    <section class="section__third">
+        <span style="background: transparent !important;" class="video__title">ویدیوها</span>
+        <div class="box__items">
+            <div class="box__first">
+                <span class="Latest__News_title">آخرین ویدیو ها</span>
+                <div class="box__item">
+                    <a onclick="showVideo(1)">
+                        <img src="../../Image/Product/Mag/Video/Mag-video1.jpg" alt="وبلاگ">
+                        <div>
+                            <span id="title1">همه چیز درباره میگرن</span>
+                            <span id="div__third_box_footer">سه شنبه 10 خرداد 1401</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="box__item">
+                    <a onclick="showVideo(2)">
+                        <img src="../../Image/Product/Mag/Video/Mag-video2.jpg" alt="وبلاگ">
+                        <div>
+                            <span id="title2">همه چیز درباره HMB</span>
+                            <span id="div__third_box_footer">چهارشنبه 26 آذر 1399</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="box__item">
+                    <a onclick="showVideo(3)">
+                        <img src="../../Image/Product/Mag/Video/Mag-video3.jpg" alt="وبلاگ">
+                        <div>
+                            <span id="title3">همه چیز درباره پوست</span>
+                            <span id="div__third_box_footer">دوشنبه 28 مهر 1399</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="box__item">
+                    <a onclick="showVideo(4)">
+                        <img src="../../Image/Product/Mag/Video/Mag-video4.jpg" alt="وبلاگ">
+                        <div>
+                            <span id="title4">همه چیز درباره خروپف</span>
+                            <span id="div__third_box_footer">نجشنبه 10 مهر 1399</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="box__item">
+                    <a onclick="showVideo(5)">
+                        <img src="../../Image/Product/Mag/Video/Mag-video5.jpg" alt="وبلاگ">
+                        <div>
+                            <span id="title5">آشنایی با محصولات اپتیفست</span>
+                            <span id="div__third_box_footer">جمعه 21 شهریور 1399</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="box__item">
+                    <a onclick="showVideo(6)">
+                        <img src="../../Image/Product/Mag/Video/Mag-video6.jpg" alt="وبلاگ">
+                        <div>
+                            <span id="title6">همه چیز درباره چین و چروک صورت</span>
+                            <span id="div__third_box_footer">یکشنبه 16 شهریور 1399</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="box__second">
+                <video id="show__video" controls>
+                    <source src="../../Videos/video1.mp4" type="video/mp4">
+                </video>
+                <div>
+                    <span id="video__title">همه چیز درباره میگرن</span>
+                    <span><i class="fa-regular fa-eye"></i> 4633</span>
+                </div>
+            </div>
+            <div class="box__first">
+                <span class="Latest__News_title">آخرین ویدیو ها</span>
+                <div class="double__box">
+                    <div class="box__item">
+                        <a onclick="showVideo(1)">
+                            <img src="../../Image/Product/Mag/Video/Mag-video1.jpg" alt="وبلاگ">
+                            <div>
+                                <span id="title1">همه چیز درباره میگرن</span>
+                                <span id="div__third_box_footer">سه شنبه 10 خرداد 1401</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box__item">
+                        <a onclick="showVideo(2)">
+                            <img src="../../Image/Product/Mag/Video/Mag-video2.jpg" alt="وبلاگ">
+                            <div>
+                                <span id="title2">همه چیز درباره HMB</span>
+                                <span id="div__third_box_footer">چهارشنبه 26 آذر 1399</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="double__box">
+                    <div class="box__item">
+                        <a onclick="showVideo(3)">
+                            <img src="../../Image/Product/Mag/Video/Mag-video3.jpg" alt="وبلاگ">
+                            <div>
+                                <span id="title3">همه چیز درباره پوست</span>
+                                <span id="div__third_box_footer">دوشنبه 28 مهر 1399</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box__item">
+                        <a onclick="showVideo(4)">
+                            <img src="../../Image/Product/Mag/Video/Mag-video4.jpg" alt="وبلاگ">
+                            <div>
+                                <span id="title4">همه چیز درباره خروپف</span>
+                                <span id="div__third_box_footer">نجشنبه 10 مهر 1399</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="double__box">
+                    <div class="box__item">
+                        <a onclick="showVideo(5)">
+                            <img src="../../Image/Product/Mag/Video/Mag-video5.jpg" alt="وبلاگ">
+                            <div>
+                                <span id="title5">آشنایی با محصولات اپتیفست</span>
+                                <span id="div__third_box_footer">جمعه 21 شهریور 1399</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box__item">
+                        <a onclick="showVideo(6)">
+                            <img src="../../Image/Product/Mag/Video/Mag-video6.jpg" alt="وبلاگ">
+                            <div>
+                                <span id="title6">همه چیز درباره چین و چروک صورت</span>
+                                <span id="div__third_box_footer">یکشنبه 16 شهریور 1399</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section__four">
+        <div class="section__four_box">
+            <span class="Latest__News_title">مکمل غذایی</span>
+            <div class="four__box_title">
+                <a href="#">
+                    <img src="../../Image/Product/Mag/Mag-25.jpg" alt="Mag">
+                    <h6>امگا 3 انتریک کوتد هلثی وی و نقش آن در سلامت بدن</h6>
+                    <div>
+                        <span> یکشنبه 27 آذر 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-26.jpg" alt="Mag">
+                        <h6>آشنایی با مکمل رنانکس شرکت کارنیک دارو</h6>
+                    </div>
+                    <div>
+                        <span> یکشنبه 06 آذر 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-27.jpg" alt="Mag">
+                        <h6>درباره مس بیشتر بدانیم</h6>
+                    </div>
+                    <div>
+                        <span> یکشنبه 22 آبان 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-28.jpg" alt="Mag">
+                        <h6>در مورد هیرتامین بیشتر بدانیم</h6>
+                    </div>
+                    <div>
+                        <span> چهارشنبه 20 مهر 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <a id="Latest__News_title_link" href="#" class="Latest__News_title">مشاهده عناوین بیشتر</a>
+        </div>
+        <div class="section__four_box">
+            <span class="Latest__News_title">بیماری ها</span>
+            <div class="four__box_title">
+                <a href="#">
+                    <img src="../../Image/Product/Mag/Mag-21.jpg" alt="Mag">
+                    <h6>واکسن گارداسیل</h6>
+                    <div>
+                        <span>چهارشنبه 05 بهمن 1401</span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-22.jpg" alt="Mag">
+                        <h6>هشدار ورود زیر سویه جدید کرونا XBB و BQ.1</h6>
+                    </div>
+                    <div>
+                        <span> چهارشنبه 14 دی 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-23.jpg" alt="Mag">
+                        <h6>درمان آنفلوانزا با نگاهی به تفاوت آنفلوانزا و سرماخوردگی</h6>
+                    </div>
+                    <div>
+                        <span> سه شنبه 17 آبان 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-24.jpg" alt="Mag">
+                        <h6>واکسن آنفولانزا فرانسوی واکسی گریپ</h6>
+                    </div>
+                    <div>
+                        <span> چهارشنبه 11 آبان 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <a id="Latest__News_title_link" href="#" class="Latest__News_title">مشاهده عناوین بیشتر</a>
+        </div>
+        <div class="section__four_box">
+            <span class="Latest__News_title">پوست</span>
+            <div class="four__box_title">
+                <a href="#">
+                    <img src="../../Image/Product/Mag/Mag-17.jpg" alt="Mag">
+                    <h6>درمان لک با ترانگزامیک اسید برای اولین بار در ایران</h6>
+                    <div>
+                        <span> سه شنبه 27 دی 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-18.jpg" alt="Mag">
+                        <h6>در هنگام خرید ضد آفتاب چه نکاتی را در نظر بگیریم؟</h6>
+                    </div>
+                    <div>
+                        <span> سه شنبه 27 دی 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-19.jpg" alt="Mag">
+                        <h6>معضل منافذ باز پوست صورت+چند راهکار طلایی برای درمان</h6>
+                    </div>
+                    <div>
+                        <span> دوشنبه 12 اردیبهشت 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-20.jpg" alt="Mag">
+                        <h6>درمان لک ها با کرم ضد لک قوی سیسپرسا حاوی سیستئامین</h6>
+                    </div>
+                    <div>
+                        <span> چهارشنبه 20 بهمن 1400 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <a id="Latest__News_title_link" href="#" class="Latest__News_title">مشاهده عناوین بیشتر</a>
+        </div>
+        <div class="section__four_box">
+            <span class="Latest__News_title">تغذیه</span>
+            <div class="four__box_title">
+                <a href="#">
+                    <img src="../../Image/Product/Mag/Mag-13.jpg" alt="Mag">
+                    <h6>فواید روغن MCT (ام سی تی اویل)</h6>
+                    <div>
+                        <span>جمعه 24 تیر 1401</span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-14.jpg" alt="Mag">
+                        <h6>احساس گرسنگی بعد از غذا خوردن،چرا اتفاق می افتد و چه باید کرد؟</h6>
+                    </div>
+                    <div>
+                        <span>چهارشنبه 11 خرداد 1401</span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-15.jpg" alt="Mag">
+                        <h6>چند نکته تغذیه ای ساده برای سلامتی در ماه رمضان</h6>
+                    </div>
+                    <div>
+                        <span> یکشنبه 28 فروردین 1401 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="four__box">
+                <a href="#">
+                    <div class="four__box_first">
+                        <img src="../../Image/Product/Mag/Mag-16.jpg" alt="Mag">
+                        <h6>تاثیر رژیم غذایی بر میزان استروژن زنان</h6>
+                    </div>
+                    <div>
+                        <span> سه شنبه 12 مرداد 1400 </span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                </a>
+            </div>
+            <a id="Latest__News_title_link" href="#" class="Latest__News_title">مشاهده عناوین بیشتر</a>
+        </div>
+    </section>
+    <footer class="main__footer">
+        <header class="footer__header">
+            <a href="#" class="header__footer_first">
+                <div>
+                    <img src="../../Image/Banner/Vlog/VB-1.jpg" alt="Mag">
+                </div>
+                <span> درمان لک با ترانگزامیک اسید برای اولین بار در ایران </span>
+            </a>
+            <a href="#" class="header__footer_first">
+                <div>
+                    <img src="../../Image/Banner/Vlog/VB-2.jpg" alt="Mag">
+                </div>
+                <span>واکسن گارداسیل</span>
+            </a>
+            <a href="#" class="header__footer_first">
+                <div>
+                    <img src="../../Image/Banner/Vlog/VB-3.jpg" alt="Mag">
+                </div>
+                <span> 16 علت اصلی ریزش مو </span>
+            </a>
+            <a href="#" class="header__footer_first">
+                <div>
+                    <img src="../../Image/Banner/Vlog/VB-9.jpg" alt="Mag">
+                </div>
+                <span>درباره تریکوتیلومانیا</span>
+            </a>
+        </header>
+        <section class="footer__section">
+            <div class="footer__section_box">
+                <a href="#">درباره ما</a>
+                <a href="#">تماس با ما</a>
+                <a href="#">داروکدورز</a>
+                <a href="#">نویسندگان</a>
+            </div>
+            <div class="footer__section_box">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a id="footer__aparat" href="#">
+                    <img id="aparat1" src="../../Image/SVG/icons-aparat.png" alt="aparat">
+                    <img id="aparat2" src="../../Image/SVG/icons-aparat2.png" alt="aparat">
+                </a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </section>
+        <section class="footer__section_second">
+            <span id="spShow1">مجله <a href="#">داروکده</a> یک مجله اینترنتی و آنلاین است که شما را در امر آشنایی , تهیه و مصرف صحیح محصولات سلامت محور یاری می رساند .</span>
+            <a href="../../Pages/Home/Home.html"><img src="../../Image/SVG/logo-mvg.svg" alt="mvg"></a>
+            <span id="spShow2">مجله <a href="#">داروکده</a> یک مجله اینترنتی و آنلاین است که شما را در امر آشنایی , تهیه و مصرف صحیح محصولات سلامت محور یاری می رساند .</span>
+        </section>
+        <footer>
+            <span>استفاده از مطالب <a style="color: #ffae4a;" href="../../Pages/MagLog/MagLogHome.html">مجله داروکده</a> فقط برای مقاصد غیرتجاری و با ذکر منبع و درج لینک بلامانع است . کلیه حقوق این مجله به وب سایت <a style="color: #66C23A;" href="../../Pages/Home/Home.html">داروکده</a> تعلق دارد.</span>
+        </footer>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قرص اپتی وومن گلدن لایف | داروکده</title>
+
+    <!-- style css page -->
+    <link rel="stylesheet" href="Products.css">
+    <link rel="stylesheet" href="../../Style/main.css">
+    <link rel="shortcut icon" href="../../Image/Logo01.ico" type="image/x-icon">
+    <style>
+        .main__footer {
+            margin-top: 372pc;
+        }
+    
+        .full__box_four .second span ul li:nth-child(6) {
+            margin-bottom: 0.5rem;
+        }
+    
+        .full__box_four .second span ul li:nth-child(12) {
+            margin-bottom: 0;
+        }
+    
+        #show3 ul li:nth-child(7) {
+            margin-right: 10px;
+        }
+    
+        #show3 ul li:nth-child(8) {
+            margin-right: 10px;
+        }
+    
+        .box__btn_comment svg {
+            padding: 6px 7px;
+            left: 18rem;
+        }
+        @media (min-width: 350px) and (max-width: 500px){
+            .main__footer {
+                margin-top: 435pc !important;
+            }
+        }
+        @media (min-width: 750px) and (max-width: 991px){
+            .main__footer {
+                margin-top: 407pc !important;
+            }
+        }
+        @media (min-width: 1537px){
+            .main__footer {
+                margin-top: 378pc !important;
+            }
+            .box__btn_comment svg {
+                padding: 6.25px 7px !important;
+            }
+        }
+    </style>
+
+    <!-- Bootstrap Component -->
+    <link rel="stylesheet" href="../../Component/Bootstrap/bootstrap.css">
+    <script src="../../Component/Bootstrap/bootstrap.js"></script>
+    <script src="../../Component/jquery.js"></script>
+
+    <!-- FontAwsome Component -->
+    <script src="../../Component/FontAwsome/6.2.0/fontawesome.js"></script>
+    <script src="../../Component/FontAwsome/6.2.0/all.js"></script>
+    
+    <!-- js Component -->
+    <script src="../../Script/main.js"></script>
+    <script src="../../Script/filterItem.js"></script>
+    <script src="../../Script/addProduct.js"></script>
+    <script src="../../Script/RegisterAndLogin.js"></script>
+    <script src="../../Script/ProductShow.js"></script>
+    <script src="../../Script/MainProducts.js"></script>
+</head>
+<body>
+    <header class="main__header">
+        <div class="Title__Banner">
+            <div></div>
+        </div>
+        <section class="list__info">
+            <div>
+                <a onclick="showForm()" id="list__info_span" onload="UserFullData()" class="list__info_span">ورود کاربر
+                    <i class="fa-solid fa-user"></i></a>
+                <div id="form__login_back">
+                    <div class="form__box_login">
+                        <input autocomplete="off" class="form_login" id="UserName" type="text"
+                            placeholder="شماره تلفن همراه خود را وارد کنید">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="form__box_login">
+                        <input autocomplete="off" class="form_login" id="Password" type="text"
+                            placeholder="رمز عبور خود را وارد کنید">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="form__check">
+                        <input id="checkData" type="checkbox" title="check">
+                        <label for="check">مرا به خاطر بسپار</label>
+                    </div>
+                    <div class="form__btn">
+                        <button onclick="LoadData()">ورود به حساب کاربری</button>
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+                    <div class="form__link">
+                        <a href="../Register/Register.html"><i class="fa-solid fa-user"></i>ثبت نام کاربر جدید</a>
+                    </div>
+                    <div class="form__link">
+                        <a href="../ForgetPassword/ForgetPassword.html"><i class="fa-solid fa-lock"></i>کلمه عبور خود را
+                            فراموش کرده ام</a>
+                    </div>
+                </div>
+                <a href="../Basket/Basket.html" class="list__info_span">پیگری سفارش <i class="fa-solid fa-check-to-slot"></i></a>
+                <span class="list__info_span" id="special__info"> 62747000 - 52862000 - 021 <i class="fa-solid fa-phone"></i></span>
+            </div>
+        </section>
+        <section class="list__Box_Search">
+            <i onclick="showNav()" id="bar__icon" class="fa-solid fa-bars"></i>
+            <div id="special__item" class="list__Box_item">
+                <span class="list__Box_Number">0</span>
+                <i id="icon__basket" class="fa-solid fa-cart-shopping"></i>
+                <a onclick="showBasket()" id="show__basket" href="#" class="list__Box_span">سبد خرید</a>
+                <div class="form__basket_back">
+
+                </div>
+            </div>
+            <div class="list__Box_item">
+                <span id="list__line"></span>
+            </div>
+            <div class="list__Box_item">
+                <input type="text" class="list__box" placeholder="عبارت مورد نظر جهت جستجو وارد کنید">
+                <i id="icon__Search" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="list__Box_item">
+                <a href="../Home/Home.html"><img id="Box__img" src="../../Image/SVG/logo.svg" title="Logo"></a>
+            </div>
+        </section>
+        <nav>
+            <ul class="list__items">
+                <li class="list__item">
+                    <span class="list__link">
+                        آرایشی بهداشتی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">محصولات آفتاب</a>
+                                <a href="#" class="list__background_item">مرطوب کننده</a>
+                                <a href="#" class="list__background_item">ضده لک</a>
+                                <a href="#" class="list__background_item">ضد چروک</a>
+                                <a href="#" class="list__background_item">لیفتینگ پوست</a>
+                                <a href="#" class="list__background_item">ترمیم کننده پوست</a>
+                                <a href="#" class="list__background_item">پاکسازی پوست</a>
+                                <a href="#" class="list__background_item">مراقبت مو</a>
+                                <a href="#" class="list__background_item">مو درمانی</a>
+                                <a href="#" class="list__background_item">بهداشت دندان و دهان</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مکمل غذایی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">مکمل آقایان</a>
+                                <a href="#" class="list__background_item">مکمل بانوان</a>
+                                <a href="#" class="list__background_item">مکمل کودکان</a>
+                                <a href="#" class="list__background_item">مکمل گیاهی</a>
+                                <a href="#" class="list__background_item">مکمل ورزشی</a>
+                                <a href="#" class="list__background_item">مکمل کمک درمانی 1</a>
+                                <a href="#" class="list__background_item">مکمل درمانی 2</a>
+                                <a href="#" class="list__background_item">ویتامین و مواد معدنی</a>
+                                <a href="#" class="list__background_item">مکمل تنظیم وزن</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مکمل ورزشی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">پروتئین</a>
+                                <a href="#" class="list__background_item">کربوهیدرات</a>
+                                <a href="#" class="list__background_item">کاهش وزن</a>
+                                <a href="#" class="list__background_item">انرژی زا</a>
+                                <a href="#" class="list__background_item">کراتین</a>
+                                <a href="#" class="list__background_item">گلوتامین</a>
+                                <a href="#" class="list__background_item">بی سی ای ای</a>
+                                <a href="#" class="list__background_item">سی ال ای</a>
+                                <a href="#" class="list__background_item">کارنیتین</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">مادر و کودک
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">مادرو بارداری</a>
+                                <a href="#" class="list__background_item">دوران شیردهی</a>
+                                <a href="#" class="list__background_item">شیر خشک و غذای کودک</a>
+                                <a href="#" class="list__background_item">لوازم کودک و نوزاد</a>
+                                <a href="#" class="list__background_item">مکمل مادران</a>
+                                <a href="#" class="list__background_item">مکمل کودکان</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <span class="list__link">تجهیزات پزشکی
+                        <div class="nav__box_item">
+                            <div id="list__link_background">
+                                <a href="#" class="list__background_item">تجهیزات پزشکی بدن</a>
+                                <a href="#" class="list__background_item">تجهیزات قند و خون</a>
+                                <a href="#" class="list__background_item">سلامت محیط</a>
+                                <a href="#" class="list__background_item">تجهیزات تسکین دهنده</a>
+                                <a href="#" class="list__background_item">تراز و دماسنج</a>
+                                <a href="#" class="list__background_item">تجهیزات مادر و کودک</a>
+                                <a href="#" class="list__background_item">لوازم فردی</a>
+                                <a href="#" class="list__background_item">ارتوپدی</a>
+                            </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="list__item">
+                    <a href="../MagLog/MagLogHome.html" class="list__link">مجله داروکده</a>
+                </li>
+                <li class="list__item">
+                    <a href="../Jamalzadeh/Jamalzadeh.html" class="list__link">داروخانه مرکزی جمالزاده</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="nav__responsive">
+            <div class="div__responsive">
+                <i onclick="showNav()"  class="fa-solid fa-bars"></i>
+                <a target="_blank" href="../Basket/Basket.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <div class="form__basket_back">
+                </div>
+                <a target="_blank" href="../Login/Login.html"><i class="fa-regular fa-user"></i></a>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a href="../Home/Home.html"><img src="../../Image/SVG/logo-short.svg" alt=""></a>
+        </section>
+        <div id="nav__bar">
+            <i onclick="closeBar()" id="close__bar" class="fa-solid fa-xmark"></i>
+            <img src="../../Image/SVG/logo_nav.svg" alt="">
+            <div class="icon__bar">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div id="bar1"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <span class="item__title">آرایشی بهداشتی</span>
+                    </div>
+                    <span class="change1" onclick="showNavBar(1)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>محصولات آفتاب</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مرطوب کننده</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ضد لک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ضد چروک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>لیفتینگ پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ترمیم کننده پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>پاکسازی پوست</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مراقبت مو</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مو (درمانی)</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>بهداشت دهان و دندان</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar2"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-glass-water"></i>
+                        <span class="item__title">مکمل غذایی</span>
+                    </div>
+                    <span class="change2" onclick="showNavBar(2)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>مکمل آقایان</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل بانوان</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل گیاهی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل ورزشی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل کمک درمانی 1</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل کمک درمانی 2</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ویتامین ها مواد معدنی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل تنظیم وزن</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar3"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <span class="item__title">مکمل ورزشی</span>
+                    </div>
+                    <span class="change3" onclick="showNavBar(3)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>پروتئین</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کربوهیدرات</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>آمینو اسید</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کاهش وزن</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>انرژی زا</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>کراتین</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>گلوتامین</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar4"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-person-breastfeeding"></i>
+                        <span class="item__title">مادر و کودک</span>
+                    </div>
+                    <span class="change4" onclick="showNavBar(4)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>مادر و بارداری</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>دوره شیردهی</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>بهداشت مادر و کودک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>شیر خشک و غذای کودک</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>لوازم کودک و نوزاد</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>مکمل مادران</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <div id="bar5"  class="nav__items">
+                <div class="item">
+                    <div>
+                        <i class="fa-solid fa-kit-medical"></i>
+                        <span class="item__title">تجهیزات پزشکی</span>
+                    </div>
+                    <span class="change5" onclick="showNavBar(5)" id="icon__change">+</span>
+                </div>
+                <div class="item__down">
+                    <div>
+                        <span>تجهیزات پزشکی بدن</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>تجهیزات قند و خون</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>سلامت محیط</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>تجهیزات تسکین دهنده</span>
+                        <span>+</span>
+                    </div>
+                    <div>
+                        <span>ترازو و دماسنج</span>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+            <a target="_blank" href="#" class="link__end_bar">استخدام</a>
+            <a target="_blank" href="#" class="link__end_bar">مجوز و منابع</a>
+            <a target="_blank" href="../AboutUs/AboutUs.html" class="link__end_bar">درباره داروکده</a>
+        </div>
+    </header>
+    <main>
+        <div class="scope__element_product">
+            <header id="title__one" class="header__main">
+                <a href="../Home/Home.html">صفحه نخست</a>
+                <span>></span>
+                <a href="HomeProduct.html">مکمل غذایی</a>
+                <span>></span>
+                <a href="#">مولتی ویتامینهای بانوان</a>
+                <span>></span>
+                <a href="Product5.html">قرص اپتی وومن</a>
+            </header>
+            <section class="section__main">
+                <div class="box__first">
+                    <header>
+                        <div class="main__header_box">
+                            <img src="../../Image/Banner/Country/Australia.jpg" alt="تحت لیسانس استرالیا">
+                            <span>گلدن لایف - Golden Life</span>
+                        </div>
+                        <div class="main__header_box">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>3.6</span>
+                        </div>
+                    </header>
+                    <section>
+                        <div class="first__box">
+                            <div class="title__box">
+                                <h4 id="title12">قرص اپتی وومن</h4>
+                                <span>Opti Woman</span>
+                            </div>
+                            <div class="date__box">
+                                <span>20% تخفیف</span>
+                                <span>تاریخ مصرف : بیش از 2 سال</span>
+                            </div>
+                            <div class="price__box">
+                                <span>261,600 تومان</span>
+                                <span>327,000 تومان</span>
+                            </div>
+                            <div class="btn__box">
+                                <button onclick="addProduct(12, 261600)">افزودن به سبد خرید</button>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                            </div>
+                            <div class="counter__box">
+                                <span>تعداد سفارش</span>
+                                <div class="counter">
+                                    <i onclick="upPrice(261600)" class="fa-solid fa-chevron-up"></i>
+                                    <span id="count__number">0</span>
+                                    <i onclick="downPrice(261600)" class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <span class="end__title_box">هزینه ارسال این محصول <span>رایگان</span> است</span>
+                        </div>
+                        <div class="second__box">
+                            <img id="main__img" src="../../Image/Product/Main-Product/Main-Product9.jpg" alt="">
+                            <div class="img__box">
+                                <img onclick="selectImage(9)" id="sub__img" src="../../Image/Product/Main-Product/Main-Product9.jpg" alt="">
+                                <img onclick="selectImage(9.2)" id="sub__img" src="../../Image/Product/Main-Product/Main-Product9.2.jpg" alt="">
+                                <img onclick="selectImage(9.3)" id="sub__img" src="../../Image/Product/Main-Product/Main-Product9.3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="third__box">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <i class="fa-solid fa-code-compare"></i>
+                            <i class="fa-solid fa-bell"></i>
+                            <i class="fa-solid fa-arrow-up-right-dots"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <span>+1</span>
+                        </div>
+                    </section>
+                </div>
+                <div class="box__second">
+                    <span data-target="box__third" onclick="GoPanel(this)">مشخصات محصول</span>
+                    <span data-target="box__four" onclick="GoPanel(this)">اطلاعات کاربردی</span>
+                    <span data-target="box__six" onclick="GoPanel(this)">محصولات مرتبط</span>
+                    <span data-target="box__seven" onclick="GoPanel(this)">نقد و بررسی</span>
+                    <span data-target="box__eight" onclick="GoPanel(this)">امتیاز دهی</span>
+                    <span data-target="box__nine" onclick="GoPanel(this)">مقالات مرتبط</span>
+                    <span data-target="box__ten" onclick="GoPanel(this)">نظرات کاربران</span>
+                </div>
+                <div class="box__third">
+                    <h4 class="main__title">مشخصات محصول</h4>
+                    <div class="full__box">
+                        <span id="border1" onclick="showTab(1)" class="full__box_title"> مشخصات اختصاری <i id="rot1" class="fa-solid fa-chevron-up"></i></span>
+                        <div id="tab1" class="description__box">
+                            <ul>
+                                <li>مولتی ویتامین اپتی وومن حاوی ویتامین ها و عناصر ضروری مورد نیاز خانم ها</li>
+                                <li>مولتی ویتامین مینرال اپتی وومن تحت لیسانس گلدن لایف استرالیا</li>
+                                <li>موثر در بهبود متابولیسم، افزایش انرژی و رفع خستگی با دارا بودن ویتامین های گروه ب و گیاه جینسنگ (Ginseng)</li>
+                                <li>آنتی اکسیدان و موثر در ارتقای سلامت عمومی بدن بانوان با دارا بودن زینک، بتاکاروتن، ویتامین های سی و ای</li>
+                                <li>موثر در حفظ سلامت پوست، مو و ناخن به واسطه ی حضور ویتامین های گروه B، E، C، سیلیکا و کاروتنوئید</li>
+                                <li>تقویت سیستم ایمنی به علت دارا بودن زینک، مس و ویتامین های ث، ای و ب6 و جین سنگ</li>
+                                <li>کمک به پیشگیری و درمان کم خونی به علت دارا بودن آهن (فروس فومارات)، اسید فولیک، ویتامین B12</li>
+                                <li>کمک به پاکسازی و سم زدایی کبدی به علت وجود عصاره خارمریم (Milk Thistle) در هر قرص</li>
+                                <li>در صورتی که قصد بارداری دارید، می توانید از این محصول استفاده کنید.</li>
+                                <li>زنان باردار و شیرده حتماً قبل از مصرف با پزشک خود مشورت کنند.</li>
+                                <li>هر قوطی از این محصول مناسب برای استفاده ی 60 روزه است.</li>
+                                <li>مشخصات اختصاصی قرص اپتی وومن</li>
+                            </ul>
+                        </div>
+                        <span id="border2" onclick="showTab(2)" class="full__box_title"> مشخصات اختصاصی <i id="rot2" class="fa-solid fa-chevron-up"></i></span>
+                        <div id="tab2" class="detail__box">
+                            <div class="line__box">
+                                  <span>نوع محصول</span>
+                                  <span>قرص</span>
+                            </div>
+                            <div class="line__box">
+                                <span>تعداد در بسته</span>
+                                <span>60 عدد</span>
+                            </div>
+                            <div class="line__box">
+                                <span>بارکد</span>
+                                <span>6260595800438</span>
+                            </div>
+                            <div class="line__box">
+                                <span>کد بهداشتی</span>
+                                <span>70054001110004</span>
+                            </div>
+                            <div class="line__box">
+                                <span>جنسیت مصرف</span>
+                                <span>بانوان</span>
+                            </div>
+                            <div class="line__box">
+                                <span>گروه</span>
+                                <span>مولتی ویتامینهای بانوان</span>
+                            </div>
+                            <div class="line__box">
+                                <span>نوع محفظه</span>
+                                <span>قوطی پلاستیکی</span>
+                            </div>
+                        </div>
+                        <span id="border3" onclick="showTab(3)" class="full__box_title"> مشخصات عمومی <i id="rot3" class="fa-solid fa-chevron-up"></i></span>
+                        <div id="tab3" class="detail__box">
+                            <div class="line__box">
+                                  <span>تحت لیسانس</span>
+                                  <span>استرالیا</span>
+                            </div>
+                            <div class="line__box">
+                                <span>کشور سازنده</span>
+                                <span>ایران</span>
+                            </div>
+                            <div class="line__box">
+                                <span>شرکت سازنده</span>
+                                <span>گلدن لایف</span>
+                            </div>
+                            <div class="line__box">
+                                <span>وب سایت</span>
+                                <span>www.goldenlifehealth.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__four">
+                    <h4 class="main__title">اطلاعات کاربردی</h4>
+                    <div class="full__box_four">
+                        <div class="first">
+                            <span onclick="showDisplay(1 , 0)" id="color1">مشخصه ها</span>
+                            <span onclick="showDisplay(2 , 0)" id="color2">روش مصرف</span>
+                            <span onclick="showDisplay(3 , 0)" id="color3">موارد مصرف</span>
+                            <span onclick="showDisplay(4 , 0)" id="color4">هشدار مصرف</span>
+                            <span onclick="showDisplay(5 , 0)" id="color5">شرایط نگهداری</span>
+                            <span onclick="showDisplay(6 , 4)" id="color6">توضیحات</span>
+                        </div>
+                        <div class="second">
+                            <span id="show1">
+                                <ul>
+                                    <li>- مولتی ویتامین مینرال مخصوص خانم ها</li>
+                                    <li>- تحت لیسانس گلدن لایف استرالیا</li>
+                                    <li>- افزایش انرژی و رفع خستگی</li>
+                                    <li>- ارتقای سلامت عمومی و تقویت سیستم ایمنی</li>
+                                    <li>- حفظ سلامت پوست، مو و ناخن</li>
+                                    <li>- حاوی ویتامین های گروه ب، عصاره ی جینسنگ، ویتامین D، کلسیم، منیزیم و روی، مس، ویتامین C، سیلیکا و بتاکاروتن</li>
+                                    <li>- کنترل وزن و کاهش بافت چربی</li>
+                                    <li>- مقابله با عوارضی ناشی از استرس</li>
+                                    <li>- افزایش رشد مو</li>
+                                    <li>- کمک به عملکرد سم زدایی کبد</li>
+                                </ul>
+                            </span>
+                            <span id="show2">
+                                روزانه یک قرص اپتی وومن همراه غذا مصرف شود.
+                            </span>
+                            <span id="show3">
+                                <ul>
+                                    <li>- مولتی ویتامین - مینرال مخصوص خانم ها</li>
+                                    <li>کمک به پیشگیری و درمان کم خونیها</li>
+                                    <li>کاهش علائم پیش از قاعدگی</li>
+                                    <li>بهبود متابولیسم و کنترل وزن</li>
+                                    <li>کاهش‌ استرس، خواب آرام، بهبود خلق و خو</li>
+                                    <li>حفظ سلامت پوست، افزایش رشد و تقویت مو و ناخن</li>
+                                    <li>افزایش استحکام استخوان ها و پیشگیری از پوکی استخوان</li>
+                                    <li>تقویت سیستم ایمنی و افزایش توانایی بدن برای مقابله با بیماری ها</li>
+                                </ul>
+                            </span>
+                            <span id="show4">
+                                <ul>
+                                    <li>- در دوران بارداری و شیردهی قبل از مصرف با پزشک مشورت نمایید.</li>
+                                    <li>زنان باردار و شیرده حتماً قبل از مصرف اپتی وومن با پزشک خود مشورت کنند.</li>
+                                    <li>در صورت مصرف هرگونه دارو، قبل از مصرف با پزشک مشورت نمایید.</li>
+                                    <li>مقدار توصیه شده را بدون مشورت با پزشک و یا داروساز خود افزایش ندهید.</li>
+                                </ul>
+                            </span>
+                            <span id="show5">
+                                <ul>
+                                    <li>- در جای خشک و در دمای زیر 25 درجه سانتیگراد نگهداری نمایید.</li>
+                                </ul>
+                            </span>
+                            <span id="show6">
+                                قرص opti woman تحت لیسانس شرکت وایتکس (گلدن لایف) استرالیا در شرکت درمان یاب دارو در ایران تولید و بسته بندی شده است. <br>
+                                <br>
+                                امروزه عدم برخورداری از یک تغذیه مناسب در کنار کمبود مواد مغذی در خاک های کشاورزی، روش های نامناسب فرآوری مواد غذایی، آلودگی هوا و ... مانع تامین نیازهای بدن به ریزمغذی‌ها از طریق غذاهای                               دریافتی می‌شود که پیامدهایی مانند خستگی مزمن، کم‌خونی، ریزش مو، پوکی استخوان، کاهش حافظه و تمرکز، ضعف سیستم ایمنی و کاهش میل جنسی را به دنبال دارد.<br>
+                                <br>
+                                قرص اپتی وومن با فراهم کردن میزان قابل توجهی از عصاره ی جینسنگ و تمامی ویتامین ها به جز ویتامین K نقش به سزایی در تولید انرژی دارد. به علاوه با دارا بودن ویتامین D، کلسیم، منیزیم و روی                                در سلامت استخوان بسیار کمک کننده خواهد بود. آهن این محصول موجب بهبود وضعیت کم خونی در خانم های مبتلا به این اختلال شده و همچنین مس، ویتامین C، سیلیکا و بتاکاروتن موجود در این محصول سبب                            بهبود وضعیت پوست، مو و ناخن خانم ها می شود.<br>
+                                ضمنا در کنار هم قرار گرفتن این ترکیبات سبب می شود که این مکمل غذایی بتواند در افزایش تمایلات جنسی نیز نقش موثری ایفا کند.<br>
+                                این محصول با تامین انواع ویتامین‌ها و املاح معدنی مورد نیاز به همراه گیاهان دارویی مفید، نقش مهمی را در حفظ و ارتقاء سلامت عمومی بدن و شادابی بانوان ایفا می‌کند.<br>
+                                کمک به پیشگیری و درمان کم خونی کم‌خونی ناشی از فقر آهن مهم‌ترین اختلال تغذیه‌ای شایع در میان زنانِ در سنین باروری در کشورهای درحال ‌توسعه است. براساس آمارهای وزارت بهداشت، نزدیک به نیمی                                از زنان ایرانی به کم‌خونی مبتلا هستند. ضعف جسمانی، عدم تمرکز، سردرد، افت فشار خون، سرگیجه، رنگ‌پریدگی به خصوص در دست ها و سطح داخلی پلک، آسیب به پوست مو و ناخن از علائم کم‌خونی به‌شمار                            می‌روند.<br>
+                                میزان 25 میلی گرم آهن در اپتی وومن به فرم فومارات که دارای جذب بالا و فاقد هرگونه عوارض گوارشی است در کنار 400 میکروگرم اسید فولیک، ویتامین B6 و ویتامین B12 به پیشگیری و درمان کم خونی                                 کمک می کند. همچنین نقش مهمی در افزایش انرژی، تقویت حافظه و رفع خستگی دارد.‌ دریافت روزانه 400 میکروگرم اسید فولیک برای پیشگیری از نقص لوله عصبی جنین در سنین باروری ضروری است، این ویتامین                               به رفع افسردگی و بهبود خلق و خو نیز کمک می‌کند.<br>
+                                کاهش علائم پیش از قاعدگی ویتامین B6 از ایجاد افسردگی و عصبانیت و همچنین افزایش وزن پیش از قاعدگی جلوگیری می کند. منیزیوم به کاهش درد و اسپاسم پیش از قاعدگی و ویتامین E موجود نیز به کاهش                               درد و حساسیت سینه ها کمک می کند.<br>
+                                تولید انرژی، رفع خستگی ، افزایش تمرکز گیاه Ginseng، آهن، ویتامین های گروه B، روی، منیزیم و منگنز موجود نقش مهمی در بهبود عملکرد ذهنی و جسمی بدن دارند.<br>
+                                کنترل وزن ویتامین های B، ید، سلنیوم، کروم و اینوزیتول از طریق بهبود عملکرد تیروئید و فعال سازی چرخه های سوخت و ساز بدن به کنترل وزن کمک می کنند.<br>
+                                مراقبت از پوست، افزایش رشد و استحکام مو و ناخن وجود آنتی اکسیدان هایی مانند بتاکاروتن و ویتامین C و E به حفظ سلامت و شادابی پوست کمک می کند. ویتامین های گروه B در کنار روی، سلنیم و                                سیلیکا نقش مهمی در افزایش رشد و استحکام مو و ناخن دارند.<br>
+                                آنتی اکسیدان و سم زدایی از کبد گیاه جین سینگ، ویتامین C ،E و بتاکاروتن به عنوان آنتی اکسیدان هایی قوی از بدن در مقابل صدمات رادیکال های آزاد محافظت کرده و سیلی مارین موجود در گیاه Milk                                thistle نیز توانایی کبد برای دفع سموم را افزایش می دهد.<br>
+                                اینوزیتول: این ترکیب آلی قندی که جزو ویتامین‌های گروه B محسوب می‌شود، نقش مهمی در انتقال پیام‌های بین سلولی، متابولیسم چربی در بدن و رشد مو دارد. ترکیب اینوزیتول با اسید فولیک و یا                               اسیدهای چرب امگا 3 می‌تواند به درمان افسردگی و اختلالات خواب کمک کند.<br>
+                                Siberian Ginseng: جین‌سینگ دارای خواص آنتی‌اکسیدان، ضد خستگی، قویت‌کننده قوای جسمی و حافظه و همچنین توانمندسازی بدن در مقابله با استرس‌ها است. علاوه بر این برای تقویت میل، کاهش قند و                              کلسترول و افزایش مقاومت بدن برای مقابله با عفونت ها نیز اثربخش می‌باشد.<br>
+                                Milk Thistle: سیلی‌مارین موجود در این گیاه دارای خاصیت آنتی‌اکسیدانی بوده و به سم‌زدایی کبد از سموم، بهبود عملکرد کبد و بازسازی سلول های کبدی کمک می‌کند.<br>
+                                <br>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__five">
+                    <h4 class="main__title">ترکیبات ( <span>به ازاي يک کپسول</span> )</h4>
+                    <div class="full__box">
+                        <div class="box__gradient">
+                            <div id="full__box_gradient">
+                                <div class="gradient__info">
+                                    <span>عنوان</span>
+                                    <div>
+                                        <span>مقدار</span>
+                                        <span>نیاز روزانه</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B1 ( Thiamin )</span>
+                                    <div>
+                                        <span>20 mg</span>
+                                        <span>100 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B2 ( Riboflavin )</span>
+                                    <div>
+                                        <span>20 mg</span>
+                                        <span>100 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B3 ( Niacin )</span>
+                                    <div>
+                                        <span>50 ug</span>
+                                        <span>100 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B5 ( Panthotenic Acid )</span>
+                                    <div>
+                                        <span>30 mg</span>
+                                        <span>100 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B6 ( Pyridoxine )</span>
+                                    <div>
+                                        <span>20 ug</span>
+                                        <span>100 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B12 ( Cyanocobalamin )</span>
+                                    <div>
+                                        <span>50 mcg</span>
+                                        <span>100 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B7 ( Biotin )</span>
+                                    <div>
+                                        <span>50 mcg</span>
+                                        <span>100 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin B9 ( Folic Acid )</span>
+                                    <div>
+                                        <span>400 mcg</span>
+                                        <span>100 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Beta-Carotene</span>
+                                    <div>
+                                        <span>50 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin C</span>
+                                    <div>
+                                        <span>100 mg</span>
+                                        <span>133 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin E</span>
+                                    <div>
+                                        <span>50 IU</span>
+                                        <span>275 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Vitamin D3 ( Cholecalciferol )</span>
+                                    <div>
+                                        <span>400 IU</span>
+                                        <span>67 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Calcium ( Carbonat )</span>
+                                    <div>
+                                        <span>200 mg</span>
+                                        <span>20 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Fe (Ferrous fumarate)</span>
+                                    <div>
+                                        <span>25 mg</span>
+                                        <span>139 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Zinc ( as Zinc Gluconate )</span>
+                                    <div>
+                                        <span>15 mg</span>
+                                        <span>187 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Se (Selenomethionine)</span>
+                                    <div>
+                                        <span>50 mcg</span>
+                                        <span>91 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Magnesium ( as Magnesium Oxide )</span>
+                                    <div>
+                                        <span>50 mg</span>
+                                        <span>16 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Manganese ( as Sulfate )</span>
+                                    <div>
+                                        <span>2 mg</span>
+                                        <span>111 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Cr (Chromium Picolinate)</span>
+                                    <div>
+                                        <span>30 mcg</span>
+                                        <span>120 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Copper ( as gluconate )</span>
+                                    <div>
+                                        <span>375 mcg</span>
+                                        <span>42 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Iodine ( Potassium Iodine )</span>
+                                    <div>
+                                        <span>764 mcg</span>
+                                        <span>100 %</span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Inositol</span>
+                                    <div>
+                                        <span>25 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Ginseng</span>
+                                    <div>
+                                        <span>40 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Milk Thistle</span>
+                                    <div>
+                                        <span>57 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="gradient__info">
+                                    <span>Silica</span>
+                                    <div>
+                                        <span>15 mg</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="show__gradient_box">
+                                <span onclick="showGradient()" id="gradient__show">نمایش کامل</span>
+                                <i id="show__gradient_icon" class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <span class="end__gradient"> نیاز مصرف روزانه از طرف شرکت سازنده مشخص نشده است <i class="fa-solid fa-star"></i></span>
+                            <span class="end__gradient"> مقدار به کار رفته از طرف شرکت سازنده مشخص نشده است <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__six">
+                    <h4 class="main__title">محصولات مرتبط</h4>
+                    <div class="full__box">
+                        <div class="box__slider_product">
+                            <i onclick="showSlider(1)" id="icon__slider1" class=" slide__svg fa-solid fa-chevron-right"></i>
+                            <div class="card__slider_product">
+                                <a href="Product2.html">
+                                    <img src="../../Image/Product/Main-Product/Main-Product2.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.7
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>952k</span>
+                                    </div>
+                                    <span>ول وومن اورجینال</span>
+                                    <span>Vitabiotics</span>
+                                    <span>199,000</span>
+                                    <span>189,000 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="Product3.html">
+                                    <img src="../../Image/Product/Main-Product/Main-Product1.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.7
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>952k</span>
+                                    </div>
+                                    <span>هیرویت</span>
+                                    <span>Health Aid</span>
+                                    <span>147,200</span>
+                                    <span>95,700 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="Product4.html">
+                                    <img src="../../Image/Product/Main-Product/Main-Product4.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.7
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>952k</span>
+                                    </div>
+                                    <span>ول من اورجینال</span>
+                                    <span>Vitabiotics</span>
+                                    <span>192,000</span>
+                                    <span>177,000 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="Product1.html">
+                                    <img src="../../Image/Product/Main-Product/Main-Product3.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.6
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>952k</span>
+                                    </div>
+                                    <span>زینک پلاس 10 میلی گرم</span>
+                                    <span>Zinc Plus 10 mg</span>
+                                    <span>261,000</span>
+                                    <span>235,500 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="#">
+                                    <img src="../../Image/Product/Main-Product/Main-Product10.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            2.9
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>21k</span>
+                                    </div>
+                                    <span>زینک پلاس ب کمپلکس مخصوص کودکان و نوجوانان</span>
+                                    <span>Daana</span>
+                                    <span>100,000</span>
+                                    <span>95,000 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="#">
+                                    <img src="../../Image/Product/Main-Product/Main-Product11.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.3
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>76k</span>
+                                    </div>
+                                    <span> زینک پلاس 10 میلی گرمی ب کمپلکس </span>
+                                    <span>Daana</span>
+                                    <span>135,400</span>
+                                    <span>101,600 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="#">
+                                    <img src="../../Image/Product/Main-Product/Main-Product12.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.5
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>137k</span>
+                                    </div>
+                                    <span>زینک گلوکونات و ویتامین ث</span>
+                                    <span>Sandrous</span>
+                                    <span>70,000</span>
+                                    <span>74,900 تومان</span>
+                                </a>
+                            </div>
+                            <div class="card__slider_product">
+                                <a href="#">
+                                    <img src="../../Image/Product/Main-Product/Main-Product13.jpg" alt="">
+                                    <div class="product__onebox_point">
+                                        <span class="star__point">
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor"></i>
+                                            <i class="fa-solid fa-star" title="poor" id="star__special"></i>
+                                            3.7
+                                        </span>
+                                        <span class="eye__point"><i class="fa-solid fa-eye"></i>54k</span>
+                                    </div>
+                                    <span>ویتامین ب6 مولتی نرمال 40 میلی گرم</span>
+                                    <span>MultiNormal</span>
+                                    <span>52,400 تومان</span>
+                                </a>
+                            </div>
+                            <i onclick="showSlider(2)" id="icon__slider2" class="slide__svg fa-solid fa-chevron-left"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__seven">
+                    <h4 class="main__title">نقد و بررسی</h4>
+                    <div class="full__box">
+                        <div class="review">
+                            <p>
+
+                                <span class="red">شرح مکمل اپتی وومن</span><br>
+                                <br>
+                                <br>
+                                <br>
+                                مولتی ویتامین ها از محبوب ترین مکمل های غذایی می باشند که برای بهبود سلامت، پیشگیری از بیماری و غنی سازی رژیم غذایی مورد استفاده قرار می گیرند. با توجه به اینکه نیازهای تغذیه ای افراد متناسب با سن، جنس و سبک زندگی هر فرد متفاوت است، بهتر است هر فردی از مولتی ویتامین مناسب خود استفاده کند. به عنوان مثال، نیاز به ویتامین ها و مواد معدنی در خانم ها به ویژه در سنین باروری، متفاوت تر از آقایان است و بنابراین استفاده از مکمل مولتی ویتامین اختصاصی برای بانوان ضروری است. در این بین اپتی وومن یک از بهترین انتخاب هاست. قرص اپتی‌وومن محصولی از شرکت گلدن لایف استرالیا، یک مولتی ویتامین مینرال مخصوص خانم‌ها  با فرمولاسیونی کامل می باشد که علاوه بر تامین نیاز روزانه به افزایش انرژی، بهبود سلامت عمومی، حفظ سلامت پوست، مو و ناخن، مقابله با استرس، بهبود متابولیسم و درمان کم خونی کمک می‌کند. <br>
+                                <br>
+                                <br>
+                                <br>
+                                اپتی وومن برای چه گروه سنی توصیه می شود؟<br>
+                                با توجه به مقادیر مواد مغذی بکار رفته در اپتی‌وومن اعم از ویتامین ها و مواد معدنی، این مکمل به کلیه ی بانوان به ویژه در سنین باروری توصیه می شود.<br>
+                                <br>
+                                <br>
+                                <br>
+                                آیا در صورت قصد بارداری، می توان از اپتی وومن استفاده کرد؟<br>
+                                این مولتی ویتامین به دلیل دارا بودن مقدار مناسبی از فولیک اسید در کنار مقدار کافی از عناصر کمیاب و ویتامین ها، می تواند به همه بانوان به ویژه خانم هایی که در سنین باروری هستند، توصیه شود.<br>
+                                <br>
+                                فولیک اسید عمدتا برای کاهش خطر نقص لوله عصبی در جنین بکار می رود.<br>
+                                <br>
+                                تنها نکته ای که باید توجه کرد این است که حداکثر مقدار مجاز فولیک اسید دریافتی از طریق مکمل ها در بزرگسالان 1000 میکروگرم می باشد. بنابراین در صورتی که مکمل فولیک اسید به طور جداگانه دریافت می نمایید، حواستان باشد که مجموع فولیک اسید دریافتی از مکمل ها از این مقدار فراتر نرود.<br>
+                                <br>
+                                <br>
+                                <br>
+                                آیا می توان در بارداری و یا شیردهی اپتی وومن استفاده کرد؟<br>
+                                با توجه به اهمیت این دوران، زنان باردار و شیرده حتماً قبل از مصرف با پزشک خود مشورت کنند. شما می توانید در این دوران از مکمل های تخصصی ویژه ی بارداری و شیردهی مانند  قرص پرگنالایف گلدن لایف استفاده نمایید.<br>
+                                <br>
+                                <br>
+                                <br>
+                                آیا اپتی وومن سبب کاهش ریزش مو می شود؟<br>
+                                این محصول با دارا بودن مقدار مناسبی ویتامین‌های گروه B در کنار زینک، سلنیم و سیلیکا نقش مهمی در افزایش رشد و کنترل ریزش موی ناشی از کمبود این مواد مغذی خواهد داشت.<br>
+                                <br>
+                                در صورتی که ریزش موی شما ناشی از مشکلات هورمونی باشد، این مکمل به تنهایی نمی تواند موثر واقع شود.<br>
+                                <br>
+                                در این حالت زنان می توانند با صلاحدید پزشک از مکمل پروستیکای شرکت گلدن لایف و یا داروهای تخصصی در این زمینه استفاده کنند.<br>
+                                <br>
+                                <br>
+                                <br>
+                                آیا اپتی وومن چاق کننده است؟<br>
+                                مولتی ویتامین مینرال اپتی‌وومن در اغلب افراد اثر چندانی در افزایش وزن ندارد.<br>
+                                <br>
+                                در افراد با کمبود ویتامین ها و مواد معدنی، استفاده از این قرص می‌تواند بر اشتها اثر گذاشته و سبب افزایش وزن گردد، هرچند این افزایش وزن چشمگیر نیست.<br>
+                                <br>
+                                اما مصرف اپتی ومن در افراد با اشتهای نرمال و بدون نشانه های کمبود مواد مغذی، نمی تواند سبب افزایش وزن و چاقی گردد.<br>
+                                <br>
+                                <br>
+                                <br>
+                                آیا مصرف Opti Woman باعث تغییر رنگ ادرار می شود؟<br>
+                                بلی، مصرف مولتی ویتامین مینرال اپتی وومن ممکن است سبب تغییر رنگ ادرار شود که این مورد نگران کننده نیست.<br>
+                                <br>
+                                <br>
+                                <br>
+                                اپتی وومن در تنبلی تخمدان موثر است؟<br>
+                                قرص Opti Woman دارای یک شبه ویتامین به نام اینوزیتول است که به ویژه زمانی که با فولیک اسید استفاده شود، در زنان مبتلا به تنبلی تخمدان منجر به بهبود حساسیت به انسولین، تنظیم قاعدگی و تخمک گذاری و بهبود باروری می گردد.<br>
+                                <br>
+                                البته از آنجایی که مقدار بکار رفته در این مکمل از مقدار مشاهده شده در مطالعات به مقدار قابل توجهی کمتر است، در مورد میزان کارآیی آن نمی توان با قطعیت صحبت کرد.<br>
+                                <br>
+                                <br>
+                                <br>
+                                آیا اپتی وومن باعث عارضه گوارشی می شود؟<br>
+                                با توجه به استفاده از املاحی همچون فومارات و گلوکونات که عارضه گوارشی کمی دارند. در صورت مصرف این فرآورده همراه با غذا و با معده پر، طبق دستور مصرف، احتمال بروز مشکل گوارشی کاهش می‌یابد.<br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <span class="red">نقد و بررسی مکمل اپتی وومن</span><br>
+                                <br>
+                                <br>
+                                <br>
+                                سلامت زنان در سنین باروری از اهمیت ویژه ای برخوردار است، به همین دلیل مولتی ویتامین هایی به صورت اختصاصی برای بانوان طراحی می شوند که اغلب حاوی ترکیبات ویژه ای هستند. مکمل مولتی ویتامین اپتی وومن علاوه بر ریزمغذی ها حاوی ویتامین های گروه ب، عصاره ی جینسینگ، عصاره خار مریم، ویتامینD، کلسیم، منیزیم و روی، مس، ویتامینC، سیلیکا و بتاکاروتن می باشد.  <br>
+                                <br>
+                                <span class="red">مشخصات ظاهری</span><br>
+                                مولتی ویتامین اپتی وومن تحت لیسانس شرکت وایتکس (گلدن لایف) استرالیا در شرکت درمان یاب دارو در ایران تولید و بسته بندی شده است. این مکمل حاوی 60 عدد قرص یا 30 عدد قرص در بسته بندی به فرم قوطی می باشد. <br>
+                                <br>
+                                <span class="red">ارزش تغذیه ای</span><br>
+                                مولتی ویتامین اپتی وومن حاوی ویتامین های گروهB، ویتامینC، ویتامین های محلول در چربی، مواد معدنی و ترکیبات گیاهی است. در ادامه به بررسی بیشتر این ترکیبات می پردازیم:<br>
+                                <br>
+                                <span class="pink">ویتامین های گروه B</span><br>
+                                اپتی ومن حاوی تمام ویتامین های گروه B است. B1، B2، B3، B5، B6، B7، B9، B12 و شبه ویتامین اینوزیتول (B8) در ترکیبات این مکمل در دوز مورد مناسب برای تامین نیاز روزانه بانوان به کار رفته اند. کمیود این ویتامین ها در خانم ها باعث کاهش وزن، احساس خستگی، بی اشتهایی، گیجی، مشکلات تمرکز، ضعف عضلانی، کم خونی، تضیف سیستم ایمنی، خشکی پوست، شکنندگی ناخن و ریزش مو می شود. <br>
+                                این ویتامین ها به ویژه B1، B2، B3 و B12 در افزایش سطح انرژی و کاهش خستگی موثر هستند. B5 و B7 بکار رفته در اپتی ومن در سلامت پوست، کاهش ریزش مو، جلوگیری از ریزش مو و افزایش زیبایی و استحکام ناخن نقش دارند. و از آنجایی که خانم ها در معرض خطر کم خونی هستند، B9، B12 و B6 به ساخت هموگلوبین و تشکیل گلبول های قرمز سالم کمک می کنند. بهبود حافظه و یادگیری، بهبود خلق و خو، کاهش استرس و اضطراب نیز از دیگر اثرات این ویتامین ها هستند. <br>
+                                <br>
+                                <span class="pink">ویتامین C</span>
+                                ویتامین C در تقویت سیستم ایمنی، بهبود جذب آهن، ساخت کلاژن و محافظت از سیستم قلب و گردش خون موثر است. کمبود این ویتامین خطر کم خونی و مشکلات پوستی را افزایش می دهد. میزان نیاز روزانه این ویتامین در زنان 65 میلی گرم است. میزان ویتامین ث موجود در اوپتی وومن به ازای هر قرص 100 میلی گرم می باشد. بنابراین، بطور کامل نیاز روزانه فرد را تامین می کند. <br>
+                                <br>
+                                <span class="pink">ویتامین های D و E</span><br>
+                                این ویتامین ها محلول در چربی هستند. ویتامین E یک آنتی اکسیدان بسیار قوی است که به تنظیم سیستم ایمنی، سلامت پوست، سلامت مو، جلوگیری از ایجاد مشکلات چشمی مرتبط با سن، مشکلات عروق کرونری قلب و مشکلات شناختی کمک می کند. <br>
+                                ویتامین D در اثر تابش نور خورشید در پوست ساخته می شود. این ویتامین جذب کلسیم را در روده تقویت کرده و غلظت کلسیم و فسفات سرم را حفظ می کند. همچنین، تقویت سیستم ایمنی و جلوگیری از بروز سرطان نیز از جمله مهمترین عملکرد های ویتامین D است. سطح ویتامین D در بانوان ایرانی پایین است، قرص opti woman حاوی ویتامین D برای تامین نیاز خانم ها است. <br>
+                                <br>
+                                در محتویات اوپتی وومن ویتامین A به کار نرفته است ولی حاوی مقدار قابل توجهی بتاکاروتن است. بتاکاروتن نوعی کاروتنوئید و پیش ساز ویتامین A است که با خاصیت آنتی اکسیدانی از تولید رادیکال های آزاد در بدن جلوگیری می کند. بتاکاروتن در کاهش خطر ابتلا به بیماری های قلبی، سرطان و بیماری های مرتبط با چشم موثر می باشد. میزان بتاکاروتن موجود در این محصول به ازای هر قرص 50 میلی گرم می باشد. <br>
+                                <br>
+                                <span class="pink">مواد معدنی </span><br>
+                                کلسیم، آهن، روی، سلنیوم، منیزیم، منگنز، کروم، مس، ید و سیلیکا در قرص های اپتی وومن وجود دارند. <br>
+                                ماده معدنی کلسیم به سلامت استخوان، سلامت قلب و کاهش وزن کمک می کند.<br>
+                                آهن برای روند طبیعی رشد بدن، تولید انرژی، تکامل عصبی، عملکرد سلولی و ساخت برخی هورمون ها ضروری است. دریافت ناکافی آهن در رژیم غذایی و از دست دهی آهن در دوران قاعدگی خانم ها را مستعد کمبود آهن و کم خونی می کند. بانوان بزرگسال روزانه به 18 میلی گرم آهن نیاز دارند. از این رو، از آنجاییکه میزان آهن موجود در opti woman به ازای هر قرص 25 میلی گرم می باشد، پس این مکمل برای تامین نیاز روزانه و جلوگیری از کمبود آهن کافی است.<br>
+                                زینک نیز در عملکرد سیستم ایمنی، ساخت پروتئین، ترمیم زخم، ساخت DNA، تقسیم سلولی، رشد و نمو طبیعی جنین در دوران بارداری، کودکی و نوجوانی و حفظ احساس چشایی و بویایی نقش مهمی دارد. این ماده معدنی در سلامت پوست، مو و ناخن نیز نقش بسزایی دارد. <br>
+                                قرص اپتی وومن به تنهایی یک مکمل موثر در سلامت و زیبایی بانوان است زیرا، حاوی زینک، سلنیوم، مس و آهن است. <br>
+                                زینک، آهن، سلنیوم و ید در سلامت و عملکرد طبیعی غده تیروئید موثر هستند.<br>
+                                منیزیم، کلسیم، منگنز و سیلیکا به کار رفته در اوپتی وومن در سلامت استخوان و مفاصل بانوان حائز اهمیت بسیار زیادی هستند و به کاهش مشکلات استخوانی کمک می کنند. منیزیم به عنوان همکار بیش از 300 سیستم آنزیمی در بدن عمل می کند. این ماده معدنی در ساخت پروتئین، DNA، عملکرد عضلات و اعصاب، کنترل قند خون و تنظیم فشار خون نقش دارد. <br>
+                                ماده معدنی کروم می تواند عملکرد انسولین را تقویت کند و از این رو باعث کاهش سطوح قند خون شود. این ماده همچنین در کاهش وزن و افزایش توده عضلانی نقش دارد. این نقش های کروم، اوپتی وومن را برای افراد دیابتی یا در معرض خطر دیابت، ورزشکاران، سالمندان، افراد با اضافه وزن و چاقی و خانم های دچار تخمدان پلی کیستیک مناسب می سازد. سندروم تخمدان پلی کیستیک نوعی اختلال در غدد درون ریز است که زنان در سن باروری را تحت تاثیر قرار می دهد. این بیماری با ناباروری، چاقی، افزایش چربی خون، افزایش خطر ابتلا به دیابت نوع 2 و بیماری های قلبی عروقی مشخص می شود. <br>
+                                مس نیز عنصر جزئی بوده که در متابولیسم انرژی، تقویت سیستم ایمنی، ساخت کلاژن، ساخت ملانین (رنگدانه پوست)، جذب و انتقال و عملکرد آهن، تشکیل استخوان، غیرفعال کردن مونوآمین ها (هیستامین، نوراپی نفرین و ...) و عملکرد آنزیم های آنتی اکسیدانی نقش دارد.  <br>
+                                <br>
+                                <span class="pink">ترکیبات گیاهی</span><br>
+                                جینسینگ: گیاه جینسینگ، یکی از پر مصرف‌ترین گیاهان دارویی است که عمدتاً به منظور افزایش توانمندی ذهنی و جسمی، کنترل استرس، افزایش تمرکز، کاهش خستگی مفرط، کاهش دوره نقاهت، تقویت قوای "ج ن س ی" و تقویت سیستم ایمنی به کار می‌رود. قرص opti woman به ازای هر قرص 40 میلی گرم جینسینگ دارد.<br>
+                                <br>
+                                خار مریم: این گیاه گلدار مربوط به خانواده گل مروارید است و ماده اصلی فعال در آن، سیلیمارین می باشد که خاصیت ضد التهابی و آنتی اکسیدانی دارد و می تواند در حفظ سلامت اندام های بدن از جمله کبد و کلیه موثر باشد. مهمترین اثرات این ترکیب :  - کمک به کاهش علائم بیماری های کبدی - کمک به افزایش حساسیت به انسولین - کاهش هموگلوبین A1c و کلسترول خون - کاهش تشکیل پلاک های آمیلوئیدی -جلوگیری ایجاد آسیب های مرتبط با سن در مغز - کمک به انباشته شدن مواد معدنی در استخوان - جلوگیری از ایجاد پوکی استخوان. میزان عصاره گیاه خار مریم موجود در این محصول به ازای هر قرص 57 میلی گرم می باشد.<br>  
+                                <br>
+                                <span class="orange">نتیجه گیری</span><br>
+                                 قرص اپتی وومن گلدن لایف تحت لیسانس شرکت وایتکس (گلدن لایف) استرالیا در شرکت درمان یاب دارو در ایران تولید و بسته بندی شده است. مکمل اپتی وومن یک مولتی ویتامین تخصصی برای خانم ها می باشد. این مولتی ویتامین می تواند به تولید انرژی و بهبود عملکرد بدن، پیشگیری و درمان کم خونی، کاهش علائم پیش از قاعدگی، بهبود متابولیسم و کنترل وزن، کاهش‌ استرس، خواب آرام، بهبود خلق و خو حفظ سلامت پوست، افزایش رشد و تقویت مو و ناخن افزایش استحکام استخوان ها و پیشگیری از پوکی استخوان، تقویت سیستم ایمنی و افزایش توانایی بدن برای مقابله با بیماری ها کمک کند.<br>
+                                 <br>
+                            </p>
+                            <span class="authorship">تالیف:  شیدا احمدی دکترای تخصصی فارماکوگنوزی و با همکاری کارشناس تغذیه مهشاد بختیاری</span>
+                        </div>
+                        <button onclick="showReview(5)" class="btn__review"> ادامه مطلب <i class="fa-solid fa-chevron-down"></i> </button>
+                    </div>
+                </div>
+                <div class="box__eight">
+                    <h4 class="main__title">امتیاز دهی</h4>
+                    <div class="full__box_eight">
+                        <div class="pointer__info">
+                            <div class="star__pointer">
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i id="special_item" class="fa-solid fa-star"></i>
+                                    <span><span>3.6</span> / 5</span>
+                                </div>
+                                <span>امتیاز مجموع این محصول</span>
+                            </div>
+                            <div class="info">
+                                <div class="canvas__setting">
+                                    <div>
+                                        <canvas id="Canvas2" width="100" height="100"></canvas>
+                                        <span class="canvas__title">3.7 <span>/5</span></span>
+                                        <span class="canvas__description">امتیاز کاربران</span>
+                                    </div>
+                                    <div>
+                                        <canvas id="Canvas1" width="100" height="100"></canvas>
+                                        <span class="canvas__title">5.0 <span>/5</span></span>
+                                        <span class="canvas__description">علاقه مندی عمومی</span>
+                                    </div>
+                                    <div>
+                                        <canvas id="Canvas3" width="100" height="100"></canvas>
+                                        <span class="canvas__title">2.8 <span>/5</span></span>
+                                        <span class="canvas__description">امتیاز بازار</span>
+                                    </div>
+                                    <div>
+                                        <canvas id="Canvas4" width="100" height="100"></canvas>
+                                        <span class="canvas__title">3.5 <span>/5</span></span>
+                                        <span class="canvas__description">ارزیابی کارشناسی</span>
+                                    </div>
+                                </div>
+                                <span class="end__info_point"><i class="fa-solid fa-circle-exclamation"></i>  امتیاز کلی یک محصول ، حاصل مجموع امتیازهای کاربران ، کارشناسان و سهم بازار می باشد که بر اساس الگوریتمهای دقیق محاسبه و ارائه می شود .</span>
+                            </div>
+                        </div>
+                        <div class="pointer__info">
+                            <div class="star__pointer">
+                                <span>شما هم به این محصول امتیاز دهید</span>
+                            </div>
+                            <div class="info">
+                                <div class="box__pointer">
+                                    <span>کیفیت</span>
+                                    <div>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="box__pointer">
+                                    <span>میزان اثربخشی</span>
+                                    <div>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="box__pointer">
+                                    <span>بسته بندی</span>
+                                    <div>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="box__pointer">
+                                    <span>ارزش نسبت به قیمت</span>
+                                    <div>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="box__pointer">
+                                    <span>امتیاز شما به این محصول</span>
+                                    <span>0 از 5</span>
+                                </div>
+                                <div class="end__btn">
+                                    <button>ثبت امتیاز</button>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__nine">
+                    <h4 class="main__title">مقالات</h4>
+                    <div class="full__box">
+                        <div class="link__blog">
+                            <h6>مقالات مرتبط</h6>
+                            <a href="../MagLog/MagLogHome.html" target="_blank">مشاهده همه</a>
+                        </div>
+                        <div class="box__blog">
+                            <div class="blog">
+                                <a href="#">
+                                    <img src="../../Image/Product/Mag/Mag-29.jpg" alt="وبلاگ">
+                                    <h6>همه چیز درباره زینک یا روی</h6>
+                                    <span id="description__blog">با مشاهده این ویدیو درباره زینک و تاثیر آن بر روی بدن بیشتر بیاموزید</span>
+                                    <div class="end__blog">
+                                        <span class="btn__vlog">بیشتر</span>
+                                        <div class="point__vlog">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <span>3921</span>
+                                            <i class="fa-solid fa-heart"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="blog">
+                                <a href="#">
+                                    <img src="../../Image/Product/Mag/Mag-30.jpg" alt="وبلاگ">
+                                    <h6>نقش منیزیم (Mg) و روی (Zinc) در بدن سازی</h6>
+                                    <span id="description__blog"> در این مقاله به معرفی مکمل ZMA می پردازیم که به دلیل دارا بودن منیزیم و روی توسط ورزشکاران، ژیمناستیک کاران و بدن سازان مورد استفاده قرار می گیرد.</span>
+                                    <div class="end__blog">
+                                        <span class="btn__vlog">بیشتر</span>
+                                        <div class="point__vlog">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <span>20469</span>
+                                            <i class="fa-solid fa-heart"></i>
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="blog">
+                                <a href="#">
+                                    <img src="../../Image/Product/Mag/Mag-31.jpg" alt="وبلاگ">
+                                    <h6>همه چیز درباره زینک Zinc (روی)</h6>
+                                    <span id="description__blog">با مطالعه این مقاله از مجله داروکده هر آن چیزی که باید در مورد روی بدانید، را بیاموزید.</span>
+                                    <div class="end__blog">
+                                        <span class="btn__vlog">بیشتر</span>
+                                        <div class="point__vlog">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <span>17181</span>
+                                            <i class="fa-solid fa-heart"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box__ten">
+                    <h4 class="main__title">نظرات کاربران <i class="fa-solid fa-comment-dots"></i></h4>
+                    <div class="full__box" id="comment_box">
+                        <i onclick="textClear()" id="x__mark" class="fa-solid fa-x"></i>
+                        <textarea name="comment" id="box__comment" placeholder="در اینجا نظر خود را با سایر دیگران به اشتراک بگذارید" cols="100" rows="5"></textarea>
+                        <div class="box__btn_comment">
+                            <div id="check__private">
+                                <label for="check__comment">پیام بصورت خصوصی ثبت شود</label>
+                                <input type="checkbox" name="check__comment" title="comment">
+                            </div>
+                            <i class="fa-solid fa-check"></i>
+                            <button onclick="addComment()">ثبت نظر</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>
+        var canvas1 = document.getElementById("Canvas1");
+        var context = canvas1.getContext("2d");
+        var centerX = canvas1.width / 2;
+        var centerY = canvas1.height / 2;
+        var radiusX = 45;
+        var radiusY = 45;
+        context.beginPath();
+        context.strokeStyle = "#1eabf3";
+        context.lineWidth = 7;
+        context.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
+        context.stroke();
+
+        var canvas2 = document.getElementById("Canvas2");
+        var context = canvas2.getContext("2d");
+        var centerX = canvas2.width / 2;
+        var centerY = canvas2.height / 2;
+        var radiusX = 45;
+        var radiusY = 45;
+        var gradient = context.createLinearGradient(0, centerY, canvas2.width, centerY);
+        gradient.addColorStop(0, "#ffcc00");
+        gradient.addColorStop(0.7, "#ffcc00");
+        gradient.addColorStop(0.7, "#e0e1e2");
+        gradient.addColorStop(1, "#e0e1e2");
+        context.beginPath();
+        context.strokeStyle = gradient;
+        context.lineWidth = 7;
+        context.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
+        context.stroke();
+
+        var canvas3 = document.getElementById("Canvas3");
+        var context = canvas3.getContext("2d");
+        var centerX = canvas3.width / 2;
+        var centerY = canvas3.height / 2;
+        var radiusX = 45;
+        var radiusY = 45;
+        var gradient = context.createLinearGradient(0, centerY, canvas2.width, centerY);
+        gradient.addColorStop(0, "#59d9ae");
+        gradient.addColorStop(0.4, "#59d9ae");
+        gradient.addColorStop(0.4, "#e0e1e2");
+        gradient.addColorStop(1, "#e0e1e2");
+        context.beginPath();
+        context.strokeStyle = gradient;
+        context.lineWidth = 7;
+        context.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
+        context.stroke();
+
+        var canvas4 = document.getElementById("Canvas4");
+        var context = canvas4.getContext("2d");
+        var centerX = canvas4.width / 2;
+        var centerY = canvas4.height / 2;
+        var radiusX = 45;
+        var radiusY = 45;
+        var gradient = context.createLinearGradient(0, centerY, canvas2.width, centerY);
+        gradient.addColorStop(0, "#aad901");
+        gradient.addColorStop(0.6, "#aad901");
+        gradient.addColorStop(0.6, "#e0e1e2");
+        gradient.addColorStop(1, "#e0e1e2");
+        context.beginPath();
+        context.strokeStyle = gradient;
+        context.lineWidth = 7;
+        context.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
+        context.stroke();
+    </script>
+    <footer class="main__footer">
+        <section class="footer__other_items">
+            <ul>
+                <li><a href="../Home/Home.html">صفحه نخست</a></li>
+                <li><a href="../Login/Login.html">کاربران</a></li>
+                <li><a href="../Basket/Basket.html">پیگیری سفارش</a></li>
+                <li><a href="../MagLog/MagLogHome.html">مجله داروکده</a></li>
+                <li><a href="#">ویکی کده</a></li>
+                <li><a href="#">کمپین مصرف کنندگان</a></li>
+                <li><a href="#">فرصت های شغلی</a></li>
+                <li><a href="../Basket/Basket.html">راهنمایی خرید</a></li>
+            </ul>
+        </section>
+        <section class="footer__social_icon">
+            <div class="footer__icon">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a id="footer__aparat" href="#">
+                    <img id="aparat1" src="../../Image/SVG/icons-aparat.png" alt="aparat">
+                    <img id="aparat2" src="../../Image/SVG/icons-aparat1.png" alt="aparat">
+                </a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <img width="5%" src="../../Image/eNamadLogo.jpg" alt="eNamad.ir">
+            <section class="footer__list_info">
+                <a href="../Jamalzadeh/Jamalzadeh.html"><i class="fa-solid fa-lock"></i> داروخانه مرکزی جمالزاده</a>
+                <a href="../ContactUs/ContactUs.html" target="_blank"><i class="fa-solid fa-phone"></i> تماس با ما</a>
+                <a href="../AboutUs/AboutUs.html"><i class="fa-solid fa-user"></i> درباره ما</a>
+            </section>
+            <section class="footer__info_address">
+                <span class="info__address">تهران - خیابان جمالزاده شمالی - 200 متر بالاتر از خیابان فرصت - نبش کوچه یزدان شناس - پلاک 251 - داروخانه مرکزی جمالزاده</span>
+                <span class="info__call">62747000 - 52862000 - 021</span>
+            </section>
+            <span class="end-message">طراحی و توسعه توسط احسان نجباء ( 1402-1401 )</span>
+        </section>
+    </footer>
+</body>
+</html>
